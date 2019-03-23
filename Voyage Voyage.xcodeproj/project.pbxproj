@@ -1,0 +1,780 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C155A7F2242B1F300609D29 /* AddTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C155A7E2242B1F300609D29 /* AddTravelViewController.swift */; };
+		3C3F3E2F223FD416000C9A6E /* TravelTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3F3E2E223FD416000C9A6E /* TravelTVController.swift */; };
+		3C3F3E31223FD5B2000C9A6E /* TravelTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C93DA4122390E07001F50C8 /* TravelTVCell.swift */; };
+		3C80490622455C61007CF9CA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C80490522455C61007CF9CA /* CoreDataManager.swift */; };
+		3C80490822455C75007CF9CA /* TravelDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C80490722455C75007CF9CA /* TravelDAO.swift */; };
+		3C80490A22455C93007CF9CA /* TravelFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C80490922455C93007CF9CA /* TravelFetchResultController.swift */; };
+		3C83311B22383431009C8B51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C83311A22383431009C8B51 /* AppDelegate.swift */; };
+		3C83311D22383431009C8B51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C83311C22383431009C8B51 /* ViewController.swift */; };
+		3C83312022383431009C8B51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C83311E22383431009C8B51 /* Main.storyboard */; };
+		3C83312322383431009C8B51 /* Voyage_Voyage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C83312122383431009C8B51 /* Voyage_Voyage.xcdatamodeld */; };
+		3C83312522383432009C8B51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C83312422383432009C8B51 /* Assets.xcassets */; };
+		3C83312822383432009C8B51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C83312622383432009C8B51 /* LaunchScreen.storyboard */; };
+		3C83313322383432009C8B51 /* Voyage_VoyageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C83313222383432009C8B51 /* Voyage_VoyageTests.swift */; };
+		3C83313E22383432009C8B51 /* Voyage_VoyageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C83313D22383432009C8B51 /* Voyage_VoyageUITests.swift */; };
+		3C8B04002240DD4B00AB9E82 /* TravelVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B03FF2240DD4B00AB9E82 /* TravelVM.swift */; };
+		3C93DA4222390E07001F50C8 /* TravelTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C93DA4122390E07001F50C8 /* TravelTVCell.swift */; };
+		6110F92E2240105D0079D1DF /* Travel-CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6110F92D2240105D0079D1DF /* Travel-CoreData.swift */; };
+		6110F9302240130A0079D1DF /* TravelSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6110F92F2240130A0079D1DF /* TravelSet.swift */; };
+		F0E615232245220300624F4F /* TravelDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E615222245220300624F4F /* TravelDetailsViewController.swift */; };
+		F0E615252245308900624F4F /* TravelMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E615242245308900624F4F /* TravelMembersViewController.swift */; };
+		F0E61527224530EF00624F4F /* TravelDetailsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E61526224530EF00624F4F /* TravelDetailsTVController.swift */; };
+		F0E615292245314400624F4F /* MemberListTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E615282245314400624F4F /* MemberListTVController.swift */; };
+		F0E6152B2245347B00624F4F /* MemberAmoutTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6152A2245347B00624F4F /* MemberAmoutTVCell.swift */; };
+		F0E6152D224534EE00624F4F /* TravelMemberTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6152C224534EE00624F4F /* TravelMemberTVCell.swift */; };
+		F0E6152F2245353000624F4F /* TransferTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6152E2245353000624F4F /* TransferTVCell.swift */; };
+		F0E615332245360100624F4F /* TransferTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E615322245360100624F4F /* TransferTVController.swift */; };
+		F0E615352245364A00624F4F /* TravelTransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E615342245364A00624F4F /* TravelTransferViewController.swift */; };
+		F0E61537224537A100624F4F /* ExpenseTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E61536224537A100624F4F /* ExpenseTVCell.swift */; };
+		F0E61539224537ED00624F4F /* TravelExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E61538224537ED00624F4F /* TravelExpensesViewController.swift */; };
+		F0E6153B2245382700624F4F /* ExpensesTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6153A2245382700624F4F /* ExpensesTVController.swift */; };
+		F0E6153D2245410500624F4F /* AddMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6153C2245410400624F4F /* AddMemberViewController.swift */; };
+		F0E6153F2245441C00624F4F /* MemberExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6153E2245441C00624F4F /* MemberExpensesViewController.swift */; };
+		F0E615412245448900624F4F /* MemberExpensesTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E615402245448900624F4F /* MemberExpensesTVController.swift */; };
+		F0E61543224545C400624F4F /* MemberExpenseTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E61542224545C400624F4F /* MemberExpenseTVCell.swift */; };
+		F0E6154522454A5600624F4F /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6154422454A5600624F4F /* AddExpenseViewController.swift */; };
+		F0E6154722454A9400624F4F /* PayerTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6154622454A9400624F4F /* PayerTVController.swift */; };
+		F0E6154922454B0C00624F4F /* PayerTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6154822454B0C00624F4F /* PayerTVCell.swift */; };
+		F0E6154B22454DE300624F4F /* ExpenseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6154A22454DE300624F4F /* ExpenseDetailsViewController.swift */; };
+		F0E6154D224550EC00624F4F /* AddTransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6154C224550EC00624F4F /* AddTransferViewController.swift */; };
+		F0E6154F2245512900624F4F /* ReceiverTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6154E2245512900624F4F /* ReceiverTVController.swift */; };
+		F0E615512245519600624F4F /* ReceiverTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E615502245519600624F4F /* ReceiverTVCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3C83312F22383432009C8B51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C83310F22383431009C8B51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C83311622383431009C8B51;
+			remoteInfo = "Voyage Voyage";
+		};
+		3C83313A22383432009C8B51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C83310F22383431009C8B51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C83311622383431009C8B51;
+			remoteInfo = "Voyage Voyage";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3C155A7E2242B1F300609D29 /* AddTravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTravelViewController.swift; sourceTree = "<group>"; };
+		3C3F3E2E223FD416000C9A6E /* TravelTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTVController.swift; sourceTree = "<group>"; };
+		3C80490522455C61007CF9CA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3C80490722455C75007CF9CA /* TravelDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDAO.swift; sourceTree = "<group>"; };
+		3C80490922455C93007CF9CA /* TravelFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelFetchResultController.swift; sourceTree = "<group>"; };
+		3C80490B22458371007CF9CA /* Voyage Voyage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Voyage Voyage.entitlements"; sourceTree = "<group>"; };
+		3C83311722383431009C8B51 /* Voyage Voyage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Voyage Voyage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C83311A22383431009C8B51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3C83311C22383431009C8B51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3C83311F22383431009C8B51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3C83312222383431009C8B51 /* Voyage_Voyage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Voyage_Voyage.xcdatamodel; sourceTree = "<group>"; };
+		3C83312422383432009C8B51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3C83312722383432009C8B51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3C83312922383432009C8B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C83312E22383432009C8B51 /* Voyage VoyageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Voyage VoyageTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C83313222383432009C8B51 /* Voyage_VoyageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voyage_VoyageTests.swift; sourceTree = "<group>"; };
+		3C83313422383432009C8B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C83313922383432009C8B51 /* Voyage VoyageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Voyage VoyageUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C83313D22383432009C8B51 /* Voyage_VoyageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voyage_VoyageUITests.swift; sourceTree = "<group>"; };
+		3C83313F22383432009C8B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C8B03FF2240DD4B00AB9E82 /* TravelVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelVM.swift; sourceTree = "<group>"; };
+		3C93DA4122390E07001F50C8 /* TravelTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTVCell.swift; sourceTree = "<group>"; };
+		6110F92D2240105D0079D1DF /* Travel-CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Travel-CoreData.swift"; path = "Voyage Voyage/Travel-CoreData.swift"; sourceTree = SOURCE_ROOT; };
+		6110F92F2240130A0079D1DF /* TravelSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TravelSet.swift; path = "Voyage Voyage/TravelSet.swift"; sourceTree = SOURCE_ROOT; };
+		F0E615222245220300624F4F /* TravelDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetailsViewController.swift; sourceTree = "<group>"; };
+		F0E615242245308900624F4F /* TravelMembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelMembersViewController.swift; sourceTree = "<group>"; };
+		F0E61526224530EF00624F4F /* TravelDetailsTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetailsTVController.swift; sourceTree = "<group>"; };
+		F0E615282245314400624F4F /* MemberListTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListTVController.swift; sourceTree = "<group>"; };
+		F0E6152A2245347B00624F4F /* MemberAmoutTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberAmoutTVCell.swift; sourceTree = "<group>"; };
+		F0E6152C224534EE00624F4F /* TravelMemberTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelMemberTVCell.swift; sourceTree = "<group>"; };
+		F0E6152E2245353000624F4F /* TransferTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTVCell.swift; sourceTree = "<group>"; };
+		F0E615322245360100624F4F /* TransferTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTVController.swift; sourceTree = "<group>"; };
+		F0E615342245364A00624F4F /* TravelTransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTransferViewController.swift; sourceTree = "<group>"; };
+		F0E61536224537A100624F4F /* ExpenseTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTVCell.swift; sourceTree = "<group>"; };
+		F0E61538224537ED00624F4F /* TravelExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelExpensesViewController.swift; sourceTree = "<group>"; };
+		F0E6153A2245382700624F4F /* ExpensesTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTVController.swift; sourceTree = "<group>"; };
+		F0E6153C2245410400624F4F /* AddMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewController.swift; sourceTree = "<group>"; };
+		F0E6153E2245441C00624F4F /* MemberExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberExpensesViewController.swift; sourceTree = "<group>"; };
+		F0E615402245448900624F4F /* MemberExpensesTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberExpensesTVController.swift; sourceTree = "<group>"; };
+		F0E61542224545C400624F4F /* MemberExpenseTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberExpenseTVCell.swift; sourceTree = "<group>"; };
+		F0E6154422454A5600624F4F /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
+		F0E6154622454A9400624F4F /* PayerTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayerTVController.swift; sourceTree = "<group>"; };
+		F0E6154822454B0C00624F4F /* PayerTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayerTVCell.swift; sourceTree = "<group>"; };
+		F0E6154A22454DE300624F4F /* ExpenseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDetailsViewController.swift; sourceTree = "<group>"; };
+		F0E6154C224550EC00624F4F /* AddTransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransferViewController.swift; sourceTree = "<group>"; };
+		F0E6154E2245512900624F4F /* ReceiverTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverTVController.swift; sourceTree = "<group>"; };
+		F0E615502245519600624F4F /* ReceiverTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverTVCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C83311422383431009C8B51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C83312B22383432009C8B51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C83313622383432009C8B51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C80490422455C48007CF9CA /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				3C80490522455C61007CF9CA /* CoreDataManager.swift */,
+				3C80490722455C75007CF9CA /* TravelDAO.swift */,
+				3C80490922455C93007CF9CA /* TravelFetchResultController.swift */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		3C83310E22383431009C8B51 = {
+			isa = PBXGroup;
+			children = (
+				3C83311922383431009C8B51 /* Voyage Voyage */,
+				3C83313122383432009C8B51 /* Voyage VoyageTests */,
+				3C83313C22383432009C8B51 /* Voyage VoyageUITests */,
+				3C83311822383431009C8B51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3C83311822383431009C8B51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C83311722383431009C8B51 /* Voyage Voyage.app */,
+				3C83312E22383432009C8B51 /* Voyage VoyageTests.xctest */,
+				3C83313922383432009C8B51 /* Voyage VoyageUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C83311922383431009C8B51 /* Voyage Voyage */ = {
+			isa = PBXGroup;
+			children = (
+				3C80490B22458371007CF9CA /* Voyage Voyage.entitlements */,
+				3C80490422455C48007CF9CA /* DAO */,
+				3CCB00E5223901790050878A /* ViewModels */,
+				3CCB00E42238FB100050878A /* Controllers */,
+				3CCB00E32238FADC0050878A /* Models */,
+				3C83311A22383431009C8B51 /* AppDelegate.swift */,
+				3C83311E22383431009C8B51 /* Main.storyboard */,
+				3C83312422383432009C8B51 /* Assets.xcassets */,
+				3C83312622383432009C8B51 /* LaunchScreen.storyboard */,
+				3C83312922383432009C8B51 /* Info.plist */,
+				3C83312122383431009C8B51 /* Voyage_Voyage.xcdatamodeld */,
+			);
+			path = "Voyage Voyage";
+			sourceTree = "<group>";
+		};
+		3C83313122383432009C8B51 /* Voyage VoyageTests */ = {
+			isa = PBXGroup;
+			children = (
+				3C83313222383432009C8B51 /* Voyage_VoyageTests.swift */,
+				3C83313422383432009C8B51 /* Info.plist */,
+			);
+			path = "Voyage VoyageTests";
+			sourceTree = "<group>";
+		};
+		3C83313C22383432009C8B51 /* Voyage VoyageUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3C83313D22383432009C8B51 /* Voyage_VoyageUITests.swift */,
+				3C83313F22383432009C8B51 /* Info.plist */,
+			);
+			path = "Voyage VoyageUITests";
+			sourceTree = "<group>";
+		};
+		3CCB00E32238FADC0050878A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6110F92D2240105D0079D1DF /* Travel-CoreData.swift */,
+				6110F92F2240130A0079D1DF /* TravelSet.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+			usesTabs = 0;
+		};
+		3CCB00E42238FB100050878A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C83311C22383431009C8B51 /* ViewController.swift */,
+				3C155A7E2242B1F300609D29 /* AddTravelViewController.swift */,
+				3C3F3E2E223FD416000C9A6E /* TravelTVController.swift */,
+				F0E615222245220300624F4F /* TravelDetailsViewController.swift */,
+				F0E615242245308900624F4F /* TravelMembersViewController.swift */,
+				F0E61526224530EF00624F4F /* TravelDetailsTVController.swift */,
+				F0E615282245314400624F4F /* MemberListTVController.swift */,
+				F0E615322245360100624F4F /* TransferTVController.swift */,
+				F0E615342245364A00624F4F /* TravelTransferViewController.swift */,
+				F0E61538224537ED00624F4F /* TravelExpensesViewController.swift */,
+				F0E6153A2245382700624F4F /* ExpensesTVController.swift */,
+				F0E6153C2245410400624F4F /* AddMemberViewController.swift */,
+				F0E6153E2245441C00624F4F /* MemberExpensesViewController.swift */,
+				F0E615402245448900624F4F /* MemberExpensesTVController.swift */,
+				F0E6154422454A5600624F4F /* AddExpenseViewController.swift */,
+				F0E6154622454A9400624F4F /* PayerTVController.swift */,
+				F0E6154A22454DE300624F4F /* ExpenseDetailsViewController.swift */,
+				F0E6154C224550EC00624F4F /* AddTransferViewController.swift */,
+				F0E6154E2245512900624F4F /* ReceiverTVController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3CCB00E5223901790050878A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3C93DA4122390E07001F50C8 /* TravelTVCell.swift */,
+				3C8B03FF2240DD4B00AB9E82 /* TravelVM.swift */,
+				F0E6152A2245347B00624F4F /* MemberAmoutTVCell.swift */,
+				F0E6152C224534EE00624F4F /* TravelMemberTVCell.swift */,
+				F0E6152E2245353000624F4F /* TransferTVCell.swift */,
+				F0E61536224537A100624F4F /* ExpenseTVCell.swift */,
+				F0E61542224545C400624F4F /* MemberExpenseTVCell.swift */,
+				F0E6154822454B0C00624F4F /* PayerTVCell.swift */,
+				F0E615502245519600624F4F /* ReceiverTVCell.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3C83311622383431009C8B51 /* Voyage Voyage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C83314222383432009C8B51 /* Build configuration list for PBXNativeTarget "Voyage Voyage" */;
+			buildPhases = (
+				3C83311322383431009C8B51 /* Sources */,
+				3C83311422383431009C8B51 /* Frameworks */,
+				3C83311522383431009C8B51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Voyage Voyage";
+			productName = "Voyage Voyage";
+			productReference = 3C83311722383431009C8B51 /* Voyage Voyage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3C83312D22383432009C8B51 /* Voyage VoyageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C83314522383432009C8B51 /* Build configuration list for PBXNativeTarget "Voyage VoyageTests" */;
+			buildPhases = (
+				3C83312A22383432009C8B51 /* Sources */,
+				3C83312B22383432009C8B51 /* Frameworks */,
+				3C83312C22383432009C8B51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C83313022383432009C8B51 /* PBXTargetDependency */,
+			);
+			name = "Voyage VoyageTests";
+			productName = "Voyage VoyageTests";
+			productReference = 3C83312E22383432009C8B51 /* Voyage VoyageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3C83313822383432009C8B51 /* Voyage VoyageUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C83314822383432009C8B51 /* Build configuration list for PBXNativeTarget "Voyage VoyageUITests" */;
+			buildPhases = (
+				3C83313522383432009C8B51 /* Sources */,
+				3C83313622383432009C8B51 /* Frameworks */,
+				3C83313722383432009C8B51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C83313B22383432009C8B51 /* PBXTargetDependency */,
+			);
+			name = "Voyage VoyageUITests";
+			productName = "Voyage VoyageUITests";
+			productReference = 3C83313922383432009C8B51 /* Voyage VoyageUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C83310F22383431009C8B51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Yvan Sanson";
+				TargetAttributes = {
+					3C83311622383431009C8B51 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					3C83312D22383432009C8B51 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3C83311622383431009C8B51;
+					};
+					3C83313822383432009C8B51 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3C83311622383431009C8B51;
+					};
+				};
+			};
+			buildConfigurationList = 3C83311222383431009C8B51 /* Build configuration list for PBXProject "Voyage Voyage" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3C83310E22383431009C8B51;
+			productRefGroup = 3C83311822383431009C8B51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C83311622383431009C8B51 /* Voyage Voyage */,
+				3C83312D22383432009C8B51 /* Voyage VoyageTests */,
+				3C83313822383432009C8B51 /* Voyage VoyageUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3C83311522383431009C8B51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C83312822383432009C8B51 /* LaunchScreen.storyboard in Resources */,
+				3C83312522383432009C8B51 /* Assets.xcassets in Resources */,
+				3C83312022383431009C8B51 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C83312C22383432009C8B51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C83313722383432009C8B51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C83311322383431009C8B51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0E615412245448900624F4F /* MemberExpensesTVController.swift in Sources */,
+				F0E61537224537A100624F4F /* ExpenseTVCell.swift in Sources */,
+				6110F92E2240105D0079D1DF /* Travel-CoreData.swift in Sources */,
+				F0E6152F2245353000624F4F /* TransferTVCell.swift in Sources */,
+				3C80490622455C61007CF9CA /* CoreDataManager.swift in Sources */,
+				F0E615352245364A00624F4F /* TravelTransferViewController.swift in Sources */,
+				F0E6152B2245347B00624F4F /* MemberAmoutTVCell.swift in Sources */,
+				3C155A7F2242B1F300609D29 /* AddTravelViewController.swift in Sources */,
+				F0E615512245519600624F4F /* ReceiverTVCell.swift in Sources */,
+				F0E6152D224534EE00624F4F /* TravelMemberTVCell.swift in Sources */,
+				3C83312322383431009C8B51 /* Voyage_Voyage.xcdatamodeld in Sources */,
+				6110F9302240130A0079D1DF /* TravelSet.swift in Sources */,
+				F0E615252245308900624F4F /* TravelMembersViewController.swift in Sources */,
+				F0E6153D2245410500624F4F /* AddMemberViewController.swift in Sources */,
+				F0E6153F2245441C00624F4F /* MemberExpensesViewController.swift in Sources */,
+				F0E615332245360100624F4F /* TransferTVController.swift in Sources */,
+				F0E615292245314400624F4F /* MemberListTVController.swift in Sources */,
+				3C83311D22383431009C8B51 /* ViewController.swift in Sources */,
+				3C8B04002240DD4B00AB9E82 /* TravelVM.swift in Sources */,
+				F0E6153B2245382700624F4F /* ExpensesTVController.swift in Sources */,
+				3C3F3E2F223FD416000C9A6E /* TravelTVController.swift in Sources */,
+				F0E61527224530EF00624F4F /* TravelDetailsTVController.swift in Sources */,
+				F0E615232245220300624F4F /* TravelDetailsViewController.swift in Sources */,
+				F0E6154722454A9400624F4F /* PayerTVController.swift in Sources */,
+				F0E61539224537ED00624F4F /* TravelExpensesViewController.swift in Sources */,
+				3C80490822455C75007CF9CA /* TravelDAO.swift in Sources */,
+				F0E6154D224550EC00624F4F /* AddTransferViewController.swift in Sources */,
+				F0E6154F2245512900624F4F /* ReceiverTVController.swift in Sources */,
+				F0E6154522454A5600624F4F /* AddExpenseViewController.swift in Sources */,
+				3C93DA4222390E07001F50C8 /* TravelTVCell.swift in Sources */,
+				F0E6154922454B0C00624F4F /* PayerTVCell.swift in Sources */,
+				F0E6154B22454DE300624F4F /* ExpenseDetailsViewController.swift in Sources */,
+				3C80490A22455C93007CF9CA /* TravelFetchResultController.swift in Sources */,
+				F0E61543224545C400624F4F /* MemberExpenseTVCell.swift in Sources */,
+				3C83311B22383431009C8B51 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C83312A22383432009C8B51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C3F3E31223FD5B2000C9A6E /* TravelTVCell.swift in Sources */,
+				3C83313322383432009C8B51 /* Voyage_VoyageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C83313522383432009C8B51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C83313E22383432009C8B51 /* Voyage_VoyageUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C83313022383432009C8B51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C83311622383431009C8B51 /* Voyage Voyage */;
+			targetProxy = 3C83312F22383432009C8B51 /* PBXContainerItemProxy */;
+		};
+		3C83313B22383432009C8B51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C83311622383431009C8B51 /* Voyage Voyage */;
+			targetProxy = 3C83313A22383432009C8B51 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3C83311E22383431009C8B51 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C83311F22383431009C8B51 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3C83312622383432009C8B51 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C83312722383432009C8B51 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3C83314022383432009C8B51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3C83314122383432009C8B51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3C83314322383432009C8B51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MPAVRTPHU2;
+				INFOPLIST_FILE = "Voyage Voyage/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yvan.marie.voyage-voyage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3C83314422383432009C8B51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MPAVRTPHU2;
+				INFOPLIST_FILE = "Voyage Voyage/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yvan.marie.voyage-voyage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3C83314622383432009C8B51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MPAVRTPHU2;
+				INFOPLIST_FILE = "Voyage VoyageTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yvan.Voyage-VoyageTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Voyage Voyage.app/Voyage Voyage";
+			};
+			name = Debug;
+		};
+		3C83314722383432009C8B51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MPAVRTPHU2;
+				INFOPLIST_FILE = "Voyage VoyageTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yvan.Voyage-VoyageTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Voyage Voyage.app/Voyage Voyage";
+			};
+			name = Release;
+		};
+		3C83314922383432009C8B51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MPAVRTPHU2;
+				INFOPLIST_FILE = "Voyage VoyageUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yvan.Voyage-VoyageUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Voyage Voyage";
+			};
+			name = Debug;
+		};
+		3C83314A22383432009C8B51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MPAVRTPHU2;
+				INFOPLIST_FILE = "Voyage VoyageUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yvan.Voyage-VoyageUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Voyage Voyage";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C83311222383431009C8B51 /* Build configuration list for PBXProject "Voyage Voyage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C83314022383432009C8B51 /* Debug */,
+				3C83314122383432009C8B51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C83314222383432009C8B51 /* Build configuration list for PBXNativeTarget "Voyage Voyage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C83314322383432009C8B51 /* Debug */,
+				3C83314422383432009C8B51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C83314522383432009C8B51 /* Build configuration list for PBXNativeTarget "Voyage VoyageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C83314622383432009C8B51 /* Debug */,
+				3C83314722383432009C8B51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C83314822383432009C8B51 /* Build configuration list for PBXNativeTarget "Voyage VoyageUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C83314922383432009C8B51 /* Debug */,
+				3C83314A22383432009C8B51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3C83312122383431009C8B51 /* Voyage_Voyage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3C83312222383431009C8B51 /* Voyage_Voyage.xcdatamodel */,
+			);
+			currentVersion = 3C83312222383431009C8B51 /* Voyage_Voyage.xcdatamodel */;
+			path = Voyage_Voyage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3C83310F22383431009C8B51 /* Project object */;
+}
