@@ -620,13 +620,13 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MPAVRTPHU2;
+				DEVELOPMENT_TEAM = 7944WFUCZG;
 				INFOPLIST_FILE = "Voyage Voyage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "yvan.marie.voyage-voyage";
+				PRODUCT_BUNDLE_IDENTIFIER = "marie.voyage-voyage";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -639,13 +639,13 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MPAVRTPHU2;
+				DEVELOPMENT_TEAM = 7944WFUCZG;
 				INFOPLIST_FILE = "Voyage Voyage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "yvan.marie.voyage-voyage";
+				PRODUCT_BUNDLE_IDENTIFIER = "marie.voyage-voyage";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
