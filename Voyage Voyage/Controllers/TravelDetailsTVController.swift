@@ -11,17 +11,34 @@ import UIKit
 class TravelDetailsTVController: NSObject, UITableViewDataSource {
     
     var tableView: UITableView
+    var participantList: [Participant]?
+    var travel: Travel
+    var fetchedResultsController: ParticipantFetchResultController
     
-    init(tableView: UITableView){
+    init(tableView: UITableView, travel: Travel){
         self.tableView = tableView
+        self.travel = travel
+        fetchedResultsController = ParticipantFetchResultController(view: tableView)
+        participantList = ParticipantsDAO.search(forTravel: travel)
+        super.init()
+        self.tableView.dataSource = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return participantList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = MemberAmoutTVCell()
+        let person = participantList![indexPath.row]
+        cell.memberName.text = person.fullname
+        let totalAmount = ParticipantsDAO.totalAmount(forParticipant: person)
+        cell.memberAmount.text = String()
+        if totalAmount >= 0 {
+            cell.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+        }else{
+            cell.backgroundColor = #colorLiteral(red: 1, green: 0.05588275939, blue: 0.1452993751, alpha: 0.6090448944)
+        }
         return cell
     }
     

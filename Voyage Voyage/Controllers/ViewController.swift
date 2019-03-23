@@ -21,6 +21,15 @@ class ViewController: UIViewController {
         self.travelTVController = TravelTVController(tableView: travelTableView)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destController = segue.destination as? TravelDetailsViewController{
+            if let cell = sender as? TravelTVCell{
+                guard let indexPath = self.travelTableView.indexPath(for: cell) else{return}
+                destController.travel = travelTVController.travelVM?.get(travelAt: indexPath.row)
+            }
+        }
+    }
+    
     @IBAction func unwindToTravelList(sender: UIStoryboardSegue){
         //Ajout machins
     }

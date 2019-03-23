@@ -13,11 +13,11 @@ class TravelDetailsViewController: UIViewController {
     @IBOutlet weak var tableViewMember: UITableView!
     
     var travelDetailsC: TravelDetailsTVController!
+    var travel: Travel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        travelDetailsC = TravelDetailsTVController(tableView: tableViewMember)
-        
+        travelDetailsC = TravelDetailsTVController(tableView: tableViewMember, travel: travel!)
     }
     /*
     // MARK: - Navigation

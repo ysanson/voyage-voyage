@@ -10,6 +10,9 @@ import UIKit
 
 class MemberAmoutTVCell: UITableViewCell {
 
+    @IBOutlet weak var memberName: UILabel!
+    @IBOutlet weak var memberAmount: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

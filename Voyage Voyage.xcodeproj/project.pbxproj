@@ -27,6 +27,7 @@
 		61E0DF7F2246676D00804185 /* ParticipantsDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0DF7E2246676D00804185 /* ParticipantsDAO.swift */; };
 		61E0DF812246679F00804185 /* ParticipantFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0DF802246679F00804185 /* ParticipantFetchResultController.swift */; };
 		61E0DF832246686300804185 /* Participant-CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0DF822246686300804185 /* Participant-CoreData.swift */; };
+		61F561292246726B009C9CBA /* ParticipantTravelVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F561282246726B009C9CBA /* ParticipantTravelVM.swift */; };
 		F0E615232245220300624F4F /* TravelDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E615222245220300624F4F /* TravelDetailsViewController.swift */; };
 		F0E615252245308900624F4F /* TravelMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E615242245308900624F4F /* TravelMembersViewController.swift */; };
 		F0E61527224530EF00624F4F /* TravelDetailsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E61526224530EF00624F4F /* TravelDetailsTVController.swift */; };
@@ -96,6 +97,7 @@
 		61E0DF7E2246676D00804185 /* ParticipantsDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsDAO.swift; sourceTree = "<group>"; };
 		61E0DF802246679F00804185 /* ParticipantFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantFetchResultController.swift; sourceTree = "<group>"; };
 		61E0DF822246686300804185 /* Participant-CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Participant-CoreData.swift"; path = "Voyage Voyage/DAO/Participant-CoreData.swift"; sourceTree = SOURCE_ROOT; };
+		61F561282246726B009C9CBA /* ParticipantTravelVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantTravelVM.swift; sourceTree = "<group>"; };
 		F0E615222245220300624F4F /* TravelDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetailsViewController.swift; sourceTree = "<group>"; };
 		F0E615242245308900624F4F /* TravelMembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelMembersViewController.swift; sourceTree = "<group>"; };
 		F0E61526224530EF00624F4F /* TravelDetailsTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetailsTVController.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				F0E61542224545C400624F4F /* MemberExpenseTVCell.swift */,
 				F0E6154822454B0C00624F4F /* PayerTVCell.swift */,
 				F0E615502245519600624F4F /* ReceiverTVCell.swift */,
+				61F561282246726B009C9CBA /* ParticipantTravelVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 			files = (
 				F0E615412245448900624F4F /* MemberExpensesTVController.swift in Sources */,
 				F0E61537224537A100624F4F /* ExpenseTVCell.swift in Sources */,
+				61F561292246726B009C9CBA /* ParticipantTravelVM.swift in Sources */,
 				6110F92E2240105D0079D1DF /* Travel-CoreData.swift in Sources */,
 				F0E6152F2245353000624F4F /* TransferTVCell.swift in Sources */,
 				3C80490622455C61007CF9CA /* CoreDataManager.swift in Sources */,

@@ -52,6 +52,26 @@ class ParticipantsDAO{
     }
     
     static func search(forTravel travel: Travel)->[Participant]?{
-        return travel.contient?.allObjects as? [Participant]
+        self.request.predicate = NSPredicate(format: "participe == %@", travel)
+        do{
+            return try CoreDataManager.context.fetch(request) as [Participant]
+        }
+        catch{
+            return nil
+        }
     }
+    
+    static func totalPayement(forParticipant participant: Participant)->Float{
+        var amount = 0.0
+        
+        return Float(amount)
+    }
+    
+    static func totalAmount(forParticipant participant: Participant)->Float{
+        var amount = 0.0
+        
+        
+        return Float(amount)
+    }
+    
 }

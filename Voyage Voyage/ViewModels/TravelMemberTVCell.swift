@@ -10,6 +10,8 @@ import UIKit
 
 class TravelMemberTVCell: UITableViewCell {
 
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

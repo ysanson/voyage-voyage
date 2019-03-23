@@ -120,6 +120,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="memberAmount" destination="iXr-cg-Bhr" id="7vU-nJ-lAV"/>
+                                            <outlet property="memberName" destination="FsA-KB-lgE" id="18G-oT-p3n"/>
                                             <segue destination="QXF-y9-NJ0" kind="show" identifier="showMemberExpenses" id="lHz-EG-GyZ"/>
                                         </connections>
                                     </tableViewCell>
