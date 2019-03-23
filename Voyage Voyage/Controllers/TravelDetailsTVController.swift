@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class TravelDetailsTVController: NSObject, UITableViewDataSource {
     
@@ -29,11 +30,11 @@ class TravelDetailsTVController: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = MemberAmoutTVCell()
+         guard let cell = tableView.dequeueReusableCell(withIdentifier: "memberAmountCell", for: indexPath) as? MemberAmoutTVCell else{fatalError("The dequeued cell is not an instance of MemberAmountTVCell.")}
         let person = participantList![indexPath.row]
-        cell.memberName.text = person.fullname
+        cell.name.text = person.fullname
         let totalAmount = ParticipantsDAO.totalAmount(forParticipant: person)
-        cell.memberAmount.text = String()
+        cell.amount.text = String(totalAmount)
         if totalAmount >= 0 {
             cell.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         }else{

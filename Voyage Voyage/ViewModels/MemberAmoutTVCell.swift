@@ -10,18 +10,7 @@ import UIKit
 
 class MemberAmoutTVCell: UITableViewCell {
 
-    @IBOutlet weak var memberName: UILabel!
-    @IBOutlet weak var memberAmount: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var amount: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

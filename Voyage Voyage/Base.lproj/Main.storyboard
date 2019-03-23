@@ -92,36 +92,32 @@
                                 <rect key="frame" x="0.0" y="116" width="375" height="506"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memberAmountCell" rowHeight="90" id="aUe-kf-4JP" customClass="MemberAmoutTVCell" customModule="Voyage_Voyage" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="memberAmountCell" textLabel="pZu-CZ-lFP" detailTextLabel="fPd-Mt-O2p" rowHeight="90" style="IBUITableViewCellStyleSubtitle" id="aUe-kf-4JP" customClass="MemberAmoutTVCell" customModule="Voyage_Voyage" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aUe-kf-4JP" id="61z-4Z-0ft">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="328" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsA-KB-lgE">
-                                                    <rect key="frame" x="132" y="16" width="111" height="21"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pZu-CZ-lFP">
+                                                    <rect key="frame" x="15" y="25" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Montant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXr-cg-Bhr">
-                                                    <rect key="frame" x="151" y="57" width="73" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fPd-Mt-O2p">
+                                                    <rect key="frame" x="15" y="48.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="iXr-cg-Bhr" firstAttribute="top" secondItem="FsA-KB-lgE" secondAttribute="bottom" constant="20" id="5Ch-YR-uaK"/>
-                                                <constraint firstItem="FsA-KB-lgE" firstAttribute="top" secondItem="61z-4Z-0ft" secondAttribute="topMargin" constant="5" id="LEd-rc-XZ0"/>
-                                                <constraint firstItem="FsA-KB-lgE" firstAttribute="centerX" secondItem="61z-4Z-0ft" secondAttribute="centerX" id="cL0-0S-MA4"/>
-                                                <constraint firstItem="iXr-cg-Bhr" firstAttribute="centerX" secondItem="61z-4Z-0ft" secondAttribute="centerX" id="tPz-Hf-bra"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="memberAmount" destination="iXr-cg-Bhr" id="7vU-nJ-lAV"/>
-                                            <outlet property="memberName" destination="FsA-KB-lgE" id="18G-oT-p3n"/>
+                                            <outlet property="amount" destination="fPd-Mt-O2p" id="h7p-pT-P2W"/>
+                                            <outlet property="name" destination="pZu-CZ-lFP" id="dni-ux-GXR"/>
                                             <segue destination="QXF-y9-NJ0" kind="show" identifier="showMemberExpenses" id="lHz-EG-GyZ"/>
                                         </connections>
                                     </tableViewCell>
