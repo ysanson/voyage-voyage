@@ -16,13 +16,15 @@ class AddMemberViewController: UIViewController, UINavigationControllerDelegate,
     @IBOutlet weak var firstnameField: UITextField!
     @IBOutlet weak var travelEntryDate: UIDatePicker!
     
-    @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         updateSaveButtonState()
+        lastnameField.delegate = self
+        self.firstnameField.delegate = self
     }
     
     // MARK: - Navigation

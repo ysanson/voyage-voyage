@@ -24,6 +24,7 @@ class AddTravelViewController: UIViewController, UINavigationControllerDelegate,
         imagePicker.delegate = self
         // Do any additional setup after loading the view.
         updateSaveButtonState()
+        self.travelName.delegate = self
     }
     
     @IBAction func pickImage(_ sender: Any) {
@@ -61,6 +62,9 @@ class AddTravelViewController: UIViewController, UINavigationControllerDelegate,
             do{
                 try CoreDataManager.context.save()
             }catch{fatalError()}
+            if let destination = segue.destination as? AddMemberViewController{
+                destination.travel = self.travel
+            }
         }
         
     }

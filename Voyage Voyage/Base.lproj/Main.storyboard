@@ -755,11 +755,7 @@
                         <viewLayoutGuide key="safeArea" id="6XJ-Ng-p2f"/>
                     </view>
                     <navigationItem key="navigationItem" title="Travel member" id="2HA-H5-4uL">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="LCi-Er-qH8">
-                            <connections>
-                                <segue destination="2Db-Hl-L68" kind="presentation" identifier="showAddMemberFromMembers" id="io7-v0-5yE"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="LCi-Er-qH8"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gy4-hm-b0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -776,89 +772,101 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastname:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PS5-pL-LRL">
-                                <rect key="frame" x="16" y="99" width="80" height="21"/>
+                                <rect key="frame" x="16" y="70" width="80" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Qz9-RD-tBQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firstname:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzh-V6-n7u">
-                                <rect key="frame" x="16" y="170" width="81" height="21"/>
+                                <rect key="frame" x="16" y="126" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travel entry date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjh-eq-w73">
-                                <rect key="frame" x="16" y="241" width="133" height="21"/>
+                                <rect key="frame" x="16" y="197" width="133" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lastname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lAw-az-Gqs">
-                                <rect key="frame" x="151" y="99" width="150" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="Hi3-aE-e5b"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Firstmane" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cmF-VN-eR9">
-                                <rect key="frame" x="152" y="169" width="150" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="dx4-il-oxz"/>
-                                </constraints>
+                                <rect key="frame" x="151" y="125" width="150" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="to0-GZ-Yus">
-                                <rect key="frame" x="27.5" y="292" width="320" height="216"/>
+                                <rect key="frame" x="27.5" y="248" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="574963820.63435197">
                                     <!--2019-03-22 16:10:20 +0000-->
                                 </date>
                             </datePicker>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUQ-2V-09E">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="Add a member" id="Mg9-mO-Pr3">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="F4z-8x-nbM">
+                                            <connections>
+                                                <segue destination="1lz-jB-FOd" kind="unwind" identifier="cancelAddMember" unwindAction="unwindToTravelListWithSender:" id="qUt-Dm-GYI"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="9U6-BK-pJH">
+                                            <connections>
+                                                <segue destination="1lz-jB-FOd" kind="unwind" identifier="doneAddMember" unwindAction="unwindToTravelListWithSender:" id="DCh-vO-TDv"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lastname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lAw-az-Gqs">
+                                <rect key="frame" x="152" y="70" width="150" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vzh-V6-n7u" firstAttribute="leading" secondItem="k4W-PO-w06" secondAttribute="leading" constant="16" id="4hU-hE-zCJ"/>
-                            <constraint firstItem="lAw-az-Gqs" firstAttribute="leading" secondItem="PS5-pL-LRL" secondAttribute="trailing" constant="55" id="5AG-R0-pZO"/>
+                            <constraint firstItem="k4W-PO-w06" firstAttribute="trailing" secondItem="cmF-VN-eR9" secondAttribute="trailing" constant="74" id="0hV-FH-8Ai"/>
+                            <constraint firstItem="vzh-V6-n7u" firstAttribute="leading" secondItem="PS5-pL-LRL" secondAttribute="leading" id="4Bb-Rw-8GY"/>
                             <constraint firstItem="to0-GZ-Yus" firstAttribute="centerX" secondItem="1bc-5g-YuU" secondAttribute="centerX" id="Jnu-4o-y1Z"/>
-                            <constraint firstItem="cmF-VN-eR9" firstAttribute="leading" secondItem="vzh-V6-n7u" secondAttribute="trailing" constant="55" id="Jzo-QR-o87"/>
+                            <constraint firstItem="vzh-V6-n7u" firstAttribute="top" secondItem="PS5-pL-LRL" secondAttribute="bottom" constant="35" id="LUV-NK-5gx"/>
+                            <constraint firstItem="hjh-eq-w73" firstAttribute="top" secondItem="vzh-V6-n7u" secondAttribute="bottom" constant="50" id="N2r-K6-At6"/>
                             <constraint firstItem="hjh-eq-w73" firstAttribute="leading" secondItem="k4W-PO-w06" secondAttribute="leading" constant="16" id="NHL-Nq-K9U"/>
-                            <constraint firstItem="PS5-pL-LRL" firstAttribute="leading" secondItem="k4W-PO-w06" secondAttribute="leading" constant="16" id="QIa-5I-wMY"/>
-                            <constraint firstItem="cmF-VN-eR9" firstAttribute="top" secondItem="lAw-az-Gqs" secondAttribute="bottom" constant="40" id="dnc-Vv-Hci"/>
-                            <constraint firstItem="hjh-eq-w73" firstAttribute="top" secondItem="vzh-V6-n7u" secondAttribute="bottom" constant="50" id="eke-fl-Dck"/>
-                            <constraint firstItem="PS5-pL-LRL" firstAttribute="top" secondItem="k4W-PO-w06" secondAttribute="top" constant="35" id="huf-IC-Sx4"/>
+                            <constraint firstItem="cmF-VN-eR9" firstAttribute="leading" secondItem="vzh-V6-n7u" secondAttribute="trailing" constant="55" id="PLi-SS-Xza"/>
+                            <constraint firstItem="k4W-PO-w06" firstAttribute="trailing" secondItem="lAw-az-Gqs" secondAttribute="trailing" constant="73" id="RCf-ZL-oNx"/>
+                            <constraint firstItem="PS5-pL-LRL" firstAttribute="top" secondItem="IUQ-2V-09E" secondAttribute="bottom" constant="6" id="UAx-eI-oDK"/>
+                            <constraint firstItem="lAw-az-Gqs" firstAttribute="leading" secondItem="PS5-pL-LRL" secondAttribute="trailing" constant="56" id="YyT-s7-7pe"/>
+                            <constraint firstItem="lAw-az-Gqs" firstAttribute="top" secondItem="PS5-pL-LRL" secondAttribute="top" id="cUs-Jz-SzA"/>
                             <constraint firstItem="to0-GZ-Yus" firstAttribute="top" secondItem="hjh-eq-w73" secondAttribute="bottom" constant="30" id="iUg-6n-v6f"/>
-                            <constraint firstItem="vzh-V6-n7u" firstAttribute="top" secondItem="PS5-pL-LRL" secondAttribute="bottom" constant="50" id="jqx-Aw-fPs"/>
-                            <constraint firstItem="lAw-az-Gqs" firstAttribute="top" secondItem="k4W-PO-w06" secondAttribute="top" constant="35" id="xhk-CS-HUl"/>
+                            <constraint firstItem="IUQ-2V-09E" firstAttribute="centerX" secondItem="to0-GZ-Yus" secondAttribute="centerX" id="pd4-vz-jAg"/>
+                            <constraint firstItem="vzh-V6-n7u" firstAttribute="leading" secondItem="hjh-eq-w73" secondAttribute="leading" id="qj7-Cf-Lue"/>
+                            <constraint firstItem="cmF-VN-eR9" firstAttribute="top" secondItem="lAw-az-Gqs" secondAttribute="bottom" constant="25" id="qzs-gv-mrW"/>
+                            <constraint firstItem="PS5-pL-LRL" firstAttribute="top" secondItem="1bc-5g-YuU" secondAttribute="top" constant="70" id="rKJ-6W-fr5"/>
+                            <constraint firstItem="IUQ-2V-09E" firstAttribute="leading" secondItem="1bc-5g-YuU" secondAttribute="leading" id="x04-iX-tIo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k4W-PO-w06"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add a new member" id="pip-2i-19b">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="9oR-fM-S30">
-                            <connections>
-                                <segue destination="1lz-jB-FOd" kind="unwind" identifier="cancelAddMember" unwindAction="unwindToTravelListWithSender:" id="tPe-v2-zXx"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="hgp-l9-4as">
-                            <connections>
-                                <segue destination="1lz-jB-FOd" kind="unwind" identifier="doneAddMember" unwindAction="unwindToTravelListWithSender:" id="NGg-dK-4Oa"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="9oR-fM-S30"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="hgp-l9-4as"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="cancelButton" destination="9oR-fM-S30" id="Dt8-gG-6TU"/>
+                        <outlet property="cancelButton" destination="F4z-8x-nbM" id="3sn-Da-T0q"/>
                         <outlet property="firstnameField" destination="cmF-VN-eR9" id="aVd-6x-Vrd"/>
                         <outlet property="lastnameField" destination="lAw-az-Gqs" id="YR3-rp-vaX"/>
-                        <outlet property="saveButton" destination="hgp-l9-4as" id="VM1-nT-lb2"/>
+                        <outlet property="saveButton" destination="9U6-BK-pJH" id="wVv-L8-49g"/>
                         <outlet property="travelEntryDate" destination="to0-GZ-Yus" id="p77-gg-CbT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="isA-U4-XbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="1lz-jB-FOd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5361" y="-637"/>
+            <point key="canvasLocation" x="4196" y="-656"/>
         </scene>
         <!--Add a new travel plan-->
         <scene sceneID="LuH-8c-bA4">
@@ -924,7 +932,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="ibY-gI-pxg">
                             <connections>
-                                <segue destination="3hz-Dv-31j" kind="unwind" identifier="doneAddMember" unwindAction="unwindToAddMemberWithSender:" id="F4N-NW-wB6"/>
+                                <segue destination="6Fe-6v-qzy" kind="presentation" identifier="doneAddTravel" id="5gR-sh-iox"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -978,24 +986,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GOW-TN-LWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1204" y="-417.8410794602699"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="q5F-zf-mrB">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Db-Hl-L68" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wiw-Wd-M2d">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="6Fe-6v-qzy" kind="relationship" relationship="rootViewController" id="u2i-FW-N1H"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XeI-zd-MGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4015" y="-637"/>
         </scene>
         <!--Add expense-->
         <scene sceneID="OcQ-98-PbR">
@@ -1132,10 +1122,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="expendsIcon" width="25" height="25"/>
-        <image name="homeIcon" width="25" height="25"/>
-        <image name="memberIcon" width="25" height="25"/>
-        <image name="transferIcon" width="25" height="25"/>
+        <image name="expendsIcon" width="37.5" height="37.5"/>
+        <image name="homeIcon" width="37.5" height="37.5"/>
+        <image name="memberIcon" width="37.5" height="37.5"/>
+        <image name="transferIcon" width="37.5" height="37.5"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8SO-nJ-ErG"/>
