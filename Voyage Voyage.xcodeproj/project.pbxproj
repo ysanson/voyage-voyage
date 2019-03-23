@@ -24,7 +24,6 @@
 		3C8B04002240DD4B00AB9E82 /* TravelVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B03FF2240DD4B00AB9E82 /* TravelVM.swift */; };
 		3C93DA4222390E07001F50C8 /* TravelTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C93DA4122390E07001F50C8 /* TravelTVCell.swift */; };
 		6110F92E2240105D0079D1DF /* Travel-CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6110F92D2240105D0079D1DF /* Travel-CoreData.swift */; };
-		6110F9302240130A0079D1DF /* TravelSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6110F92F2240130A0079D1DF /* TravelSet.swift */; };
 		F0E615232245220300624F4F /* TravelDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E615222245220300624F4F /* TravelDetailsViewController.swift */; };
 		F0E615252245308900624F4F /* TravelMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E615242245308900624F4F /* TravelMembersViewController.swift */; };
 		F0E61527224530EF00624F4F /* TravelDetailsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E61526224530EF00624F4F /* TravelDetailsTVController.swift */; };
@@ -91,7 +90,6 @@
 		3C8B03FF2240DD4B00AB9E82 /* TravelVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelVM.swift; sourceTree = "<group>"; };
 		3C93DA4122390E07001F50C8 /* TravelTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTVCell.swift; sourceTree = "<group>"; };
 		6110F92D2240105D0079D1DF /* Travel-CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Travel-CoreData.swift"; path = "Voyage Voyage/Travel-CoreData.swift"; sourceTree = SOURCE_ROOT; };
-		6110F92F2240130A0079D1DF /* TravelSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TravelSet.swift; path = "Voyage Voyage/TravelSet.swift"; sourceTree = SOURCE_ROOT; };
 		F0E615222245220300624F4F /* TravelDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetailsViewController.swift; sourceTree = "<group>"; };
 		F0E615242245308900624F4F /* TravelMembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelMembersViewController.swift; sourceTree = "<group>"; };
 		F0E61526224530EF00624F4F /* TravelDetailsTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetailsTVController.swift; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				6110F92D2240105D0079D1DF /* Travel-CoreData.swift */,
-				6110F92F2240130A0079D1DF /* TravelSet.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -408,7 +405,6 @@
 				F0E615512245519600624F4F /* ReceiverTVCell.swift in Sources */,
 				F0E6152D224534EE00624F4F /* TravelMemberTVCell.swift in Sources */,
 				3C83312322383431009C8B51 /* Voyage_Voyage.xcdatamodeld in Sources */,
-				6110F9302240130A0079D1DF /* TravelSet.swift in Sources */,
 				F0E615252245308900624F4F /* TravelMembersViewController.swift in Sources */,
 				F0E6153D2245410500624F4F /* AddMemberViewController.swift in Sources */,
 				F0E6153F2245441C00624F4F /* MemberExpensesViewController.swift in Sources */,

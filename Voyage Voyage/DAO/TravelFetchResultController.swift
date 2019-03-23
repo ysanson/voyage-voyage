@@ -17,7 +17,7 @@ class TravelFetchResultController: NSObject, NSFetchedResultsControllerDelegate{
         // prepare a request
         let request : NSFetchRequest<Travel> = Travel.fetchRequest()
         request.sortDescriptors =
-            [NSSortDescriptor(key:#keyPath(Travel.travelName),ascending:true)]
+            [NSSortDescriptor(key:#keyPath(Travel.creationDate),ascending:false)]
         let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext:
             CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
         fetchResultController.delegate = self

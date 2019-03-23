@@ -37,6 +37,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Ve-PI-LoN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -1122,8 +1123,8 @@
     </scenes>
     <resources>
         <image name="expendsIcon" width="16" height="16"/>
-        <image name="homeIcon" width="37.5" height="37.5"/>
-        <image name="memberIcon" width="37.5" height="37.5"/>
+        <image name="homeIcon" width="25" height="25"/>
+        <image name="memberIcon" width="25" height="25"/>
         <image name="transferIcon" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -10,8 +10,6 @@ import UIKit
 
 class TravelTVController: NSObject, UITableViewDataSource, TravelVMDelegate {
     
-    
-    
     var tableView: UITableView
     var travelVM : TravelVM?
     var fetchedResultController: TravelFetchResultController
@@ -37,8 +35,6 @@ class TravelTVController: NSObject, UITableViewDataSource, TravelVMDelegate {
         return cell
         
     }
-    
-   
     
     //MARK- TravelVMDelegate
     
