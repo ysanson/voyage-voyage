@@ -18,7 +18,6 @@ class AddTravelViewController: UIViewController, UINavigationControllerDelegate,
     @IBOutlet weak var doneButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var choosePictureButton: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,23 +8,65 @@
 
 import UIKit
 
-class AddMemberViewController: UIViewController {
+class AddMemberViewController: UIViewController, UINavigationControllerDelegate, UITextFieldDelegate {
 
+    var travel: Travel?
+    var participant: Participant?
+    @IBOutlet weak var lastnameField: UITextField!
+    @IBOutlet weak var firstnameField: UITextField!
+    @IBOutlet weak var travelEntryDate: UIDatePicker!
+    
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        updateSaveButtonState()
     }
     
-
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "doneAddMember"{
+            participant = Participant(firstname: firstnameField.text!, lastname: lastnameField.text!, entryDate: travelEntryDate.date, travel: travel!)
+            do{
+                try CoreDataManager.context.save()
+            }catch{fatalError()}
+        }
     }
-    */
+    
+    @IBAction func unwindToAddMember(sender: UIStoryboardSegue){
+        if let sourceViewController = sender.source as? AddTravelViewController{
+            travel = sourceViewController.travel
+        }
+    }
+    
+    //MARK: TextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text{
+            if text != ""{
+                textField.resignFirstResponder()
+                return true
+            }
+        }
+        return false
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        saveButton.isEnabled = false
+    }
+    
+    private func updateSaveButtonState() {
+        // Disable the Save button if the text field is empty.
+        let firstname = firstnameField.text ?? ""
+        let lastname = self.lastnameField.text ?? ""
+        saveButton.isEnabled = !firstname.isEmpty && !lastname.isEmpty
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        updateSaveButtonState()
+        navigationItem.title = textField.text
+    }
 
 }

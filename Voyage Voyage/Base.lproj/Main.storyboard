@@ -836,11 +836,27 @@
                         <viewLayoutGuide key="safeArea" id="k4W-PO-w06"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add a new member" id="pip-2i-19b">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="9oR-fM-S30"/>
-                        <barButtonItem key="rightBarButtonItem" title="Validate" style="done" id="hgp-l9-4as"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="9oR-fM-S30">
+                            <connections>
+                                <segue destination="1lz-jB-FOd" kind="unwind" identifier="cancelAddMember" unwindAction="unwindToTravelListWithSender:" id="tPe-v2-zXx"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="hgp-l9-4as">
+                            <connections>
+                                <segue destination="1lz-jB-FOd" kind="unwind" identifier="doneAddMember" unwindAction="unwindToTravelListWithSender:" id="NGg-dK-4Oa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cancelButton" destination="9oR-fM-S30" id="Dt8-gG-6TU"/>
+                        <outlet property="firstnameField" destination="cmF-VN-eR9" id="aVd-6x-Vrd"/>
+                        <outlet property="lastnameField" destination="lAw-az-Gqs" id="YR3-rp-vaX"/>
+                        <outlet property="saveButton" destination="hgp-l9-4as" id="VM1-nT-lb2"/>
+                        <outlet property="travelEntryDate" destination="to0-GZ-Yus" id="p77-gg-CbT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="isA-U4-XbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1lz-jB-FOd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5361" y="-637"/>
         </scene>
@@ -883,14 +899,6 @@
                                     <action selector="pickImage:" destination="ne9-nS-5uV" eventType="touchUpInside" id="jm0-8P-E23"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zW-od-lza">
-                                <rect key="frame" x="171.5" y="318.5" width="32" height="30"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                <state key="normal" title="Next"/>
-                                <connections>
-                                    <segue destination="2Db-Hl-L68" kind="presentation" identifier="showAddMemberFromAddTravel" id="Iyp-6t-Nvx"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -899,14 +907,12 @@
                             <constraint firstItem="OGW-sr-WGm" firstAttribute="leading" secondItem="wMX-H4-FNJ" secondAttribute="trailing" constant="34" id="DWT-EC-57R"/>
                             <constraint firstItem="1nL-tG-xeS" firstAttribute="leading" secondItem="OTv-4p-kzX" secondAttribute="leading" constant="16" id="E3d-Ou-veT"/>
                             <constraint firstItem="wMX-H4-FNJ" firstAttribute="top" secondItem="Duw-SK-svQ" secondAttribute="bottom" constant="50" id="EUg-jl-waC"/>
-                            <constraint firstItem="3zW-od-lza" firstAttribute="centerX" secondItem="EkS-ms-GZs" secondAttribute="centerX" id="Mfn-O7-fcb"/>
                             <constraint firstItem="wMX-H4-FNJ" firstAttribute="centerY" secondItem="OGW-sr-WGm" secondAttribute="centerY" id="TC3-P5-QuD"/>
                             <constraint firstItem="OTv-4p-kzX" firstAttribute="trailing" secondItem="OGW-sr-WGm" secondAttribute="trailing" constant="73" id="Tbd-I0-jo4"/>
                             <constraint firstItem="Duw-SK-svQ" firstAttribute="leading" secondItem="1nL-tG-xeS" secondAttribute="trailing" constant="44" id="XNo-ef-Hxz"/>
                             <constraint firstItem="1nL-tG-xeS" firstAttribute="top" secondItem="OTv-4p-kzX" secondAttribute="top" constant="50" id="Xr1-rT-XHx"/>
                             <constraint firstItem="wMX-H4-FNJ" firstAttribute="leading" secondItem="1nL-tG-xeS" secondAttribute="leading" id="jPa-RR-Xtj"/>
                             <constraint firstItem="OGW-sr-WGm" firstAttribute="top" secondItem="Duw-SK-svQ" secondAttribute="bottom" constant="45" id="nAF-83-JhH"/>
-                            <constraint firstItem="3zW-od-lza" firstAttribute="centerY" secondItem="EkS-ms-GZs" secondAttribute="centerY" id="uoa-Sf-f5E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OTv-4p-kzX"/>
                     </view>
@@ -916,9 +922,9 @@
                                 <segue destination="3hz-Dv-31j" kind="unwind" identifier="cancelAddTravel" unwindAction="unwindToTravelListWithSender:" id="x07-FL-0ee"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="ibY-gI-pxg">
+                        <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="ibY-gI-pxg">
                             <connections>
-                                <segue destination="3hz-Dv-31j" kind="unwind" identifier="doneAddTravel" unwindAction="unwindToTravelListWithSender:" id="owm-I9-jmI"/>
+                                <segue destination="3hz-Dv-31j" kind="unwind" identifier="doneAddMember" unwindAction="unwindToAddMemberWithSender:" id="F4N-NW-wB6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -926,7 +932,6 @@
                         <outlet property="cancelButton" destination="eS8-Ow-cra" id="Cry-2t-4d7"/>
                         <outlet property="choosePictureButton" destination="OGW-sr-WGm" id="SNf-Y9-k9N"/>
                         <outlet property="doneButton" destination="ibY-gI-pxg" id="ugh-n8-Q0e"/>
-                        <outlet property="nextButton" destination="3zW-od-lza" id="3Y6-Vi-QJ4"/>
                         <outlet property="travelName" destination="Duw-SK-svQ" id="q4g-aR-sQb"/>
                     </connections>
                 </viewController>
@@ -1134,7 +1139,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8SO-nJ-ErG"/>
-        <segue reference="Iyp-6t-Nvx"/>
         <segue reference="VRU-8d-9pR"/>
     </inferredMetricsTieBreakers>
 </document>
