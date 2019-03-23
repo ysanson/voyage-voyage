@@ -36,7 +36,7 @@ class TravelDetailsTVController: NSObject, UITableViewDataSource {
         let totalAmount = ParticipantsDAO.totalAmount(forParticipant: person)
         cell.amount.text = String(totalAmount)
         if totalAmount >= 0 {
-            cell.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+            cell.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 0.5)
         }else{
             cell.backgroundColor = #colorLiteral(red: 1, green: 0.05588275939, blue: 0.1452993751, alpha: 0.6090448944)
         }
