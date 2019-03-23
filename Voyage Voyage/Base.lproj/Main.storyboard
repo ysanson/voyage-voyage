@@ -182,9 +182,12 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableViewMember" destination="Yvt-je-mXb" id="H88-la-aqY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Enj-yP-y0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="4nT-Di-aQu" customClass="TravelDetailsTVController" customModule="Voyage_Voyage" customModuleProvider="target"/>
+                <customObject id="4nT-Di-aQu"/>
             </objects>
             <point key="canvasLocation" x="1204" y="313"/>
         </scene>
@@ -1122,10 +1125,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="expendsIcon" width="16" height="16"/>
+        <image name="expendsIcon" width="25" height="25"/>
         <image name="homeIcon" width="25" height="25"/>
         <image name="memberIcon" width="25" height="25"/>
-        <image name="transferIcon" width="16" height="16"/>
+        <image name="transferIcon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8SO-nJ-ErG"/>

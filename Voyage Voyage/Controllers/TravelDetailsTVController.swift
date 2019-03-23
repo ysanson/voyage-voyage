@@ -9,6 +9,13 @@
 import UIKit
 
 class TravelDetailsTVController: NSObject, UITableViewDataSource {
+    
+    var tableView: UITableView
+    
+    init(tableView: UITableView){
+        self.tableView = tableView
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }

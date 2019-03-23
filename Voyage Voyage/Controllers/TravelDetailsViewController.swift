@@ -10,10 +10,14 @@ import UIKit
 
 class TravelDetailsViewController: UIViewController {
 
+    @IBOutlet weak var tableViewMember: UITableView!
+    
+    var travelDetailsC: TravelDetailsTVController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        travelDetailsC = TravelDetailsTVController(tableView: tableViewMember)
         
-        // Do any additional setup after loading the view.
     }
     /*
     // MARK: - Navigation
