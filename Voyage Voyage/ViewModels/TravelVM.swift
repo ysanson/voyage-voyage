@@ -34,7 +34,7 @@ protocol TravelVMDelegate {
 //----------------------------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------------------------
 // MARK: -
-class TravelVM{//} : TravelFetchResultController{
+class TravelVM{
     // MARK: -
     var delegate : TravelVMDelegate? = nil
     var travelsFetched : NSFetchedResultsController<Travel>
