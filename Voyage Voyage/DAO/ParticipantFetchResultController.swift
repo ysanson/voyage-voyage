@@ -44,6 +44,7 @@ class ParticipantFetchResultController: NSObject, NSFetchedResultsControllerDele
     }
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at
         indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        self.tableView.beginUpdates()
         switch type {
         case .insert:
             if let newIndexPath = newIndexPath{

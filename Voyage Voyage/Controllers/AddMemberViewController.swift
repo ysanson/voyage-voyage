@@ -35,11 +35,16 @@ class AddMemberViewController: UIViewController, UINavigationControllerDelegate,
             do{
                 try CoreDataManager.context.save()
             }catch{fatalError()}
+            if let dest = segue.destination as? TravelMembersViewController{
+                dest.travel = self.travel
+            }
         }
     }
     
     @IBAction func unwindToAddMember(sender: UIStoryboardSegue){
         if let sourceViewController = sender.source as? AddTravelViewController{
+            travel = sourceViewController.travel
+        } else if let sourceViewController = sender.source as? TravelMembersViewController{
             travel = sourceViewController.travel
         }
     }

@@ -714,7 +714,7 @@
                                     <barButtonItem id="mEa-CD-FAU"/>
                                 </items>
                             </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vrt-0c-Mnb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vrt-0c-Mnb">
                                 <rect key="frame" x="0.0" y="116" width="375" height="507"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -745,6 +745,10 @@
                                                 <constraint firstItem="8Eh-i7-c1g" firstAttribute="top" secondItem="tGu-Pf-q09" secondAttribute="topMargin" constant="5" id="oQL-oe-D3b"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="memberDates" destination="tMh-3t-bMW" id="glx-ZQ-jc9"/>
+                                            <outlet property="memberName" destination="8Eh-i7-c1g" id="h5a-IO-w9t"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -772,9 +776,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="vrt-0c-Mnb" id="i3R-0O-07g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gy4-hm-b0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="hRJ-S0-Sy1" customClass="MemberListTVController" customModule="Voyage_Voyage" customModuleProvider="target"/>
+                <customObject id="hRJ-S0-Sy1"/>
             </objects>
             <point key="canvasLocation" x="3103" y="-3"/>
         </scene>
@@ -831,7 +838,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="9U6-BK-pJH">
                                             <connections>
-                                                <segue destination="1lz-jB-FOd" kind="unwind" identifier="doneAddMember" unwindAction="unwindToTravelListWithSender:" id="DCh-vO-TDv"/>
+                                                <segue destination="1lz-jB-FOd" kind="unwind" identifier="doneAddMember" unwindAction="unwindToMemberListWithSender:" id="ppT-Vc-mZb"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>

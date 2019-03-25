@@ -24,7 +24,6 @@ class TravelTVController: NSObject, UITableViewDataSource, UITableViewDelegate, 
         self.tableView.dataSource = self
         self.travelVM?.delegate = self
         self.tableView.delegate = self
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,7 +47,7 @@ class TravelTVController: NSObject, UITableViewDataSource, UITableViewDelegate, 
         editAction.backgroundColor = #colorLiteral(red: 0.3724241709, green: 0.06135788213, blue: 0.9991285863, alpha: 1)
         
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete"){ (action, view, handler) in
-            self.deletePrompt()
+            self.deletePrompt(travel: (self.travelVM?.get(travelAt: indexPath.row))!)
         }
         
         let config = UISwipeActionsConfiguration(actions: [deleteAction, editAction])
@@ -73,12 +72,13 @@ class TravelTVController: NSObject, UITableViewDataSource, UITableViewDelegate, 
         self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
     }
     
-    func deletePrompt(){
+    func deletePrompt(travel: Travel){
         let dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to delete this?", preferredStyle: .alert)
         
         // Create OK button with action handler
         let ok = UIAlertAction(title: "OK", style: .destructive, handler: { (action) -> Void in
-            //deleteRecord()
+            TravelDAO.delete(travel: travel)
+            self.tableView.reloadData()
         })
         
         // Create Cancel button with action handlder

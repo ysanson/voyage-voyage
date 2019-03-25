@@ -9,12 +9,38 @@
 import UIKit
 
 class MemberListTVController: NSObject, UITableViewDataSource {
+    
+    var tableView:UITableView
+    var participantList: [Participant]?
+    var travel: Travel
+    var fetchResultsController: ParticipantFetchResultController
+    
+    init(tableview: UITableView, travel: Travel){
+        self.tableView = tableview
+        self.travel = travel
+        fetchResultsController = ParticipantFetchResultController(view: tableView)
+        participantList = ParticipantsDAO.search(forTravel: travel)
+        super.init()
+        self.tableView.dataSource = self 
+    }
+    
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return participantList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "travelMemberCell", for: indexPath) as? TravelMemberTVCell else{fatalError("The dequeued cell is not an instance of TravelMemberTVCell.")}
+        cell.memberName.text = participantList?[indexPath.row].fullname
+        let dates = participantList?[indexPath.row].dates
+        cell.memberDates.text = dates
+        cell.memberName.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        cell.memberDates.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        if (dates?.split(separator: "/").count ?? 0) > 2{
+            cell.backgroundColor = #colorLiteral(red: 0.5440851166, green: 0.5440851166, blue: 0.5440851166, alpha: 0.425368618)
+        }
         return cell
     }
     

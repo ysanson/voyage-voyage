@@ -13,7 +13,7 @@ extension Participant{
     public var fullname: String {return (self.firstname ?? "") + " " + (self.lastname ?? "")}
     public var dates: String {
         let format = DateFormatter()
-        format.dateFormat = "jj-MM-yyyy"
+        format.dateFormat = "dd.MM.yyyy"
         let date1 = format.string(from: self.entrydate!)
         let date2: String
         if self.exitdate != nil{
