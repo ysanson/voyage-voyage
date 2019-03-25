@@ -13,14 +13,18 @@ class TravelTVController: NSObject, UITableViewDataSource, UITableViewDelegate, 
     var tableView: UITableView
     var travelVM : TravelVM?
     var fetchedResultController: TravelFetchResultController
+    var viewController: ViewController
     
-    init(tableView: UITableView){
+    init(tableView: UITableView, viewController: ViewController){
         self.tableView = tableView
+        self.viewController = viewController
         self.fetchedResultController = TravelFetchResultController(view: tableView)
         self.travelVM = TravelVM(data: self.fetchedResultController.travelsFetched)
         super.init()
         self.tableView.dataSource = self
         self.travelVM?.delegate = self
+        self.tableView.delegate = self
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,23 +41,18 @@ class TravelTVController: NSObject, UITableViewDataSource, UITableViewDelegate, 
     }
     
     //MARK- UITableViewDelegate
-    /*func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let updateAction = UITableViewRowAction(style: .normal, title: "Edit", handler: {(action: UITableViewRowAction, indexPath: IndexPath)-> Void in})
-        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete", handler: {(action: UITableViewRowAction, indexPath: IndexPath)-> Void in
-            self.deletePrompt()
-        })
-        return [updateAction, deleteAction]
-    }*/
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .insert{
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let editAction = UIContextualAction(style: .destructive, title: "Edit"){ (action, view, handler) in
             
         }
+        editAction.backgroundColor = #colorLiteral(red: 0.3724241709, green: 0.06135788213, blue: 0.9991285863, alpha: 1)
         
-        else if editingStyle == .delete{
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete"){ (action, view, handler) in
             self.deletePrompt()
         }
         
+        let config = UISwipeActionsConfiguration(actions: [deleteAction, editAction])
+        return config
     }
     
     //MARK- TravelVMDelegate
@@ -78,7 +77,7 @@ class TravelTVController: NSObject, UITableViewDataSource, UITableViewDelegate, 
         let dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to delete this?", preferredStyle: .alert)
         
         // Create OK button with action handler
-        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+        let ok = UIAlertAction(title: "OK", style: .destructive, handler: { (action) -> Void in
             //deleteRecord()
         })
         
@@ -92,6 +91,6 @@ class TravelTVController: NSObject, UITableViewDataSource, UITableViewDelegate, 
         dialogMessage.addAction(cancel)
         
         // Present dialog message to user
-        //present(dialogMessage, animated: true, completion: nil)
+        viewController.present(dialogMessage, animated: true, completion: nil)
     }
 }

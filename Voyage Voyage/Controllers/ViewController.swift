@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.travelTVController = TravelTVController(tableView: travelTableView)
+        self.travelTVController = TravelTVController(tableView: travelTableView, viewController: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
