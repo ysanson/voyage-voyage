@@ -1118,14 +1118,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="expendsIcon" width="25" height="25"/>
-        <image name="homeIcon" width="25" height="25"/>
-        <image name="memberIcon" width="25" height="25"/>
-        <image name="transferIcon" width="25" height="25"/>
+        <image name="expendsIcon" width="37.5" height="37.5"/>
+        <image name="homeIcon" width="37.5" height="37.5"/>
+        <image name="memberIcon" width="37.5" height="37.5"/>
+        <image name="transferIcon" width="37.5" height="37.5"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tNk-r6-eKo"/>
-        <segue reference="GZG-xg-27a"/>
+        <segue reference="5gR-sh-iox"/>
         <segue reference="VRU-8d-9pR"/>
     </inferredMetricsTieBreakers>
 </document>
