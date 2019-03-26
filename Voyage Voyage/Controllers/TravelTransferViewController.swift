@@ -10,12 +10,18 @@ import UIKit
 
 class TravelTransferViewController: UIViewController {
 
+    @IBOutlet weak var navItem: UINavigationItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.navigationItem.title = self.navItem.title
+        self.tabBarController?.navigationItem.rightBarButtonItems = self.navItem.rightBarButtonItems
+    }
     /*
     // MARK: - Navigation
 

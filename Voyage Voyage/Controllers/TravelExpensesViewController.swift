@@ -9,10 +9,18 @@
 import UIKit
 
 class TravelExpensesViewController: UIViewController {
+    
+    @IBOutlet weak var navitem: UINavigationItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.navigationItem.title = self.navitem.title
+        self.tabBarController?.navigationItem.rightBarButtonItems = self.navitem.rightBarButtonItems
     }
    
     /*

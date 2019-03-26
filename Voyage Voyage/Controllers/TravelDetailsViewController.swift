@@ -11,13 +11,21 @@ import UIKit
 class TravelDetailsViewController: UIViewController {
 
     @IBOutlet weak var tableViewMember: UITableView!
+    @IBOutlet weak var navItem: UINavigationItem!
+    
+    var tbc: TravelDetailsTabBarController!
     
     var travelDetailsC: TravelDetailsTVController!
-    var travel: Travel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        travelDetailsC = TravelDetailsTVController(tableView: tableViewMember, travel: travel!)
+        tbc = self.tabBarController as? TravelDetailsTabBarController
+        travelDetailsC = TravelDetailsTVController(tableView: tableViewMember, travel: tbc.travel!)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.navigationItem.title = self.navItem.title
+        self.tabBarController?.navigationItem.rightBarButtonItems = navItem.rightBarButtonItems
     }
 
     // MARK: - Navigation
@@ -26,9 +34,7 @@ class TravelDetailsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if let destController = segue.destination as? TravelMembersViewController{
-            destController.travel = self.travel
-        }
+        
     }
  
 

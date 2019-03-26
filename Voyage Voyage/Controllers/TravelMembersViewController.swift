@@ -11,16 +11,17 @@ import UIKit
 class TravelMembersViewController: UIViewController {
 
     var travelMemberC: MemberListTVController!
-    var travel: Travel?
-    
+    var tbc: TravelDetailsTabBarController!
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tabItem: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        travelMemberC = MemberListTVController(tableview: tableView, travel: travel!)
+       tbc = self.tabBarController as? TravelDetailsTabBarController
+        travelMemberC = MemberListTVController(tableview: tableView, travel: tbc.travel!)
     }
     
     // MARK: - Navigation
@@ -30,8 +31,13 @@ class TravelMembersViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if let destController = segue.destination as? AddMemberViewController{
-            destController.travel = self.travel
+            destController.travel = self.tbc.travel
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.navigationItem.title = self.tabItem.title
+        self.tabBarController?.navigationItem.rightBarButtonItems = self.tabItem.rightBarButtonItems
     }
     
     @IBAction func unwindToMemberList(sender: UIStoryboardSegue){

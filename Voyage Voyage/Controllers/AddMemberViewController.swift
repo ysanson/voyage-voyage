@@ -36,7 +36,7 @@ class AddMemberViewController: UIViewController, UINavigationControllerDelegate,
                 try CoreDataManager.context.save()
             }catch{fatalError()}
             if let dest = segue.destination as? TravelMembersViewController{
-                dest.travel = self.travel
+                dest.tbc.travel = self.travel
             }
         }
     }
@@ -45,7 +45,7 @@ class AddMemberViewController: UIViewController, UINavigationControllerDelegate,
         if let sourceViewController = sender.source as? AddTravelViewController{
             travel = sourceViewController.travel
         } else if let sourceViewController = sender.source as? TravelMembersViewController{
-            travel = sourceViewController.travel
+            travel = sourceViewController.tbc.travel
         }
     }
     

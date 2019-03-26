@@ -1,30 +1,29 @@
 //
-//  AddTravelViewController.swift
+//  TravelPlanBaseViewController.swift
 //  Voyage Voyage
 //
-//  Created by Yvan Sanson on 20/03/2019.
+//  Created by Yvan Sanson on 26/03/2019.
 //  Copyright © 2019 Yvan Sanson. All rights reserved.
 //
 
 import UIKit
 
-class AddTravelViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
+class TravelPlanBaseViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
 
-    var travel: Travel?
+    @IBOutlet weak var travelName: UITextField!
+    @IBOutlet weak var choosePictureButton: UIButton!
+    
     var imagePicker = UIImagePickerController()
     var image: UIImage?
-    
-    @IBOutlet weak var travelName: UITextField!
-    @IBOutlet weak var doneButton: UIBarButtonItem!
-    @IBOutlet weak var cancelButton: UIBarButtonItem!
-    @IBOutlet weak var choosePictureButton: UIButton!
+    var addMode: AddTravelViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imagePicker.delegate = self
+
         // Do any additional setup after loading the view.
-        updateSaveButtonState()
         self.travelName.delegate = self
+        imagePicker.delegate = self
+        updateSaveButtonState()
     }
     
     @IBAction func pickImage(_ sender: Any) {
@@ -53,21 +52,16 @@ class AddTravelViewController: UIViewController, UINavigationControllerDelegate,
         }
     }
     
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "doneAddTravel"{
-            travel = Travel(travelName: travelName.text!, travelImage: image!, creationDate: Date.init())
-            do{
-                try CoreDataManager.context.save()
-            }catch{fatalError()}
-            if let destination = segue.destination as? AddMemberViewController{
-                destination.travel = self.travel
-            }
-        }
-        
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
+    */
+    
     
     //MARK: TextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -81,13 +75,13 @@ class AddTravelViewController: UIViewController, UINavigationControllerDelegate,
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        doneButton.isEnabled = false
+        //doneButton.isEnabled = false
     }
     
     private func updateSaveButtonState() {
         // Disable the Save button if the text field is empty.
         let nameText = travelName.text ?? ""
-        doneButton.isEnabled = !nameText.isEmpty && !(image == nil)
+        addMode!.doneButton.isEnabled = !nameText.isEmpty && !(image == nil)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
