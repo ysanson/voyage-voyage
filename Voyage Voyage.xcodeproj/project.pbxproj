@@ -239,26 +239,12 @@
 		3CCB00E42238FB100050878A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3CF2C394224A84EE0082B051 /* TravelDetails */,
+				3CF2C393224A84DC0082B051 /* BaseView */,
 				3CF2C38E224A7C330082B051 /* Members */,
 				3CF2C38B224A3CFC0082B051 /* TravelPlan */,
-				3C83311C22383431009C8B51 /* ViewController.swift */,
-				3C3F3E2E223FD416000C9A6E /* TravelTVController.swift */,
-				F0E615222245220300624F4F /* TravelDetailsViewController.swift */,
-				F0E615242245308900624F4F /* TravelMembersViewController.swift */,
-				F0E61526224530EF00624F4F /* TravelDetailsTVController.swift */,
-				F0E615282245314400624F4F /* MemberListTVController.swift */,
-				F0E615322245360100624F4F /* TransferTVController.swift */,
-				F0E615342245364A00624F4F /* TravelTransferViewController.swift */,
-				F0E61538224537ED00624F4F /* TravelExpensesViewController.swift */,
-				F0E6153A2245382700624F4F /* ExpensesTVController.swift */,
-				F0E6153E2245441C00624F4F /* MemberExpensesViewController.swift */,
-				F0E615402245448900624F4F /* MemberExpensesTVController.swift */,
 				F0E6154422454A5600624F4F /* AddExpenseViewController.swift */,
-				F0E6154622454A9400624F4F /* PayerTVController.swift */,
-				F0E6154A22454DE300624F4F /* ExpenseDetailsViewController.swift */,
 				F0E6154C224550EC00624F4F /* AddTransferViewController.swift */,
-				F0E6154E2245512900624F4F /* ReceiverTVController.swift */,
-				3CF2C385224A21E80082B051 /* TravelDetailsTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -298,6 +284,36 @@
 				3CF2C391224A7C550082B051 /* EditMemberViewController.swift */,
 			);
 			path = Members;
+			sourceTree = "<group>";
+		};
+		3CF2C393224A84DC0082B051 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				3C83311C22383431009C8B51 /* ViewController.swift */,
+				3C3F3E2E223FD416000C9A6E /* TravelTVController.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		3CF2C394224A84EE0082B051 /* TravelDetails */ = {
+			isa = PBXGroup;
+			children = (
+				F0E61526224530EF00624F4F /* TravelDetailsTVController.swift */,
+				3CF2C385224A21E80082B051 /* TravelDetailsTabBarController.swift */,
+				F0E615222245220300624F4F /* TravelDetailsViewController.swift */,
+				F0E615282245314400624F4F /* MemberListTVController.swift */,
+				F0E615242245308900624F4F /* TravelMembersViewController.swift */,
+				F0E615322245360100624F4F /* TransferTVController.swift */,
+				F0E615342245364A00624F4F /* TravelTransferViewController.swift */,
+				F0E61538224537ED00624F4F /* TravelExpensesViewController.swift */,
+				F0E6153A2245382700624F4F /* ExpensesTVController.swift */,
+				F0E6153E2245441C00624F4F /* MemberExpensesViewController.swift */,
+				F0E615402245448900624F4F /* MemberExpensesTVController.swift */,
+				F0E6154622454A9400624F4F /* PayerTVController.swift */,
+				F0E6154A22454DE300624F4F /* ExpenseDetailsViewController.swift */,
+				F0E6154E2245512900624F4F /* ReceiverTVController.swift */,
+			);
+			path = TravelDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

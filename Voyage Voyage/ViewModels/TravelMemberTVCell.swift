@@ -12,5 +12,5 @@ class TravelMemberTVCell: UITableViewCell {
     
     @IBOutlet weak var memberName: UILabel!
     @IBOutlet weak var memberDates: UILabel!
-    
+    var isActive: Bool?
 }

@@ -15,6 +15,10 @@ class MemberBaseViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var travelEntryDate: UIDatePicker!
     
     var addMemberController: AddMemberViewController?
+    var editMemberController: EditMemberViewController?
+    var fname: String?
+    var lName: String?
+    var entDate: Date?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +26,9 @@ class MemberBaseViewController: UIViewController, UINavigationControllerDelegate
         lastnameField.delegate = self
         self.firstnameField.delegate = self
         updateSaveButtonState()
+        self.lastnameField.text = lName
+        self.firstnameField.text = fname
+        self.travelEntryDate.date = entDate ?? Date.init()
     }
     
 
@@ -50,6 +57,9 @@ class MemberBaseViewController: UIViewController, UINavigationControllerDelegate
         if addMemberController != nil{
             addMemberController?.saveButton.isEnabled = false
         }
+        else if editMemberController != nil{
+            editMemberController?.saveButton.isEnabled = false
+        }
         
     }
     
@@ -59,6 +69,9 @@ class MemberBaseViewController: UIViewController, UINavigationControllerDelegate
         let lastname = self.lastnameField.text ?? ""
         if addMemberController != nil{
             addMemberController?.saveButton.isEnabled = !firstname.isEmpty && !lastname.isEmpty
+        }
+        else if editMemberController != nil{
+            editMemberController?.saveButton.isEnabled = !firstname.isEmpty && !lastname.isEmpty
         }
         
     }

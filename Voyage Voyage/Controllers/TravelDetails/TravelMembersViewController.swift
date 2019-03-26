@@ -21,7 +21,8 @@ class TravelMembersViewController: UIViewController {
         
         // Do any additional setup after loading the view.
        tbc = self.tabBarController as? TravelDetailsTabBarController
-        travelMemberC = MemberListTVController(tableview: tableView, travel: tbc.travel!)
+        travelMemberC = MemberListTVController(tableview: tableView, travel: tbc.travel!, vc: self)
+        self.tableView.reloadData()
     }
     
     // MARK: - Navigation
@@ -32,6 +33,13 @@ class TravelMembersViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if let destController = segue.destination as? AddMemberViewController{
             destController.travel = self.tbc.travel
+        }
+        else if let dest = segue.destination as? EditMemberViewController{
+            dest.travel = self.tbc.travel
+            if let cell = sender as? TravelMemberTVCell{
+                guard let indexPath = self.tableView.indexPath(for: cell) else{return}
+                dest.participant = self.travelMemberC.participantList?[indexPath.row]
+            }
         }
     }
     

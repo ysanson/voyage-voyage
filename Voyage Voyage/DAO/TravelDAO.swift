@@ -56,4 +56,9 @@ class TravelDAO{
         }
     }
     
+    static func addPeople(forTravel travel: Travel, participant: Participant){
+        travel.addToContient(participant)
+        save()
+    }
+    
 }

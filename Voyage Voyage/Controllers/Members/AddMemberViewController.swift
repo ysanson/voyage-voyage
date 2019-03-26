@@ -39,6 +39,9 @@ class AddMemberViewController: UIViewController{
             if let dest = segue.destination as? TravelMembersViewController{
                 dest.tbc.travel = self.travel
             }
+            else if let dest = segue.destination as? TravelDetailsTabBarController{
+                dest.travel = self.travel
+            }
         }
         else if segue.identifier == "addMemberBaseView"{
             let dest = segue.destination as? MemberBaseViewController

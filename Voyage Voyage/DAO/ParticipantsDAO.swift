@@ -16,8 +16,14 @@ class ParticipantsDAO{
     static func save(){
         CoreDataManager.save()
     }
-    static func delete(travel: Participant){
-        CoreDataManager.context.delete(travel)
+    static func delete(participant: Participant){
+        participant.exitdate = Date.init()
+    }
+    static func update(forParticipant participant: Participant, newFirstName fName: String, newLastName lName: String, newEntryDate entDate: Date){
+        participant.firstname = fName
+        participant.lastname = lName
+        participant.entrydate = entDate
+        save()
     }
     
     static func fetchAll() -> [Participant]?{

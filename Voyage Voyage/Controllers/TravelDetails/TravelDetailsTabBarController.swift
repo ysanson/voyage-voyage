@@ -24,4 +24,8 @@ class TravelDetailsTabBarController: UITabBarController{
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func unwindToTravelDetails(sender: UIStoryboardSegue){
+        
+    }
 }
