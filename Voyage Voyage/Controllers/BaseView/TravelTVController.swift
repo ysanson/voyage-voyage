@@ -78,6 +78,7 @@ class TravelTVController: NSObject, UITableViewDataSource, UITableViewDelegate, 
         // Create OK button with action handler
         let ok = UIAlertAction(title: "OK", style: .destructive, handler: { (action) -> Void in
             TravelDAO.delete(travel: travel)
+            self.tableView.reloadData()
         })
         
         // Create Cancel button with action handlder

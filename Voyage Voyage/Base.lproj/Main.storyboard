@@ -790,12 +790,12 @@
                                     <navigationItem title="Add a member" id="Mg9-mO-Pr3">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="F4z-8x-nbM">
                                             <connections>
-                                                <segue destination="1lz-jB-FOd" kind="unwind" identifier="cancelAddMember" unwindAction="unwindToTravelDetailsWithSender:" id="02g-dj-Cq7"/>
+                                                <segue destination="1lz-jB-FOd" kind="unwind" identifier="cancelAddMember" unwindAction="unwindToTravelListWithSender:" id="02g-dj-Cq7"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="9U6-BK-pJH">
                                             <connections>
-                                                <segue destination="1lz-jB-FOd" kind="unwind" identifier="doneAddMember" unwindAction="unwindToTravelDetailsWithSender:" id="BRV-os-hHO"/>
+                                                <segue destination="1lz-jB-FOd" kind="unwind" identifier="doneAddMember" unwindAction="unwindToTravelListWithSender:" id="BRV-os-hHO"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -861,7 +861,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="ibY-gI-pxg">
                             <connections>
-                                <segue destination="6Fe-6v-qzy" kind="presentation" identifier="doneAddTravel" id="5gR-sh-iox"/>
+                                <segue destination="6Fe-6v-qzy" kind="presentation" identifier="doneAddTravel" id="rqG-IH-bf6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1223,6 +1223,7 @@
                             <constraint firstItem="AHu-KR-Wf7" firstAttribute="top" secondItem="1Ix-T5-iPr" secondAttribute="top" id="xP5-Gy-fmB"/>
                             <constraint firstItem="O40-Ao-8Jy" firstAttribute="centerX" secondItem="0bI-9W-u5g" secondAttribute="centerX" id="yhn-bl-432"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="PSD-PU-GMs"/>
                     </view>
                     <connections>
                         <outlet property="firstnameField" destination="te3-kn-doi" id="kaD-WJ-J7D"/>
@@ -1243,9 +1244,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BsI-90-Hfz"/>
-        <segue reference="frZ-Ko-JFq"/>
+        <segue reference="Yh1-dO-0m9"/>
         <segue reference="j8c-s3-9Wi"/>
-        <segue reference="GZG-xg-27a"/>
+        <segue reference="rqG-IH-bf6"/>
         <segue reference="VRU-8d-9pR"/>
     </inferredMetricsTieBreakers>
 </document>

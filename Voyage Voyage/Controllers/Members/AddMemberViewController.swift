@@ -36,10 +36,12 @@ class AddMemberViewController: UIViewController{
             do{
                 try CoreDataManager.context.save()
             }catch{fatalError()}
-            if let dest = segue.destination as? TravelMembersViewController{
-                dest.tbc.travel = self.travel
+            if let dest = segue.destination as? TravelDetailsTabBarController{
+                dest.travel = self.travel
             }
-            else if let dest = segue.destination as? TravelDetailsTabBarController{
+        }
+        else if segue.identifier == "cancelAddMember"{
+            if let dest = segue.destination as? TravelDetailsTabBarController{
                 dest.travel = self.travel
             }
         }
