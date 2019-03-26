@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 class TravelDAO{
     static let request : NSFetchRequest<Travel> = Travel.fetchRequest()
@@ -17,6 +18,11 @@ class TravelDAO{
     }
     static func delete(travel: Travel){
         CoreDataManager.context.delete(travel)
+    }
+    static func update(travel: Travel, newName name:String, newImage image: UIImage){
+        travel.travelName = name
+        travel.travelPhoto = image.jpegData(compressionQuality: 0.8)
+        save()
     }
     
     static func fetchAll() -> [Travel]?{

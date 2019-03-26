@@ -25,6 +25,9 @@
 		3C93DA4222390E07001F50C8 /* TravelTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C93DA4122390E07001F50C8 /* TravelTVCell.swift */; };
 		3CF2C386224A21E80082B051 /* TravelDetailsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2C385224A21E80082B051 /* TravelDetailsTabBarController.swift */; };
 		3CF2C38A224A3CF20082B051 /* TravelPlanBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2C389224A3CF20082B051 /* TravelPlanBaseViewController.swift */; };
+		3CF2C38D224A45140082B051 /* EditTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2C38C224A45140082B051 /* EditTravelViewController.swift */; };
+		3CF2C390224A7C400082B051 /* MemberBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2C38F224A7C400082B051 /* MemberBaseViewController.swift */; };
+		3CF2C392224A7C550082B051 /* EditMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2C391224A7C550082B051 /* EditMemberViewController.swift */; };
 		6110F92E2240105D0079D1DF /* Travel-CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6110F92D2240105D0079D1DF /* Travel-CoreData.swift */; };
 		61E0DF7F2246676D00804185 /* ParticipantsDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0DF7E2246676D00804185 /* ParticipantsDAO.swift */; };
 		61E0DF812246679F00804185 /* ParticipantFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0DF802246679F00804185 /* ParticipantFetchResultController.swift */; };
@@ -97,6 +100,9 @@
 		3C93DA4122390E07001F50C8 /* TravelTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTVCell.swift; sourceTree = "<group>"; };
 		3CF2C385224A21E80082B051 /* TravelDetailsTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetailsTabBarController.swift; sourceTree = "<group>"; };
 		3CF2C389224A3CF20082B051 /* TravelPlanBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPlanBaseViewController.swift; sourceTree = "<group>"; };
+		3CF2C38C224A45140082B051 /* EditTravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTravelViewController.swift; sourceTree = "<group>"; };
+		3CF2C38F224A7C400082B051 /* MemberBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberBaseViewController.swift; sourceTree = "<group>"; };
+		3CF2C391224A7C550082B051 /* EditMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMemberViewController.swift; sourceTree = "<group>"; };
 		6110F92D2240105D0079D1DF /* Travel-CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Travel-CoreData.swift"; path = "Voyage Voyage/Travel-CoreData.swift"; sourceTree = SOURCE_ROOT; };
 		61E0DF7E2246676D00804185 /* ParticipantsDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsDAO.swift; sourceTree = "<group>"; };
 		61E0DF802246679F00804185 /* ParticipantFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantFetchResultController.swift; sourceTree = "<group>"; };
@@ -233,6 +239,7 @@
 		3CCB00E42238FB100050878A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3CF2C38E224A7C330082B051 /* Members */,
 				3CF2C38B224A3CFC0082B051 /* TravelPlan */,
 				3C83311C22383431009C8B51 /* ViewController.swift */,
 				3C3F3E2E223FD416000C9A6E /* TravelTVController.swift */,
@@ -244,7 +251,6 @@
 				F0E615342245364A00624F4F /* TravelTransferViewController.swift */,
 				F0E61538224537ED00624F4F /* TravelExpensesViewController.swift */,
 				F0E6153A2245382700624F4F /* ExpensesTVController.swift */,
-				F0E6153C2245410400624F4F /* AddMemberViewController.swift */,
 				F0E6153E2245441C00624F4F /* MemberExpensesViewController.swift */,
 				F0E615402245448900624F4F /* MemberExpensesTVController.swift */,
 				F0E6154422454A5600624F4F /* AddExpenseViewController.swift */,
@@ -279,8 +285,19 @@
 			children = (
 				3C155A7E2242B1F300609D29 /* AddTravelViewController.swift */,
 				3CF2C389224A3CF20082B051 /* TravelPlanBaseViewController.swift */,
+				3CF2C38C224A45140082B051 /* EditTravelViewController.swift */,
 			);
 			path = TravelPlan;
+			sourceTree = "<group>";
+		};
+		3CF2C38E224A7C330082B051 /* Members */ = {
+			isa = PBXGroup;
+			children = (
+				3CF2C38F224A7C400082B051 /* MemberBaseViewController.swift */,
+				F0E6153C2245410400624F4F /* AddMemberViewController.swift */,
+				3CF2C391224A7C550082B051 /* EditMemberViewController.swift */,
+			);
+			path = Members;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0E615412245448900624F4F /* MemberExpensesTVController.swift in Sources */,
+				3CF2C38D224A45140082B051 /* EditTravelViewController.swift in Sources */,
 				F0E61537224537A100624F4F /* ExpenseTVCell.swift in Sources */,
 				61F561292246726B009C9CBA /* ParticipantTravelVM.swift in Sources */,
 				6110F92E2240105D0079D1DF /* Travel-CoreData.swift in Sources */,
@@ -432,6 +450,7 @@
 				F0E615512245519600624F4F /* ReceiverTVCell.swift in Sources */,
 				F0E6152D224534EE00624F4F /* TravelMemberTVCell.swift in Sources */,
 				3C83312322383431009C8B51 /* Voyage_Voyage.xcdatamodeld in Sources */,
+				3CF2C390224A7C400082B051 /* MemberBaseViewController.swift in Sources */,
 				F0E615252245308900624F4F /* TravelMembersViewController.swift in Sources */,
 				F0E6153D2245410500624F4F /* AddMemberViewController.swift in Sources */,
 				F0E6153F2245441C00624F4F /* MemberExpensesViewController.swift in Sources */,
@@ -453,6 +472,7 @@
 				F0E6154522454A5600624F4F /* AddExpenseViewController.swift in Sources */,
 				3C93DA4222390E07001F50C8 /* TravelTVCell.swift in Sources */,
 				3CF2C38A224A3CF20082B051 /* TravelPlanBaseViewController.swift in Sources */,
+				3CF2C392224A7C550082B051 /* EditMemberViewController.swift in Sources */,
 				61E0DF7F2246676D00804185 /* ParticipantsDAO.swift in Sources */,
 				F0E6154922454B0C00624F4F /* PayerTVCell.swift in Sources */,
 				F0E6154B22454DE300624F4F /* ExpenseDetailsViewController.swift in Sources */,

@@ -13,9 +13,12 @@ class TravelPlanBaseViewController: UIViewController, UINavigationControllerDele
     @IBOutlet weak var travelName: UITextField!
     @IBOutlet weak var choosePictureButton: UIButton!
     
-    var imagePicker = UIImagePickerController()
+    @IBOutlet weak var imageView: UIImageView!
     var image: UIImage?
+    var name: String?
+    var imagePicker = UIImagePickerController()
     var addMode: AddTravelViewController?
+    var editMode: EditTravelViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +26,9 @@ class TravelPlanBaseViewController: UIViewController, UINavigationControllerDele
         // Do any additional setup after loading the view.
         self.travelName.delegate = self
         imagePicker.delegate = self
+        self.travelName.text = self.name
+        self.imageView.image = self.image
+        changeImageButtonState()
         updateSaveButtonState()
     }
     
@@ -36,7 +42,7 @@ class TravelPlanBaseViewController: UIViewController, UINavigationControllerDele
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-            self.image = pickedImage
+            self.imageView.image = pickedImage
             changeImageButtonState()
             updateSaveButtonState()
         }
@@ -44,7 +50,7 @@ class TravelPlanBaseViewController: UIViewController, UINavigationControllerDele
     }
     
     private func changeImageButtonState(){
-        if choosePictureButton.titleLabel?.text == "Choose a picture" {
+        if self.imageView.image != nil {
             choosePictureButton.titleLabel?.text = "Change picture"
         }
         else{
@@ -81,12 +87,16 @@ class TravelPlanBaseViewController: UIViewController, UINavigationControllerDele
     private func updateSaveButtonState() {
         // Disable the Save button if the text field is empty.
         let nameText = travelName.text ?? ""
-        addMode!.doneButton.isEnabled = !nameText.isEmpty && !(image == nil)
+        if addMode != nil{
+            addMode!.doneButton.isEnabled = !nameText.isEmpty && !(self.imageView.image == nil)
+        }
+        else if editMode != nil{
+            editMode!.doneButton.isEnabled = !nameText.isEmpty && !(self.imageView.image == nil)
+        }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
         updateSaveButtonState()
-        navigationItem.title = textField.text
     }
     
 

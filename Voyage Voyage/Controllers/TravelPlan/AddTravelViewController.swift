@@ -29,7 +29,7 @@ class AddTravelViewController: UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "doneAddTravel"{
             let travelName = travelPlanBase?.travelName.text!
-            let travelImage = travelPlanBase?.image
+            let travelImage = travelPlanBase?.imageView.image
             travel = Travel(travelName: travelName!, travelImage: travelImage!, creationDate: Date.init())
             do{
                 try CoreDataManager.context.save()

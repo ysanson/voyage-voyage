@@ -23,6 +23,8 @@ class ParticipantFetchResultController: NSObject, NSFetchedResultsControllerDele
         fetchResultController.delegate = self
         return fetchResultController
     }()
+    
+    
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>){
         self.tableView.beginUpdates()
     }

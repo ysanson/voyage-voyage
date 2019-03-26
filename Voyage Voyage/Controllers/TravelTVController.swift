@@ -42,7 +42,7 @@ class TravelTVController: NSObject, UITableViewDataSource, UITableViewDelegate, 
     //MARK- UITableViewDelegate
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let editAction = UIContextualAction(style: .destructive, title: "Edit"){ (action, view, handler) in
-            
+            self.viewController.performSegue(withIdentifier: "editTravelFromTravels", sender: tableView.cellForRow(at: indexPath))
         }
         editAction.backgroundColor = #colorLiteral(red: 0.3724241709, green: 0.06135788213, blue: 0.9991285863, alpha: 1)
         
