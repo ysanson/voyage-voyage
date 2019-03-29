@@ -20,7 +20,7 @@ class PayerTVController: NSObject, UITableViewDataSource, UITableViewDelegate {
         self.tableView = tableView
         self.baseView = baseView
         //self.fetchedResults = ParticipantFetchResultController(view: tableView)
-        self.participants = ParticipantsDAO.search(forTravel: travel)
+        self.participants = ParticipantsDAO.searchForStillHere(forTravel: travel)
         super.init()
         self.tableView.dataSource = self
         self.tableView.delegate = self

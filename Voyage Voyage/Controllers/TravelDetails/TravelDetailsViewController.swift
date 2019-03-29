@@ -26,6 +26,7 @@ class TravelDetailsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.title = self.navItem.title
         self.tabBarController?.navigationItem.rightBarButtonItems = navItem.rightBarButtonItems
+        self.tabBarController?.navigationItem.backBarButtonItem?.tintColor = .white
     }
 
     // MARK: - Navigation

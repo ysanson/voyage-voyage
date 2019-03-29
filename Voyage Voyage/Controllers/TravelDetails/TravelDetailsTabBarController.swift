@@ -18,6 +18,7 @@ class TravelDetailsTabBarController: UITabBarController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.backBarButtonItem?.tintColor = .white
     }
     
     @IBAction func unwindToTravelDetails(sender: UIStoryboardSegue){

@@ -13,14 +13,12 @@ class MemberListTVController: NSObject, UITableViewDataSource, UITableViewDelega
     var tableView:UITableView
     var participantList: [Participant]?
     var travel: Travel
-    var fetchResultsController: ParticipantFetchResultController
     var vc: TravelMembersViewController
     
     init(tableview: UITableView, travel: Travel, vc: TravelMembersViewController){
         self.tableView = tableview
         self.travel = travel
         self.vc = vc
-        fetchResultsController = ParticipantFetchResultController(view: tableView)
         participantList = ParticipantsDAO.search(forTravel: travel)
         super.init()
         self.tableView.dataSource = self
@@ -33,12 +31,12 @@ class MemberListTVController: NSObject, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "travelMemberCell", for: indexPath) as? TravelMemberTVCell else{fatalError("The dequeued cell is not an instance of TravelMemberTVCell.")}
-        let participant = participantList?[indexPath.row]
-        cell.memberName.text = participant?.fullname
-        cell.memberDates.text = participant?.dates
+        let participant = participantList![indexPath.row]
+        cell.memberName.text = participant.fullname
+        cell.memberDates.text = participant.dates
         cell.memberName.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
         cell.memberDates.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
-        if participant?.exitdate != nil{
+        if participant.exitdate != nil{
             cell.backgroundColor = #colorLiteral(red: 0.5440851166, green: 0.5440851166, blue: 0.5440851166, alpha: 0.425368618)
             cell.isActive = false
         }
@@ -53,7 +51,7 @@ class MemberListTVController: NSObject, UITableViewDataSource, UITableViewDelega
         if let cell = tableView.cellForRow(at: indexPath) as? TravelMemberTVCell{
             if cell.isActive ?? false{
                 let deleteAction = UIContextualAction(style: .destructive, title: "Delete from travel"){ (action, view, handler) in
-                    self.deleteConfirmation(participant: (self.participantList?[indexPath.row])!)
+                    self.deleteConfirmation(participant: (self.participantList?[indexPath.row])!, indexPath: indexPath)
                 }
                 let editAction = UIContextualAction(style: .destructive, title: "Edit"){ (action, view, handler) in
                     self.vc.performSegue(withIdentifier: "editMemberFromMembers", sender: tableView.cellForRow(at: indexPath))
@@ -73,12 +71,12 @@ class MemberListTVController: NSObject, UITableViewDataSource, UITableViewDelega
         return noConf
     }
 
-    func deleteConfirmation(participant: Participant){
+    func deleteConfirmation(participant: Participant, indexPath: IndexPath){
         let dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to delete this member? His exit date will be set for today.", preferredStyle: .alert)
         // Create OK button with action handler
         let ok = UIAlertAction(title: "Delete", style: .destructive, handler: { (action) -> Void in
             ParticipantsDAO.delete(participant: participant)
-            self.tableView.reloadData()
+            self.tableView.reloadRows(at: [indexPath], with: .automatic)
         })
         
         // Create Cancel button with action handlder

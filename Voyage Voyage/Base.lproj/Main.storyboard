@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JNv-qs-wTj">
-                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="123" width="375" height="544"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TravelCell" editingAccessoryType="disclosureIndicator" textLabel="8Wc-Ji-Pxk" imageView="2Ve-PI-LoN" rowHeight="90" style="IBUITableViewCellStyleDefault" id="G5n-90-3Cq" customClass="TravelTVCell" customModule="Voyage_Voyage" customModuleProvider="target">
@@ -56,10 +56,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JNv-qs-wTj" firstAttribute="leading" secondItem="eJV-ch-OpA" secondAttribute="leading" id="Va9-N6-RXZ"/>
-                            <constraint firstItem="eJV-ch-OpA" firstAttribute="trailing" secondItem="JNv-qs-wTj" secondAttribute="trailing" id="X3y-bT-M82"/>
-                            <constraint firstItem="eJV-ch-OpA" firstAttribute="bottom" secondItem="JNv-qs-wTj" secondAttribute="bottom" id="ZCm-E5-C1B"/>
-                            <constraint firstItem="JNv-qs-wTj" firstAttribute="top" secondItem="eJV-ch-OpA" secondAttribute="top" id="ecR-OJ-5vh"/>
+                            <constraint firstAttribute="trailing" secondItem="JNv-qs-wTj" secondAttribute="trailing" id="0xI-Xy-m2R"/>
+                            <constraint firstItem="JNv-qs-wTj" firstAttribute="top" secondItem="eJV-ch-OpA" secondAttribute="top" constant="7" id="1Y3-Mc-ue0"/>
+                            <constraint firstItem="JNv-qs-wTj" firstAttribute="bottom" secondItem="eJV-ch-OpA" secondAttribute="bottom" id="QRI-Xe-t5J"/>
+                            <constraint firstItem="JNv-qs-wTj" firstAttribute="leading" secondItem="h1u-4x-UZE" secondAttribute="leading" id="w3f-ys-cy7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eJV-ch-OpA"/>
                     </view>
@@ -116,6 +116,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" red="0.29222571850000001" green="0.69071817400000002" blue="0.96945959329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="amount" destination="fPd-Mt-O2p" id="h7p-pT-P2W"/>
                                             <outlet property="name" destination="pZu-CZ-lFP" id="dni-ux-GXR"/>
@@ -140,6 +141,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="homeIcon" selectedImage="homeIcon" id="fS6-om-AzK"/>
                     <navigationItem key="navigationItem" title="Details" id="fx1-3A-m31">
                         <barButtonItem key="rightBarButtonItem" title="Add Expense" id="rkE-qu-QgN">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="gbL-js-aP8" kind="presentation" identifier="addExpenseFromDetail" id="tNk-r6-eKo"/>
                             </connections>
@@ -337,7 +339,10 @@
                             </containerView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpf-3h-gD4">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.15086460800000001" green="0.65490304980000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Edit a member" id="Huo-cD-F58">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="tWx-Jf-7Xu">
@@ -354,7 +359,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.21150293329357539" green="0.67387043132936775" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="c74-3t-qmk" firstAttribute="bottom" secondItem="LDl-e9-3R1" secondAttribute="bottom" id="Lbb-zZ-nOG"/>
                             <constraint firstItem="c74-3t-qmk" firstAttribute="top" secondItem="aJu-FV-IwY" secondAttribute="top" constant="64" id="MuY-eb-7Uk"/>
@@ -453,6 +458,7 @@
                     <tabBarItem key="tabBarItem" title="Expends" image="expendsIcon" selectedImage="expendsIcon" id="bOY-q7-lbU"/>
                     <navigationItem key="navigationItem" title="Travel expenses" id="l88-LF-sbb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="1KL-Rw-e1I">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="gbL-js-aP8" kind="presentation" identifier="addExpenseFromExpenses" id="j8c-s3-9Wi"/>
                             </connections>
@@ -478,7 +484,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FVH-sl-cDd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.2115029333" green="0.67387043130000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="5FX-vU-b3g" kind="relationship" relationship="viewControllers" id="OUG-TT-FJ9"/>
@@ -552,6 +558,7 @@
                     <tabBarItem key="tabBarItem" title="Members" image="memberIcon" selectedImage="memberIcon" id="J9B-dz-2Ko"/>
                     <navigationItem key="navigationItem" title="Travel members" id="2HA-H5-4uL">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="LCi-Er-qH8">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="6Fe-6v-qzy" kind="presentation" identifier="addMemberFromMembers" id="GZG-xg-27a"/>
                             </connections>
@@ -579,7 +586,10 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUQ-2V-09E">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.2115029333" green="0.67387043130000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Add a member" id="Mg9-mO-Pr3">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="F4z-8x-nbM">
@@ -602,7 +612,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.29222571849822998" green="0.69071817398071289" blue="0.96945959329605103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bnr-9d-ZVl" firstAttribute="bottom" secondItem="k4W-PO-w06" secondAttribute="bottom" id="2T1-TX-hFc"/>
                             <constraint firstItem="bnr-9d-ZVl" firstAttribute="leading" secondItem="IUQ-2V-09E" secondAttribute="leading" id="HFu-QQ-afQ"/>
@@ -685,7 +695,10 @@
                             </containerView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXQ-5H-XvV">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.063337566679999999" green="0.64261987040000002" blue="1" alpha="0.53997805769999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Edit a travel" id="8jn-9y-9iD">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="sxX-LR-tup">
@@ -702,7 +715,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.15086460802145207" green="0.65490304984528946" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jXQ-5H-XvV" firstAttribute="leading" secondItem="MeJ-zd-EGu" secondAttribute="leading" id="2qe-V7-ND5"/>
                             <constraint firstItem="jXQ-5H-XvV" firstAttribute="trailing" secondItem="MeJ-zd-EGu" secondAttribute="trailing" id="42L-8J-OMf"/>
@@ -736,6 +749,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="WwY-ej-ORl">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.063337566679321666" green="0.64261987037206836" blue="1" alpha="0.53997805765492957" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Knq-Gx-S5E">
@@ -757,6 +774,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M65-Y7-Yg1">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.063337566679999999" green="0.64261987040000002" blue="1" alpha="0.53997805769999996" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -777,7 +798,10 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyO-fg-Eff">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.2115029333" green="0.67387043130000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Add an expense" id="6mJ-3j-1WX">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vKw-aW-hbS">
@@ -801,7 +825,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.29222571849822998" green="0.69071817398071289" blue="0.96945959329605103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gyO-fg-Eff" firstAttribute="trailing" secondItem="4Yc-zU-KDZ" secondAttribute="trailing" id="7FX-de-ATJ"/>
                             <constraint firstItem="gyO-fg-Eff" firstAttribute="leading" secondItem="4Yc-zU-KDZ" secondAttribute="leading" id="RLE-DD-fAU"/>
@@ -832,7 +856,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nHg-O6-kOD">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.29222571850000001" green="0.69071817400000002" blue="0.96945959329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="Add expense" id="chw-1B-P2X">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="c2e-PW-goP"/>
@@ -847,7 +871,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.39252239465713501" green="0.73083490133285522" blue="0.96943861246109009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2ir-cY-kVf" firstAttribute="leading" secondItem="nHg-O6-kOD" secondAttribute="leading" id="YYA-y2-ot1"/>
                             <constraint firstAttribute="trailing" secondItem="nHg-O6-kOD" secondAttribute="trailing" id="cEd-2g-6l6"/>
@@ -889,6 +913,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDx-iu-IB7">
                                 <rect key="frame" x="174" y="157" width="117" height="32"/>
+                                <color key="tintColor" red="0.3925223947" green="0.73083490129999995" blue="0.96943861249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Choose a picture"/>
                                 <connections>
                                     <action selector="pickImage:" destination="OZi-Yl-HNT" eventType="touchUpInside" id="9Zb-Bp-nOn"/>
@@ -1025,6 +1050,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aV3-Dr-to0">
                                         <rect key="frame" x="159" y="0.0" width="192" height="30"/>
+                                        <color key="tintColor" red="0.29222571850000001" green="0.69071817400000002" blue="0.96945959329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Choose a picture"/>
                                         <connections>
                                             <action selector="pickImage:" destination="IX4-3g-aJj" eventType="touchUpInside" id="WVG-e2-dyS"/>
@@ -1097,6 +1123,7 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VEl-JD-aVW">
                                                     <rect key="frame" x="282" y="8" width="49" height="31"/>
+                                                    <color key="tintColor" red="0.29222571850000001" green="0.69071817400000002" blue="0.96945959329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -1240,10 +1267,11 @@
         <image name="memberIcon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BsI-90-Hfz"/>
-        <segue reference="Yh1-dO-0m9"/>
-        <segue reference="j8c-s3-9Wi"/>
-        <segue reference="GZG-xg-27a"/>
-        <segue reference="VRU-8d-9pR"/>
+        <segue reference="7ou-dS-B3r"/>
+        <segue reference="frZ-Ko-JFq"/>
+        <segue reference="tNk-r6-eKo"/>
+        <segue reference="rqG-IH-bf6"/>
+        <segue reference="4Fr-Bu-J5w"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

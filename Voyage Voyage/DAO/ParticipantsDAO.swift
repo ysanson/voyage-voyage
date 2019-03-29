@@ -61,4 +61,15 @@ class ParticipantsDAO{
         return travel.contient?.allObjects as? [Participant]
     }
     
+    static func searchForStillHere(forTravel travel: Travel)->[Participant]?{
+        guard let parts = ParticipantsDAO.search(forTravel: travel) else { return nil }
+        var result: [Participant] = []
+        for part in parts{
+            if part.exitdate == nil{
+                result.append(part)
+            }
+        }
+        return result
+    }
+    
 }
