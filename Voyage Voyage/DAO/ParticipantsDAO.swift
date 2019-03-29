@@ -61,17 +61,4 @@ class ParticipantsDAO{
         return travel.contient?.allObjects as? [Participant]
     }
     
-    static func totalPayement(forParticipant participant: Participant)->Float{
-        var amount = 0.0
-        
-        return Float(amount)
-    }
-    
-    static func totalAmount(forParticipant participant: Participant)->Float{
-        var amount = 0.0
-        
-        
-        return Float(amount)
-    }
-    
 }

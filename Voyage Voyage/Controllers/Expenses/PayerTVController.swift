@@ -8,7 +8,25 @@
 
 import UIKit
 
-class PayerTVController: NSObject, UITableViewDataSource {
+class PayerTVController: NSObject, UITableViewDataSource, UITableViewDelegate {
+    
+    var tableView: UITableView
+    var baseView: ExpenseBaseViewController
+    //var fetchedResults: ParticipantFetchResultController
+    var participants: [Participant]?
+    
+    
+    init(tableView: UITableView, baseView: ExpenseBaseViewController, travel: Travel){
+        self.tableView = tableView
+        self.baseView = baseView
+        //self.fetchedResults = ParticipantFetchResultController(view: tableView)
+        self.participants = ParticipantsDAO.search(forTravel: travel)
+        super.init()
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }

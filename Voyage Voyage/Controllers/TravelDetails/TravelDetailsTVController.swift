@@ -33,7 +33,7 @@ class TravelDetailsTVController: NSObject, UITableViewDataSource {
          guard let cell = tableView.dequeueReusableCell(withIdentifier: "memberAmountCell", for: indexPath) as? MemberAmoutTVCell else{fatalError("The dequeued cell is not an instance of MemberAmountTVCell.")}
         let person = participantList![indexPath.row]
         cell.name.text = person.fullname
-        let totalAmount = ParticipantsDAO.totalAmount(forParticipant: person)
+        let totalAmount = 0
         cell.amount.text = String(totalAmount)
         cell.name.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         cell.amount.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)

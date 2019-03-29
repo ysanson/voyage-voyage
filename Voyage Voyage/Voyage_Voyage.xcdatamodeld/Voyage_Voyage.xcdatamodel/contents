@@ -1,43 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.98" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Expense" representedClassName="Expense" syncable="YES" codeGenerationType="class">
         <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="Binary" syncable="YES"/>
-        <relationship name="paidBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Payement" inverseName="concerns" inverseEntity="Payement" syncable="YES"/>
-        <relationship name="refundedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Refund" inverseName="spending" inverseEntity="Refund" syncable="YES"/>
+        <relationship name="contains" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExpensePart" inverseName="refersTo" inverseEntity="ExpensePart" syncable="YES"/>
+    </entity>
+    <entity name="ExpensePart" representedClassName="ExpensePart" syncable="YES" codeGenerationType="class">
+        <attribute name="paidAmount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="partialAmount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="paidBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participant" inverseName="pays" inverseEntity="Participant" syncable="YES"/>
+        <relationship name="refersTo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Expense" inverseName="contains" inverseEntity="Expense" syncable="YES"/>
+        <relationship name="refundedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participant" inverseName="refunds" inverseEntity="Participant" syncable="YES"/>
     </entity>
     <entity name="Participant" representedClassName="Participant" syncable="YES" codeGenerationType="class">
         <attribute name="entrydate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="exitdate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="firstname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="gives" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Transfer" inverseName="givenBy" inverseEntity="Transfer" syncable="YES"/>
-        <relationship name="makeRefund" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Refund" inverseName="refunds" inverseEntity="Refund" syncable="YES"/>
         <relationship name="participe" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Travel" inverseName="contient" inverseEntity="Travel" syncable="YES"/>
-        <relationship name="pays" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Payement" inverseName="realizedBy" inverseEntity="Payement" syncable="YES"/>
-        <relationship name="receives" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TransferReception" inverseName="receivedBy" inverseEntity="TransferReception" syncable="YES"/>
-    </entity>
-    <entity name="Payement" representedClassName="Payement" syncable="YES" codeGenerationType="class">
-        <attribute name="paidAmount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="concerns" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Expense" inverseName="paidBy" inverseEntity="Expense" syncable="YES"/>
-        <relationship name="realizedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participant" inverseName="pays" inverseEntity="Participant" syncable="YES"/>
-    </entity>
-    <entity name="Refund" representedClassName="Refund" syncable="YES" codeGenerationType="class">
-        <attribute name="isRefunded" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="partialAmount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="refunds" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participant" inverseName="makeRefund" inverseEntity="Participant" syncable="YES"/>
-        <relationship name="spending" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Expense" inverseName="refundedBy" inverseEntity="Expense" syncable="YES"/>
-    </entity>
-    <entity name="Transfer" representedClassName="Transfer" syncable="YES" codeGenerationType="class">
-        <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="givenBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participant" inverseName="gives" inverseEntity="Participant" syncable="YES"/>
-        <relationship name="isConcernedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TransferReception" inverseName="concernsTransfer" inverseEntity="TransferReception" syncable="YES"/>
-    </entity>
-    <entity name="TransferReception" representedClassName="TransferReception" syncable="YES" codeGenerationType="class">
-        <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="concernsTransfer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Transfer" inverseName="isConcernedBy" inverseEntity="Transfer" syncable="YES"/>
-        <relationship name="receivedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participant" inverseName="receives" inverseEntity="Participant" syncable="YES"/>
+        <relationship name="pays" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ExpensePart" inverseName="paidBy" inverseEntity="ExpensePart" syncable="YES"/>
+        <relationship name="refunds" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ExpensePart" inverseName="refundedBy" inverseEntity="ExpensePart" syncable="YES"/>
     </entity>
     <entity name="Travel" representedClassName="Travel" syncable="YES" codeGenerationType="class">
         <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -46,12 +29,9 @@
         <relationship name="contient" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Participant" inverseName="participe" inverseEntity="Participant" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Expense" positionX="220.88671875" positionY="-420.2734375" width="128" height="120"/>
-        <element name="Participant" positionX="-201.41015625" positionY="-219.59765625" width="128" height="178"/>
-        <element name="Payement" positionX="270.91796875" positionY="193.68359375" width="128" height="88"/>
-        <element name="Refund" positionX="-44.2421875" positionY="-373.30859375" width="128" height="103"/>
-        <element name="Transfer" positionX="-23.890625" positionY="-241.79296875" width="128" height="88"/>
-        <element name="TransferReception" positionX="194.17578125" positionY="-161.125" width="128" height="88"/>
+        <element name="Expense" positionX="74.1953125" positionY="-447.72265625" width="128" height="103"/>
+        <element name="Participant" positionX="-250.9375" positionY="-271.875" width="128" height="148"/>
         <element name="Travel" positionX="-552.84765625" positionY="-122.16015625" width="128" height="103"/>
+        <element name="ExpensePart" positionX="70.1015625" positionY="-218.28515625" width="128" height="118"/>
     </elements>
 </model>

@@ -1,14 +1,14 @@
 //
-//  AddTransferViewController.swift
+//  ExpensesPartPayerViewController.swift
 //  Voyage Voyage
 //
-//  Created by Marie SALELLES on 22/03/2019.
+//  Created by Yvan Sanson on 29/03/2019.
 //  Copyright © 2019 Yvan Sanson. All rights reserved.
 //
 
 import UIKit
 
-class AddTransferViewController: UIViewController {
+class ExpensesPartPayerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
