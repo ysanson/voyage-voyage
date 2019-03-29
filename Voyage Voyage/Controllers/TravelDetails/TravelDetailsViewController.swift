@@ -20,7 +20,7 @@ class TravelDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tbc = self.tabBarController as? TravelDetailsTabBarController
-        travelDetailsC = TravelDetailsTVController(tableView: tableViewMember, travel: tbc.travel!)
+        travelDetailsC = TravelDetailsTVController(tableView: tableViewMember, viewController: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {

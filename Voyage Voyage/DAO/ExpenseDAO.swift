@@ -36,6 +36,10 @@ class ExpenseDAO{
         }
     }
     
+    static func fetch(forTravel travel: Travel)->[Expense]?{
+        return travel.has?.allObjects as? [Expense]
+    }
+    
     static func totalExpenses(forParticipant person: Participant) -> Float{
         return 0.0
     }

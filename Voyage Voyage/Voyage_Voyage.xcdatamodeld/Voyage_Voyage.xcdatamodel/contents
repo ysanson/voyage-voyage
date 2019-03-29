@@ -4,6 +4,7 @@
         <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="concerns" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Travel" inverseName="has" inverseEntity="Travel" syncable="YES"/>
         <relationship name="contains" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExpensePart" inverseName="refersTo" inverseEntity="ExpensePart" syncable="YES"/>
     </entity>
     <entity name="ExpensePart" representedClassName="ExpensePart" syncable="YES" codeGenerationType="class">
@@ -27,11 +28,12 @@
         <attribute name="travelName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="travelPhoto" optional="YES" attributeType="Binary" syncable="YES"/>
         <relationship name="contient" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Participant" inverseName="participe" inverseEntity="Participant" syncable="YES"/>
+        <relationship name="has" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Expense" inverseName="concerns" inverseEntity="Expense" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Expense" positionX="74.1953125" positionY="-447.72265625" width="128" height="103"/>
+        <element name="Expense" positionX="-114.7578125" positionY="-599.1796875" width="128" height="118"/>
         <element name="Participant" positionX="-250.9375" positionY="-271.875" width="128" height="148"/>
-        <element name="Travel" positionX="-552.84765625" positionY="-122.16015625" width="128" height="103"/>
+        <element name="Travel" positionX="-552.84765625" positionY="-122.16015625" width="128" height="118"/>
         <element name="ExpensePart" positionX="70.1015625" positionY="-218.28515625" width="128" height="118"/>
     </elements>
 </model>

@@ -15,17 +15,19 @@ extension Expense{
         return UIImage(data: self.photo!) ?? UIImage(named: "Default")!
     }
     
-    convenience init(expenseName: String, amount: Float, photo: UIImage){
+    convenience init(expenseName: String, amount: Float, photo: UIImage, travel: Travel){
         self.init(context: CoreDataManager.context)
         self.name = expenseName
         self.amount = amount
         self.photo = photo.jpegData(compressionQuality: 0.8)
+        self.concerns = travel
     }
     
-    convenience init(expenseName: String, amount: Float){
+    convenience init(expenseName: String, amount: Float, travel: Travel){
         self.init(context: CoreDataManager.context)
         self.name = expenseName
         self.amount = amount
         self.photo = UIImage(named: "Default")?.jpegData(compressionQuality: 0.8)
+        self.concerns = travel
     }
 }

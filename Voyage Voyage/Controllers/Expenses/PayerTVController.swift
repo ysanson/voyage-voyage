@@ -28,17 +28,15 @@ class PayerTVController: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return participants?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "payerCell", for: indexPath) as? PayerTVCell else{fatalError("The dequeued cell is not an instance of TravelTVCell.")}
+        cell.memberName.text = participants![indexPath.row].fullname
+        cell.isPayer.isOn = false
         return cell
     }
-    
-
-    
-
     /*
     // MARK: - Navigation
 

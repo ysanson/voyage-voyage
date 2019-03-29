@@ -16,17 +16,23 @@ class ExpenseBaseViewController: UIViewController, UINavigationControllerDelegat
     var addMode: AddExpenseViewController?
     var tvc: PayerTVController!
     var travel: Travel?
+    var tap: UITapGestureRecognizer!
     
     @IBOutlet weak var expenseName: UITextField!
     @IBOutlet weak var totalAmountTextField: UITextField!
     @IBOutlet weak var membersNameTableView: UITableView!
-    @IBOutlet weak var choosePictureButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var choosePictureButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tvc = PayerTVController(tableView: self.tableView, baseView: self, travel: travel!)
+        tap =  UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
+        self.expenseName.delegate = self
+        self.totalAmountTextField.delegate = self
     }
     
 
@@ -69,14 +75,15 @@ class ExpenseBaseViewController: UIViewController, UINavigationControllerDelegat
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        //doneButton.isEnabled = false
+        updateSaveButtonState()
     }
     
     private func updateSaveButtonState() {
         // Disable the Save button if the text field is empty.
+        let expName = expenseName.text ?? ""
         let amount = totalAmountTextField.text ?? ""
         if addMode != nil{
-            addMode!.doneButton.isEnabled = !amount.isEmpty && !(self.photo == nil)
+            addMode!.doneButton.isEnabled = !expName.isEmpty && !amount.isEmpty
         }
         /*else if editMode != nil{
             editMode!.doneButton.isEnabled = !nameText.isEmpty && !(self.imageView.image == nil)

@@ -13,12 +13,7 @@ class TravelDetailsTabBarController: UITabBarController{
     var travel: Travel?
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        /*if let dest = self.selectedViewController as? TravelDetailsViewController{
-            dest.travel = self.travel
-        }
-        else if let dest = self.selectedViewController as? TravelMembersViewController{
-            dest.travel = self.travel
-        }*/
+        
     }
     
     override func viewDidLoad() {

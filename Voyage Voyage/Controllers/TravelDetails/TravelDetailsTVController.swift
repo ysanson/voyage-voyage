@@ -13,14 +13,12 @@ class TravelDetailsTVController: NSObject, UITableViewDataSource {
     
     var tableView: UITableView
     var participantList: [Participant]?
-    var travel: Travel
-    var fetchedResultsController: ParticipantFetchResultController
+    var viewController: TravelDetailsViewController
     
-    init(tableView: UITableView, travel: Travel){
+    init(tableView: UITableView, viewController: TravelDetailsViewController){
         self.tableView = tableView
-        self.travel = travel
-        fetchedResultsController = ParticipantFetchResultController(view: tableView)
-        participantList = ParticipantsDAO.search(forTravel: travel)
+        self.viewController = viewController
+        participantList = ParticipantsDAO.search(forTravel: viewController.tbc.travel!)
         super.init()
         self.tableView.dataSource = self
     }
