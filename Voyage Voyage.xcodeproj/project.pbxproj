@@ -48,6 +48,7 @@
 		61E0DF7F2246676D00804185 /* ParticipantsDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0DF7E2246676D00804185 /* ParticipantsDAO.swift */; };
 		61E0DF812246679F00804185 /* ParticipantFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0DF802246679F00804185 /* ParticipantFetchResultController.swift */; };
 		61E0DF832246686300804185 /* Participant-CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0DF822246686300804185 /* Participant-CoreData.swift */; };
+		61F47AD22250EB8E00FE1DAA /* PayerAmountTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F47AD12250EB8E00FE1DAA /* PayerAmountTVController.swift */; };
 		61F561292246726B009C9CBA /* ParticipantTravelVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F561282246726B009C9CBA /* ParticipantTravelVM.swift */; };
 		F0E615232245220300624F4F /* TravelDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E615222245220300624F4F /* TravelDetailsViewController.swift */; };
 		F0E615252245308900624F4F /* TravelMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E615242245308900624F4F /* TravelMembersViewController.swift */; };
@@ -137,6 +138,7 @@
 		61E0DF7E2246676D00804185 /* ParticipantsDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsDAO.swift; sourceTree = "<group>"; };
 		61E0DF802246679F00804185 /* ParticipantFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantFetchResultController.swift; sourceTree = "<group>"; };
 		61E0DF822246686300804185 /* Participant-CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Participant-CoreData.swift"; path = "Voyage Voyage/DAO/Participant-CoreData.swift"; sourceTree = SOURCE_ROOT; };
+		61F47AD12250EB8E00FE1DAA /* PayerAmountTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayerAmountTVController.swift; sourceTree = "<group>"; };
 		61F561282246726B009C9CBA /* ParticipantTravelVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantTravelVM.swift; sourceTree = "<group>"; };
 		F0E615222245220300624F4F /* TravelDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetailsViewController.swift; sourceTree = "<group>"; };
 		F0E615242245308900624F4F /* TravelMembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelMembersViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				617AD14A224FBB2A00344017 /* ExpensePart3ViewController.swift */,
 				617AD14E224FBC8700344017 /* ExpencePartBase2ViewController.swift */,
 				617AD150224FBC9D00344017 /* ExpensePartBase3ViewController.swift */,
+				61F47AD12250EB8E00FE1DAA /* PayerAmountTVController.swift */,
 			);
 			path = Expenses;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				3C80490622455C61007CF9CA /* CoreDataManager.swift in Sources */,
 				3C972B8E224E3177005744F5 /* ExpensesPartPayerViewController.swift in Sources */,
 				F0E6152B2245347B00624F4F /* MemberAmoutTVCell.swift in Sources */,
+				61F47AD22250EB8E00FE1DAA /* PayerAmountTVController.swift in Sources */,
 				3C155A7F2242B1F300609D29 /* AddTravelViewController.swift in Sources */,
 				F0E615512245519600624F4F /* ReceiverTVCell.swift in Sources */,
 				3C972B90224E33A8005744F5 /* ExpensesPartBaseViewController.swift in Sources */,
@@ -746,7 +750,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MPAVRTPHU2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Voyage Voyage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -767,7 +771,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MPAVRTPHU2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Voyage Voyage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
