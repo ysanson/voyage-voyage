@@ -13,6 +13,7 @@ class ExpensesPartPayerViewController: UIViewController {
     var payers:[Participant]?
     var expense: Expense?
     var baseView: ExpensesPartBaseViewController?
+    var travel: Travel?
     
     @IBOutlet weak var nextButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
@@ -39,10 +40,12 @@ class ExpensesPartPayerViewController: UIViewController {
             dest?.payers = self.payers
             baseView = dest
         }
-       /* if let dest = segue.destination as? ExpensePart2ViewController {
+        if let dest = segue.destination as? ExpensePart2ViewController {
             dest.payers = self.payers
             dest.expense = self.expense
-        }*/
+            dest.payAmount = self.baseView?.tvc.havePayAmount()
+            dest.travel = self.travel
+        }
         
     }
     

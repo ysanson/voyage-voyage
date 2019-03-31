@@ -9,7 +9,15 @@
 import UIKit
 
 class ExpensePart2ViewController: UIViewController {
+    
+    var payers: [Participant]?
+    var expense: Expense?
+    var payAmount: [Float]?
+    var baseView: ExpencePartBase2ViewController?
+    var travel: Travel?
 
+    @IBOutlet weak var nextButton: UIBarButtonItem!
+    @IBOutlet weak var CancelButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,14 +25,32 @@ class ExpensePart2ViewController: UIViewController {
     }
     
 
-    /*
+    func haveParticipants(payers: [Participant])-> [Participant]?{
+        let parts = ParticipantsDAO.searchForStillHere(forTravel: self.travel!)
+        var participants:[Participant] = []
+        for part in parts! {
+            if !payers.contains(part){
+                participants.append(part)
+            }
+        }
+        return participants
+        
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "expensePart2"{
+            let dest = segue.destination as? ExpencePartBase2ViewController
+            
+            dest?.addMode = self
+            baseView = dest
+            dest?.participants = haveParticipants(payers: self.payers!)
+        }
     }
-    */
+
 
 }

@@ -8,11 +8,18 @@
 
 import UIKit
 
-class ExpencePartBase2ViewController: UIViewController {
+class ExpencePartBase2ViewController:  UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    var participants : [Participant]?
+    var addMode: ExpensePart2ViewController?
+    var tvc : ParticipantsTVController!
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tvc = ParticipantsTVController(tableView: self.tableView, baseView: self,participants: self.participants)
         // Do any additional setup after loading the view.
     }
     

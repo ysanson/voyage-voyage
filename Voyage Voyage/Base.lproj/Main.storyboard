@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4wv-ub-mfE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4wv-ub-mfE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -251,7 +251,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="MJL-wa-0ml" kind="embed" id="O8i-0U-k7u"/>
+                                    <segue destination="MJL-wa-0ml" kind="embed" identifier="expensePart2" id="O8i-0U-k7u"/>
                                 </connections>
                             </containerView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sva-Bu-EOw">
@@ -274,6 +274,10 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="uaX-sD-NkN"/>
                     </view>
+                    <connections>
+                        <outlet property="CancelButton" destination="gXx-Qq-Rh7" id="JGT-Mj-8Hu"/>
+                        <outlet property="nextButton" destination="cpL-ae-HCa" id="RPM-wk-qgS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCg-9O-Kth" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1310,6 +1314,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="amountInput" destination="J85-fv-y9b" id="0Tz-17-VbV"/>
                                             <outlet property="payername" destination="Ryf-mD-N7T" id="g2J-hM-pcN"/>
                                         </connections>
                                     </tableViewCell>
@@ -1346,10 +1351,10 @@
             </objects>
             <point key="canvasLocation" x="1288.8" y="3850.5247376311845"/>
         </scene>
-        <!--Expense Part Base2 View Controller-->
+        <!--Expence Part Base2 View Controller-->
         <scene sceneID="A5F-Ew-YBv">
             <objects>
-                <viewController id="MJL-wa-0ml" customClass="ExpensePartBase2ViewController" sceneMemberID="viewController">
+                <viewController id="MJL-wa-0ml" customClass="ExpencePartBase2ViewController" customModule="Voyage_Voyage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oRH-bh-Jqu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1364,7 +1369,7 @@
                                 <rect key="frame" x="0.0" y="75" width="375" height="475"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="rp0-tg-H8V" customClass="ExpenseParticipantTVCell" customModule="Voyage_Voyage" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="participantCell" rowHeight="50" id="rp0-tg-H8V" customClass="ExpenseParticipantTVCell" customModule="Voyage_Voyage" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rp0-tg-H8V" id="yCu-6a-KU2">
@@ -1391,6 +1396,10 @@
                                                 <constraint firstItem="pr9-nH-EYS" firstAttribute="centerY" secondItem="yCu-6a-KU2" secondAttribute="centerY" id="g7Z-lx-aPz"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="isHere" destination="pr9-nH-EYS" id="LAO-SR-Tlr"/>
+                                            <outlet property="memberName" destination="0UL-eQ-lsO" id="w8z-wT-sMj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1410,6 +1419,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FFS-kX-zuk"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="7Vz-FR-nJ9" id="R5b-lm-0vO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8r2-rC-DBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="Ziv-AY-tb3"/>

@@ -46,6 +46,7 @@ class AddExpenseViewController: UIViewController {
             let dest = segue.destination as? ExpensesPartPayerViewController
             dest?.payers = baseView?.tvc.havePayer()
             dest?.expense = self.expense
+            dest?.travel = self.travel
         }
         else if segue.identifier == "cancelAddExpense1"{
             let dest = segue.destination as? TravelDetailsTabBarController
