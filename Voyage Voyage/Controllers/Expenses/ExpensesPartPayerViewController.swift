@@ -25,6 +25,25 @@ class ExpensesPartPayerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func isExpenseFullyPaid(withAmounts amounts: [Float])->Bool{
+        var fullAmt: Float = 0.0
+        for amt in amounts{
+            fullAmt += amt
+        }
+        if fullAmt != expense?.amount{
+            let dialogMessage = UIAlertController(title: "Error", message: "The overall amount is not equal to the expense amount", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .cancel)
+            { (action) -> Void in
+                return
+            }
+            dialogMessage.addAction(ok)
+            self.present(dialogMessage, animated: true, completion: nil)
+            return false
+        }
+        return true
+        
+        
+    }
 
     
     // MARK: - Navigation
@@ -41,13 +60,13 @@ class ExpensesPartPayerViewController: UIViewController {
             baseView = dest
         }
         if let dest = segue.destination as? ExpensePart2ViewController {
-            dest.payers = self.payers
-            dest.expense = self.expense
-            dest.payAmount = self.baseView?.tvc.havePayAmount()
-            dest.travel = self.travel
+            let paidAmount = self.baseView?.tvc.havePayAmount()
+            if self.isExpenseFullyPaid(withAmounts: paidAmount!){
+                dest.payers = self.payers
+                dest.expense = self.expense
+                dest.payAmount = paidAmount
+                dest.travel = self.travel
+            }
         }
-        
     }
-    
-
 }

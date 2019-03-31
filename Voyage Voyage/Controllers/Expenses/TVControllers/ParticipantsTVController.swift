@@ -39,6 +39,18 @@ class ParticipantsTVController: NSObject, UITableViewDataSource, UITableViewDele
         // #warning Incomplete implementation, return the number of rows
         return participants?.count ?? 0
     }
+    
+    func haveParticipantsSelected()-> [Participant]?{
+        let cells = self.tableView.visibleCells as? [PayerTVCell]
+        var parts: [Participant]? = []
+        for cell in cells! {
+            if cell.isPayer.isOn{
+                guard let indexPath = self.tableView.indexPath(for: cell) else{continue}
+                parts?.append(participants![indexPath.row])
+            }
+        }
+        return parts
+    }
 
    
 }

@@ -50,6 +50,12 @@ class ExpensePart2ViewController: UIViewController {
             baseView = dest
             dest?.participants = haveParticipants(payers: self.payers!)
         }
+        if let dest = segue.destination as? ExpensePart3ViewController{
+            dest.expense = self.expense
+            dest.payers = payers
+            dest.participants = self.baseView?.tvc.haveParticipantsSelected()
+            dest.payAmount = self.payAmount
+        }
     }
 
 
