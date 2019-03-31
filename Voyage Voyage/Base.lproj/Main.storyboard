@@ -931,7 +931,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nHg-O6-kOD">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <color key="barTintColor" red="0.29222571850000001" green="0.69071817400000002" blue="0.96945959329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Add expense" id="chw-1B-P2X">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="c2e-PW-goP"/>
@@ -946,7 +946,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ir-cY-kVf">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <connections>
-                                    <segue destination="O5G-XH-x6R" kind="embed" id="eED-ZL-7bi"/>
+                                    <segue destination="O5G-XH-x6R" kind="embed" identifier="partExpenseBase" id="eED-ZL-7bi"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -962,6 +962,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RGO-4D-aBD"/>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="c2e-PW-goP" id="33d-jq-0Tf"/>
+                        <outlet property="nextButton" destination="cSh-4r-LAZ" id="J0f-ij-GzI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlN-uc-gee" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1265,7 +1269,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E8O-rh-emI">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E8O-rh-emI">
                                 <rect key="frame" x="0.0" y="64" width="375" height="407"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1296,7 +1300,7 @@
                                                             </constraints>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                         </textField>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjy-Hg-nzT">
                                                             <rect key="frame" x="240" y="0.0" width="11" height="30"/>
@@ -1309,7 +1313,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="amountInput" destination="J85-fv-y9b" id="BKF-B3-pw2"/>
                                             <outlet property="payername" destination="Ryf-mD-N7T" id="g2J-hM-pcN"/>
                                         </connections>
                                     </tableViewCell>
@@ -1335,6 +1338,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5xK-Gq-hio"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="E8O-rh-emI" id="cve-bw-oUE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4RN-2H-j2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="bHX-Vt-Dgv"/>
@@ -1403,6 +1409,7 @@
                             <constraint firstItem="7Vz-FR-nJ9" firstAttribute="leading" secondItem="oRH-bh-Jqu" secondAttribute="leading" id="aKE-Mx-sfL"/>
                             <constraint firstItem="GHN-kz-yNc" firstAttribute="top" secondItem="oRH-bh-Jqu" secondAttribute="topMargin" constant="8" id="sN6-aZ-WlK"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="FFS-kX-zuk"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8r2-rC-DBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1483,6 +1490,7 @@
                             <constraint firstItem="6xz-aX-L6H" firstAttribute="leading" secondItem="EEW-Zd-hHE" secondAttribute="leadingMargin" id="lDo-Dm-K94"/>
                             <constraint firstItem="6xz-aX-L6H" firstAttribute="top" secondItem="EEW-Zd-hHE" secondAttribute="topMargin" constant="8" id="nth-1c-bwK"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="4J5-Fp-xRq"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="08X-Jh-z6n" userLabel="First Responder" sceneMemberID="firstResponder"/>

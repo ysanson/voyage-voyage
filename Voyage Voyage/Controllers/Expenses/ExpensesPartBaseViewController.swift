@@ -8,13 +8,25 @@
 
 import UIKit
 
-class ExpensesPartBaseViewController: UIViewController {
+class ExpensesPartBaseViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    var addMode: ExpensesPartPayerViewController?
+    var expense: Expense?
+    var payers: [Participant]?
+    var tvc: PayerAmountTVController!
+    var tap: UITapGestureRecognizer!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        tvc = PayerAmountTVController(tableView: self.tableView, baseView: self, expense: expense!, payers: self.payers)
+        tap =  UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
     }
+    
     
 
     /*
@@ -26,5 +38,6 @@ class ExpensesPartBaseViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 
 }

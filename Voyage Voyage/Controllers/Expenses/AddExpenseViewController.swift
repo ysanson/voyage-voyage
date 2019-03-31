@@ -43,6 +43,8 @@ class AddExpenseViewController: UIViewController {
             let photo = baseView?.photo
             expense = Expense(expenseName: name!, amount: Float(amount)!, photo: photo ?? UIImage(named: "Default")!, travel: self.travel!)
             ExpenseDAO.save()
+            let dest = segue.destination as? ExpensesPartPayerViewController
+            dest?.payers = baseView?.tvc.havePayer()
         }
         else if segue.identifier == "cancelAddExpense1"{
             let dest = segue.destination as? TravelDetailsTabBarController
