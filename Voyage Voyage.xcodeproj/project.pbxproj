@@ -10,6 +10,7 @@
 		3C155A7F2242B1F300609D29 /* AddTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C155A7E2242B1F300609D29 /* AddTravelViewController.swift */; };
 		3C3F3E2F223FD416000C9A6E /* TravelTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3F3E2E223FD416000C9A6E /* TravelTVController.swift */; };
 		3C3F3E31223FD5B2000C9A6E /* TravelTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C93DA4122390E07001F50C8 /* TravelTVCell.swift */; };
+		3C7B64742250F92100C7C4FA /* String-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B64732250F92100C7C4FA /* String-Ext.swift */; };
 		3C80490622455C61007CF9CA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C80490522455C61007CF9CA /* CoreDataManager.swift */; };
 		3C80490822455C75007CF9CA /* TravelDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C80490722455C75007CF9CA /* TravelDAO.swift */; };
 		3C80490A22455C93007CF9CA /* TravelFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C80490922455C93007CF9CA /* TravelFetchResultController.swift */; };
@@ -93,6 +94,7 @@
 /* Begin PBXFileReference section */
 		3C155A7E2242B1F300609D29 /* AddTravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTravelViewController.swift; sourceTree = "<group>"; };
 		3C3F3E2E223FD416000C9A6E /* TravelTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTVController.swift; sourceTree = "<group>"; };
+		3C7B64732250F92100C7C4FA /* String-Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String-Ext.swift"; path = "Voyage Voyage/ViewModels/String-Ext.swift"; sourceTree = SOURCE_ROOT; };
 		3C80490522455C61007CF9CA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		3C80490722455C75007CF9CA /* TravelDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDAO.swift; sourceTree = "<group>"; };
 		3C80490922455C93007CF9CA /* TravelFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelFetchResultController.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				61E0DF822246686300804185 /* Participant-CoreData.swift */,
 				3C972B86224E2447005744F5 /* Expense-CoreData.swift */,
 				3C972B88224E25AE005744F5 /* ExpensePart.swift */,
+				3C7B64732250F92100C7C4FA /* String-Ext.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				3C80490822455C75007CF9CA /* TravelDAO.swift in Sources */,
 				F0E6154F2245512900624F4F /* ReceiverTVController.swift in Sources */,
 				F0E6154522454A5600624F4F /* AddExpenseViewController.swift in Sources */,
+				3C7B64742250F92100C7C4FA /* String-Ext.swift in Sources */,
 				3C972B84224E238D005744F5 /* ExpensePartDAO.swift in Sources */,
 				3C972B89224E25AE005744F5 /* ExpensePart.swift in Sources */,
 				3C93DA4222390E07001F50C8 /* TravelTVCell.swift in Sources */,
@@ -750,7 +754,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MPAVRTPHU2;
 				INFOPLIST_FILE = "Voyage Voyage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -771,7 +775,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MPAVRTPHU2;
 				INFOPLIST_FILE = "Voyage Voyage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -33,6 +33,7 @@ class ExpenseBaseViewController: UIViewController, UINavigationControllerDelegat
         self.view.addGestureRecognizer(tap)
         self.expenseName.delegate = self
         self.totalAmountTextField.delegate = self
+        imagePicker.delegate = self
     }
     
 
@@ -48,7 +49,6 @@ class ExpenseBaseViewController: UIViewController, UINavigationControllerDelegat
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             self.photo = pickedImage
             changeImageButtonState()
-            updateSaveButtonState()
         }
         dismiss(animated: true, completion: nil)
     }

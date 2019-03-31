@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4wv-ub-mfE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4wv-ub-mfE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1270,11 +1270,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E8O-rh-emI">
-                                <rect key="frame" x="0.0" y="64" width="375" height="407"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="539"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="407" id="wvj-8h-Weq"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="amountPayerCell" rowHeight="90" id="6Qs-lf-o9D" customClass="AmountPayerTableViewCell" customModule="Voyage_Voyage" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
@@ -1332,6 +1329,8 @@
                         <constraints>
                             <constraint firstItem="F35-HK-wkN" firstAttribute="top" secondItem="jgf-g4-cje" secondAttribute="topMargin" id="Ahk-hc-skl"/>
                             <constraint firstItem="E8O-rh-emI" firstAttribute="top" secondItem="F35-HK-wkN" secondAttribute="bottom" constant="23" id="Bgj-Uu-ZZ3"/>
+                            <constraint firstItem="E8O-rh-emI" firstAttribute="top" secondItem="F35-HK-wkN" secondAttribute="bottom" constant="23" id="Mwg-sN-7Fd"/>
+                            <constraint firstItem="E8O-rh-emI" firstAttribute="bottom" secondItem="5xK-Gq-hio" secondAttribute="bottom" id="Oto-M2-pe8"/>
                             <constraint firstItem="F35-HK-wkN" firstAttribute="leading" secondItem="jgf-g4-cje" secondAttribute="leadingMargin" id="bGw-Jf-clF"/>
                             <constraint firstAttribute="trailing" secondItem="E8O-rh-emI" secondAttribute="trailing" id="dOh-ZD-eZO"/>
                             <constraint firstItem="E8O-rh-emI" firstAttribute="leading" secondItem="jgf-g4-cje" secondAttribute="leading" id="gC0-KF-r8F"/>

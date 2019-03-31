@@ -41,10 +41,11 @@ class AddExpenseViewController: UIViewController {
             let name = baseView?.expenseName.text
             let amount = baseView?.totalAmountTextField.text ?? String(0)
             let photo = baseView?.photo
-            expense = Expense(expenseName: name!, amount: Float(amount)!, photo: photo ?? UIImage(named: "Default")!, travel: self.travel!)
+            expense = Expense(expenseName: name!, amount: amount.floatValue, photo: (photo ?? UIImage(named: "Default")!), travel: self.travel!)
             ExpenseDAO.save()
             let dest = segue.destination as? ExpensesPartPayerViewController
             dest?.payers = baseView?.tvc.havePayer()
+            dest?.expense = self.expense
         }
         else if segue.identifier == "cancelAddExpense1"{
             let dest = segue.destination as? TravelDetailsTabBarController
