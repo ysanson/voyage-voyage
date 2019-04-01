@@ -47,10 +47,5 @@ class TravelMembersViewController: UIViewController {
         self.tabBarController?.navigationItem.title = self.tabItem.title
         self.tabBarController?.navigationItem.rightBarButtonItems = self.tabItem.rightBarButtonItems
     }
-    
-    @IBAction func unwindToMemberList(sender: UIStoryboardSegue){
-        
-    }
-    
 
 }

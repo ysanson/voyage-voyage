@@ -65,8 +65,6 @@
 		F0E61539224537ED00624F4F /* TravelExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E61538224537ED00624F4F /* TravelExpensesViewController.swift */; };
 		F0E6153B2245382700624F4F /* ExpensesTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6153A2245382700624F4F /* ExpensesTVController.swift */; };
 		F0E6153D2245410500624F4F /* AddMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6153C2245410400624F4F /* AddMemberViewController.swift */; };
-		F0E6153F2245441C00624F4F /* MemberExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6153E2245441C00624F4F /* MemberExpensesViewController.swift */; };
-		F0E615412245448900624F4F /* MemberExpensesTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E615402245448900624F4F /* MemberExpensesTVController.swift */; };
 		F0E61543224545C400624F4F /* MemberExpenseTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E61542224545C400624F4F /* MemberExpenseTVCell.swift */; };
 		F0E6154522454A5600624F4F /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6154422454A5600624F4F /* AddExpenseViewController.swift */; };
 		F0E6154722454A9400624F4F /* PayerTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6154622454A9400624F4F /* PayerTVController.swift */; };
@@ -158,8 +156,6 @@
 		F0E61538224537ED00624F4F /* TravelExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelExpensesViewController.swift; sourceTree = "<group>"; };
 		F0E6153A2245382700624F4F /* ExpensesTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTVController.swift; sourceTree = "<group>"; };
 		F0E6153C2245410400624F4F /* AddMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewController.swift; sourceTree = "<group>"; };
-		F0E6153E2245441C00624F4F /* MemberExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberExpensesViewController.swift; sourceTree = "<group>"; };
-		F0E615402245448900624F4F /* MemberExpensesTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberExpensesTVController.swift; sourceTree = "<group>"; };
 		F0E61542224545C400624F4F /* MemberExpenseTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberExpenseTVCell.swift; sourceTree = "<group>"; };
 		F0E6154422454A5600624F4F /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 		F0E6154622454A9400624F4F /* PayerTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayerTVController.swift; sourceTree = "<group>"; };
@@ -303,6 +299,7 @@
 		3CCB00E42238FB100050878A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3CDE4C292252570B00994D8E /* ExpenseDetails */,
 				3C972B8A224E2B13005744F5 /* Expenses */,
 				3CF2C394224A84EE0082B051 /* TravelDetails */,
 				3CF2C393224A84DC0082B051 /* BaseView */,
@@ -330,6 +327,14 @@
 				617AD14C224FBC5400344017 /* ParticipantAmountTVCell.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3CDE4C292252570B00994D8E /* ExpenseDetails */ = {
+			isa = PBXGroup;
+			children = (
+				F0E6154A22454DE300624F4F /* ExpenseDetailsViewController.swift */,
+			);
+			path = ExpenseDetails;
 			sourceTree = "<group>";
 		};
 		3CF2C38B224A3CFC0082B051 /* TravelPlan */ = {
@@ -372,9 +377,6 @@
 				F0E615322245360100624F4F /* TransferTVController.swift */,
 				F0E61538224537ED00624F4F /* TravelExpensesViewController.swift */,
 				F0E6153A2245382700624F4F /* ExpensesTVController.swift */,
-				F0E6153E2245441C00624F4F /* MemberExpensesViewController.swift */,
-				F0E615402245448900624F4F /* MemberExpensesTVController.swift */,
-				F0E6154A22454DE300624F4F /* ExpenseDetailsViewController.swift */,
 				F0E6154E2245512900624F4F /* ReceiverTVController.swift */,
 			);
 			path = TravelDetails;
@@ -539,7 +541,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0E615412245448900624F4F /* MemberExpensesTVController.swift in Sources */,
 				3CF2C38D224A45140082B051 /* EditTravelViewController.swift in Sources */,
 				617AD14D224FBC5400344017 /* ParticipantAmountTVCell.swift in Sources */,
 				F0E61537224537A100624F4F /* ExpenseTVCell.swift in Sources */,
@@ -565,7 +566,6 @@
 				3CF2C390224A7C400082B051 /* MemberBaseViewController.swift in Sources */,
 				F0E615252245308900624F4F /* TravelMembersViewController.swift in Sources */,
 				F0E6153D2245410500624F4F /* AddMemberViewController.swift in Sources */,
-				F0E6153F2245441C00624F4F /* MemberExpensesViewController.swift in Sources */,
 				617AD147224FB88200344017 /* ExpensePart2ViewController.swift in Sources */,
 				F0E615332245360100624F4F /* TransferTVController.swift in Sources */,
 				617AD14F224FBC8700344017 /* ExpencePartBase2ViewController.swift in Sources */,

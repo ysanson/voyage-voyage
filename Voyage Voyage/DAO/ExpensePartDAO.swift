@@ -33,4 +33,9 @@ class ExpensePartDAO{
             return nil
         }
     }
+    
+    static func search(forExpense expense: Expense)->[ExpensePart]?{
+        return expense.contains?.allObjects as? [ExpensePart]
+    }
+    
 }

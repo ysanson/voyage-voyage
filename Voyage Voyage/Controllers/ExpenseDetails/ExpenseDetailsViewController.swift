@@ -10,6 +10,11 @@ import UIKit
 
 class ExpenseDetailsViewController: UIViewController {
 
+    var expense: Expense?
+    @IBOutlet weak var expenseName: UILabel!
+    @IBOutlet weak var amount: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
