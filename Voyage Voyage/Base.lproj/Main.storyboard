@@ -317,6 +317,9 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="aj0-De-e8N" id="IhD-zv-kbf"/>
+                                </connections>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k0X-Pq-CS7">
                                 <rect key="frame" x="48" y="453" width="286" height="128"/>
@@ -341,6 +344,9 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="K4T-gc-0BJ" id="J1v-j6-o5m"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -366,6 +372,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6AL-Ve-45Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="aj0-De-e8N"/>
+                <customObject id="K4T-gc-0BJ"/>
             </objects>
             <point key="canvasLocation" x="1749.5999999999999" y="2139.5802098950526"/>
         </scene>

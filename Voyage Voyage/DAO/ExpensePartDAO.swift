@@ -38,4 +38,14 @@ class ExpensePartDAO{
         return expense.contains?.allObjects as? [ExpensePart]
     }
     
+    static func getPaidAmount(forExpense expense:Expense, forPayer payer: Participant)->Float?{
+        let parts = expense.contains?.allObjects as? [ExpensePart]
+        for part in parts!{
+            if part.paidBy == payer{
+                return part.paidAmount
+            }
+        }
+        return nil
+    }
+    
 }

@@ -35,6 +35,8 @@
 		3C972B90224E33A8005744F5 /* ExpensesPartBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C972B8F224E33A8005744F5 /* ExpensesPartBaseViewController.swift */; };
 		3C972B92224E3458005744F5 /* AmountPayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C972B91224E3458005744F5 /* AmountPayerTableViewCell.swift */; };
 		3CDE4C2822522EBD00994D8E /* ParticipantAmountTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE4C2722522EBD00994D8E /* ParticipantAmountTVController.swift */; };
+		3CDE4C2B225257AB00994D8E /* ExpensePayersTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE4C2A225257AB00994D8E /* ExpensePayersTVController.swift */; };
+		3CDE4C2D225257F500994D8E /* ExpenseParticipantTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE4C2C225257F500994D8E /* ExpenseParticipantTVController.swift */; };
 		3CF2C386224A21E80082B051 /* TravelDetailsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2C385224A21E80082B051 /* TravelDetailsTabBarController.swift */; };
 		3CF2C38A224A3CF20082B051 /* TravelPlanBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2C389224A3CF20082B051 /* TravelPlanBaseViewController.swift */; };
 		3CF2C38D224A45140082B051 /* EditTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2C38C224A45140082B051 /* EditTravelViewController.swift */; };
@@ -126,6 +128,8 @@
 		3C972B8F224E33A8005744F5 /* ExpensesPartBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesPartBaseViewController.swift; sourceTree = "<group>"; };
 		3C972B91224E3458005744F5 /* AmountPayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountPayerTableViewCell.swift; sourceTree = "<group>"; };
 		3CDE4C2722522EBD00994D8E /* ParticipantAmountTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantAmountTVController.swift; sourceTree = "<group>"; };
+		3CDE4C2A225257AB00994D8E /* ExpensePayersTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensePayersTVController.swift; sourceTree = "<group>"; };
+		3CDE4C2C225257F500994D8E /* ExpenseParticipantTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseParticipantTVController.swift; sourceTree = "<group>"; };
 		3CF2C385224A21E80082B051 /* TravelDetailsTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetailsTabBarController.swift; sourceTree = "<group>"; };
 		3CF2C389224A3CF20082B051 /* TravelPlanBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPlanBaseViewController.swift; sourceTree = "<group>"; };
 		3CF2C38C224A45140082B051 /* EditTravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTravelViewController.swift; sourceTree = "<group>"; };
@@ -333,6 +337,8 @@
 			isa = PBXGroup;
 			children = (
 				F0E6154A22454DE300624F4F /* ExpenseDetailsViewController.swift */,
+				3CDE4C2A225257AB00994D8E /* ExpensePayersTVController.swift */,
+				3CDE4C2C225257F500994D8E /* ExpenseParticipantTVController.swift */,
 			);
 			path = ExpenseDetails;
 			sourceTree = "<group>";
@@ -564,6 +570,7 @@
 				61F47AD4225103BA00FE1DAA /* ParticipantsTVController.swift in Sources */,
 				617AD14B224FBB2A00344017 /* ExpensePart3ViewController.swift in Sources */,
 				3CF2C390224A7C400082B051 /* MemberBaseViewController.swift in Sources */,
+				3CDE4C2D225257F500994D8E /* ExpenseParticipantTVController.swift in Sources */,
 				F0E615252245308900624F4F /* TravelMembersViewController.swift in Sources */,
 				F0E6153D2245410500624F4F /* AddMemberViewController.swift in Sources */,
 				617AD147224FB88200344017 /* ExpensePart2ViewController.swift in Sources */,
@@ -597,6 +604,7 @@
 				F0E6154922454B0C00624F4F /* PayerTVCell.swift in Sources */,
 				F0E6154B22454DE300624F4F /* ExpenseDetailsViewController.swift in Sources */,
 				3C80490A22455C93007CF9CA /* TravelFetchResultController.swift in Sources */,
+				3CDE4C2B225257AB00994D8E /* ExpensePayersTVController.swift in Sources */,
 				F0E61543224545C400624F4F /* MemberExpenseTVCell.swift in Sources */,
 				3C83311B22383431009C8B51 /* AppDelegate.swift in Sources */,
 				61E0DF812246679F00804185 /* ParticipantFetchResultController.swift in Sources */,

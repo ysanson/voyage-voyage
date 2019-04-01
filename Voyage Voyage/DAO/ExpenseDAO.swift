@@ -40,8 +40,30 @@ class ExpenseDAO{
         return travel.has?.allObjects as? [Expense]
     }
     
-    static func totalExpenses(forParticipant person: Participant) -> Float{
-        return 0.0
+    static func fetchAllPayers(forExpense expense:Expense)->[Participant]?{
+        let parts = expense.contains?.allObjects as? [ExpensePart]
+        var payers: [Participant] = []
+        for part in parts!{
+            let payer = part.paidBy
+            if !payers.contains(payer!){
+                payers.append(payer!)
+            }
+        }
+        return payers
     }
+    
+    static func fetchAllParticipants(forExpense expense: Expense)->[Participant]?{
+        let parts = expense.contains?.allObjects as? [ExpensePart]
+        var participants: [Participant] = []
+        for part in parts!{
+            let participant = part.refundedBy
+            if !participants.contains(participant!){
+                participants.append(participant!)
+            }
+        }
+        return participants
+    }
+    
+    
     
 }
