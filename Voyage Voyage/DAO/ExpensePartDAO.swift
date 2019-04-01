@@ -48,4 +48,13 @@ class ExpensePartDAO{
         return nil
     }
     
+    static func getPartialAmount(forExpense expense:Expense, forParticipant participant: Participant)->Float?{
+        let parts = expense.contains?.allObjects as? [ExpensePart]
+        for part in parts!{
+            if part.refundedBy == participant{
+                return part.partialAmount
+            }
+        }
+        return nil
+    }
 }

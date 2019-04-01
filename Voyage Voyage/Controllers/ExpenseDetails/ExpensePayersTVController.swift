@@ -13,10 +13,15 @@ class ExpensePayersTVController: NSObject, UITableViewDelegate, UITableViewDataS
     
     var tableView: UITableView!
     var payers: [Participant]?
+    var expense: Expense
     
     init(tableView: UITableView, expense: Expense){
         self.tableView = tableView
+        self.expense = expense
         payers = ExpenseDAO.fetchAllPayers(forExpense: expense)
+        super.init()
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,7 +29,12 @@ class ExpensePayersTVController: NSObject, UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ExpensePayers")
+        let participant = payers![indexPath.row]
+        cell?.textLabel?.text = participant.fullname
+        let paidAmount = ExpensePartDAO.getPaidAmount(forExpense: self.expense, forPayer: participant)!
+        cell?.detailTextLabel?.text = "Paid " + String(paidAmount)
+        return cell!
     }
     
     
