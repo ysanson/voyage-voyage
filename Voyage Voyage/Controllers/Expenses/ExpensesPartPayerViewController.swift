@@ -25,10 +25,10 @@ class ExpensesPartPayerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func isExpenseFullyPaid(withAmounts amounts: [Float])->Bool{
+    func isExpenseFullyPaid(withAmounts amounts: [Participant:Float])->Bool{
         var fullAmt: Float = 0.0
-        for amt in amounts{
-            fullAmt += amt
+        for (_, value) in amounts{
+            fullAmt += value
         }
         if fullAmt != expense?.amount{
             let dialogMessage = UIAlertController(title: "Error", message: "The overall amount is not equal to the expense amount", preferredStyle: .alert)
@@ -41,8 +41,6 @@ class ExpensesPartPayerViewController: UIViewController {
             return false
         }
         return true
-        
-        
     }
 
     
@@ -60,13 +58,17 @@ class ExpensesPartPayerViewController: UIViewController {
             baseView = dest
         }
         if let dest = segue.destination as? ExpensePart2ViewController {
-            let paidAmount = self.baseView?.tvc.havePayAmount()
+            let paidAmount = self.baseView?.tvc.getPayAmount()
             if self.isExpenseFullyPaid(withAmounts: paidAmount!){
                 dest.payers = self.payers
                 dest.expense = self.expense
-                dest.payAmount = paidAmount
+                dest.paidAmount = paidAmount
                 dest.travel = self.travel
             }
+        }
+        else if segue.identifier == "cancelAddExpense1"{
+            let dest = segue.destination as? TravelDetailsTabBarController
+            dest?.travel = self.travel
         }
     }
 }

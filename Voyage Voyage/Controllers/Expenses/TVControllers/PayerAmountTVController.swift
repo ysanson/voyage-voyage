@@ -30,6 +30,7 @@ class PayerAmountTVController: NSObject, UITableViewDataSource, UITableViewDeleg
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "amountPayerCell", for: indexPath) as? AmountPayerTableViewCell
         else {fatalError("The dequeued cell is not an instance of amountTVCell")}
         cell.payername.text = payers![indexPath.row].fullname
+        cell.participant = payers![indexPath.row]
         return cell
     }
 
@@ -37,13 +38,13 @@ class PayerAmountTVController: NSObject, UITableViewDataSource, UITableViewDeleg
        return payers?.count ?? 0
     }
     
-    func havePayAmount() -> [Float]?{
+    func getPayAmount()->[Participant:Float]{
+        var dict:[Participant:Float] = [:]
         let cells = self.tableView.visibleCells as? [AmountPayerTableViewCell]
-        var payAmount: [Float]? = []
         for cell in cells!{
-            payAmount?.append(cell.amountInput.text?.floatValue ?? 0)
+            dict[cell.participant!] = cell.amountInput.text?.floatValue ?? 0
         }
-        return payAmount
+        return dict
     }
 
   

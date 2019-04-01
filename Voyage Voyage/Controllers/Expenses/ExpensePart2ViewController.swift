@@ -12,7 +12,7 @@ class ExpensePart2ViewController: UIViewController {
     
     var payers: [Participant]?
     var expense: Expense?
-    var payAmount: [Float]?
+    var paidAmount: [Participant:Float]?
     var baseView: ExpencePartBase2ViewController?
     var travel: Travel?
 
@@ -54,7 +54,12 @@ class ExpensePart2ViewController: UIViewController {
             dest.expense = self.expense
             dest.payers = payers
             dest.participants = self.baseView?.tvc.haveParticipantsSelected()
-            dest.payAmount = self.payAmount
+            dest.paidAmount = self.paidAmount
+            dest.travel = self.travel
+        }
+        else if segue.identifier == "cancelAddExpense2"{
+            let dest = segue.destination as? TravelDetailsTabBarController
+            dest?.travel = self.travel
         }
     }
 

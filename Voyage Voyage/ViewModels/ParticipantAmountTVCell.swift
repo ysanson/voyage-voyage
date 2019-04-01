@@ -8,8 +8,16 @@
 
 import UIKit
 
-class ParticipantAmountTVCell: UITableViewCell {
-
+class ParticipantAmountTVCell: UITableViewCell, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    @IBOutlet weak var amountTextField: UITextField!
+    @IBOutlet weak var payerTextField: UITextField!
+    @IBOutlet weak var participantName: UILabel!
+    
+    var picker = UIPickerView()
+    var payers: [Participant]?
+    var participant: Participant?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +29,19 @@ class ParticipantAmountTVCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return payers?.count ?? 0
+    }
+    
+    func pickerView( _ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return payers![row].fullname
+    }
+    
+    func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        payerTextField.text = payers![row].fullname
+    }
 }

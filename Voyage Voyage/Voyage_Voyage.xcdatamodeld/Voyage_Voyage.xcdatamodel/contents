@@ -8,6 +8,7 @@
         <relationship name="contains" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExpensePart" inverseName="refersTo" inverseEntity="ExpensePart" syncable="YES"/>
     </entity>
     <entity name="ExpensePart" representedClassName="ExpensePart" syncable="YES" codeGenerationType="class">
+        <attribute name="isRefunded" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="paidAmount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="partialAmount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="paidBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participant" inverseName="pays" inverseEntity="Participant" syncable="YES"/>
@@ -32,8 +33,8 @@
     </entity>
     <elements>
         <element name="Expense" positionX="-114.7578125" positionY="-599.1796875" width="128" height="118"/>
+        <element name="ExpensePart" positionX="70.1015625" positionY="-218.28515625" width="128" height="133"/>
         <element name="Participant" positionX="-250.9375" positionY="-271.875" width="128" height="148"/>
         <element name="Travel" positionX="-552.84765625" positionY="-122.16015625" width="128" height="118"/>
-        <element name="ExpensePart" positionX="70.1015625" positionY="-218.28515625" width="128" height="118"/>
     </elements>
 </model>

@@ -12,6 +12,6 @@ class AmountPayerTableViewCell: UITableViewCell {
 
     @IBOutlet weak var payername: UILabel!
     @IBOutlet weak var amountInput: UITextField!
-    
+    var participant: Participant?
 
 }

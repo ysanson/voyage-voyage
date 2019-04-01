@@ -41,10 +41,10 @@ class ParticipantsTVController: NSObject, UITableViewDataSource, UITableViewDele
     }
     
     func haveParticipantsSelected()-> [Participant]?{
-        let cells = self.tableView.visibleCells as? [PayerTVCell]
+        let cells = self.tableView.visibleCells as? [ExpenseParticipantTVCell]
         var parts: [Participant]? = []
         for cell in cells! {
-            if cell.isPayer.isOn{
+            if cell.isHere.isOn{
                 guard let indexPath = self.tableView.indexPath(for: cell) else{continue}
                 parts?.append(participants![indexPath.row])
             }

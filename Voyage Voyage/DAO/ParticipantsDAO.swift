@@ -61,6 +61,16 @@ class ParticipantsDAO{
         return travel.contient?.allObjects as? [Participant]
     }
     
+    static func search(forFullname fullname: String, forTravel travel: Travel)->Participant?{
+        guard let parts = travel.contient?.allObjects as? [Participant] else {return nil}
+        for part in parts{
+            if part.fullname == fullname{
+                return part
+            }
+        }
+        return nil
+    }
+    
     static func searchForStillHere(forTravel travel: Travel)->[Participant]?{
         guard let parts = ParticipantsDAO.search(forTravel: travel) else { return nil }
         var result: [Participant] = []

@@ -29,11 +29,12 @@
 		3C972B82224E2264005744F5 /* ExpensePartFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C972B81224E2264005744F5 /* ExpensePartFetchResultController.swift */; };
 		3C972B84224E238D005744F5 /* ExpensePartDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C972B83224E238D005744F5 /* ExpensePartDAO.swift */; };
 		3C972B87224E2447005744F5 /* Expense-CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C972B86224E2447005744F5 /* Expense-CoreData.swift */; };
-		3C972B89224E25AE005744F5 /* ExpensePart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C972B88224E25AE005744F5 /* ExpensePart.swift */; };
+		3C972B89224E25AE005744F5 /* ExpensePart-CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C972B88224E25AE005744F5 /* ExpensePart-CoreData.swift */; };
 		3C972B8C224E2B3D005744F5 /* ExpenseBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C972B8B224E2B3D005744F5 /* ExpenseBaseViewController.swift */; };
 		3C972B8E224E3177005744F5 /* ExpensesPartPayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C972B8D224E3177005744F5 /* ExpensesPartPayerViewController.swift */; };
 		3C972B90224E33A8005744F5 /* ExpensesPartBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C972B8F224E33A8005744F5 /* ExpensesPartBaseViewController.swift */; };
 		3C972B92224E3458005744F5 /* AmountPayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C972B91224E3458005744F5 /* AmountPayerTableViewCell.swift */; };
+		3CDE4C2822522EBD00994D8E /* ParticipantAmountTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE4C2722522EBD00994D8E /* ParticipantAmountTVController.swift */; };
 		3CF2C386224A21E80082B051 /* TravelDetailsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2C385224A21E80082B051 /* TravelDetailsTabBarController.swift */; };
 		3CF2C38A224A3CF20082B051 /* TravelPlanBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2C389224A3CF20082B051 /* TravelPlanBaseViewController.swift */; };
 		3CF2C38D224A45140082B051 /* EditTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF2C38C224A45140082B051 /* EditTravelViewController.swift */; };
@@ -121,11 +122,12 @@
 		3C972B81224E2264005744F5 /* ExpensePartFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensePartFetchResultController.swift; sourceTree = "<group>"; };
 		3C972B83224E238D005744F5 /* ExpensePartDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensePartDAO.swift; sourceTree = "<group>"; };
 		3C972B86224E2447005744F5 /* Expense-CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Expense-CoreData.swift"; path = "Voyage Voyage/DAO/Expense-CoreData.swift"; sourceTree = SOURCE_ROOT; };
-		3C972B88224E25AE005744F5 /* ExpensePart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExpensePart.swift; path = "Voyage Voyage/DAO/ExpensePart.swift"; sourceTree = SOURCE_ROOT; };
+		3C972B88224E25AE005744F5 /* ExpensePart-CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ExpensePart-CoreData.swift"; path = "Voyage Voyage/DAO/ExpensePart-CoreData.swift"; sourceTree = SOURCE_ROOT; };
 		3C972B8B224E2B3D005744F5 /* ExpenseBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseBaseViewController.swift; sourceTree = "<group>"; };
 		3C972B8D224E3177005744F5 /* ExpensesPartPayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesPartPayerViewController.swift; sourceTree = "<group>"; };
 		3C972B8F224E33A8005744F5 /* ExpensesPartBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesPartBaseViewController.swift; sourceTree = "<group>"; };
 		3C972B91224E3458005744F5 /* AmountPayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountPayerTableViewCell.swift; sourceTree = "<group>"; };
+		3CDE4C2722522EBD00994D8E /* ParticipantAmountTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantAmountTVController.swift; sourceTree = "<group>"; };
 		3CF2C385224A21E80082B051 /* TravelDetailsTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetailsTabBarController.swift; sourceTree = "<group>"; };
 		3CF2C389224A3CF20082B051 /* TravelPlanBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPlanBaseViewController.swift; sourceTree = "<group>"; };
 		3CF2C38C224A45140082B051 /* EditTravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTravelViewController.swift; sourceTree = "<group>"; };
@@ -291,7 +293,7 @@
 				6110F92D2240105D0079D1DF /* Travel-CoreData.swift */,
 				61E0DF822246686300804185 /* Participant-CoreData.swift */,
 				3C972B86224E2447005744F5 /* Expense-CoreData.swift */,
-				3C972B88224E25AE005744F5 /* ExpensePart.swift */,
+				3C972B88224E25AE005744F5 /* ExpensePart-CoreData.swift */,
 				3C7B64732250F92100C7C4FA /* String-Ext.swift */,
 			);
 			path = Models;
@@ -384,6 +386,7 @@
 				61F47AD3225103BA00FE1DAA /* ParticipantsTVController.swift */,
 				F0E6154622454A9400624F4F /* PayerTVController.swift */,
 				61F47AD12250EB8E00FE1DAA /* PayerAmountTVController.swift */,
+				3CDE4C2722522EBD00994D8E /* ParticipantAmountTVController.swift */,
 			);
 			path = TVControllers;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				617AD14F224FBC8700344017 /* ExpencePartBase2ViewController.swift in Sources */,
 				F0E615292245314400624F4F /* MemberListTVController.swift in Sources */,
 				3C972B7E224E1367005744F5 /* ExpenseDAO.swift in Sources */,
+				3CDE4C2822522EBD00994D8E /* ParticipantAmountTVController.swift in Sources */,
 				3C83311D22383431009C8B51 /* ViewController.swift in Sources */,
 				61E0DF832246686300804185 /* Participant-CoreData.swift in Sources */,
 				617AD149224FBA4B00344017 /* ExpenseParticipantTVCell.swift in Sources */,
@@ -585,7 +589,7 @@
 				F0E6154522454A5600624F4F /* AddExpenseViewController.swift in Sources */,
 				3C7B64742250F92100C7C4FA /* String-Ext.swift in Sources */,
 				3C972B84224E238D005744F5 /* ExpensePartDAO.swift in Sources */,
-				3C972B89224E25AE005744F5 /* ExpensePart.swift in Sources */,
+				3C972B89224E25AE005744F5 /* ExpensePart-CoreData.swift in Sources */,
 				3C93DA4222390E07001F50C8 /* TravelTVCell.swift in Sources */,
 				3CF2C38A224A3CF20082B051 /* TravelPlanBaseViewController.swift in Sources */,
 				3CF2C392224A7C550082B051 /* EditMemberViewController.swift in Sources */,
@@ -774,13 +778,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7944WFUCZG;
+				DEVELOPMENT_TEAM = MPAVRTPHU2;
 				INFOPLIST_FILE = "Voyage Voyage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "marie.voyage-voyage";
+				PRODUCT_BUNDLE_IDENTIFIER = "yvan.marie.voyage-voyage";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -795,13 +799,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7944WFUCZG;
+				DEVELOPMENT_TEAM = MPAVRTPHU2;
 				INFOPLIST_FILE = "Voyage Voyage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "marie.voyage-voyage";
+				PRODUCT_BUNDLE_IDENTIFIER = "yvan.marie.voyage-voyage";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
