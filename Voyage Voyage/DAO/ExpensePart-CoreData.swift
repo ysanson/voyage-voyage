@@ -19,6 +19,8 @@ extension ExpensePart{
         self.paidBy = paidBy
         self.refundedBy = refundedBy
         self.refersTo = refersTo
+        paidBy.addToPays(self)
+        refundedBy.addToRefunds(self)
         self.isRefunded = false
     }
 }

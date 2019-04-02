@@ -42,7 +42,7 @@ class ExpensePart3ViewController: UIViewController {
         else if segue.identifier == "doneAddExpense"{
             let payerParts = self.baseView!.tvc!.getCellValues()
             let partPayerCorrespondance = self.baseView?.tvc?.getPayerForParticipant()
-            for (part,payer)  in partPayerCorrespondance!{
+            for (part,payer) in partPayerCorrespondance!{
                 let partialAmount = payerParts![part]
                 let paid = paidAmount![payer]
                 var _ = ExpensePart(partialAmount: partialAmount!, paidAmount: paid!, paidBy: payer, refundedBy: part, refersTo: self.expense!)

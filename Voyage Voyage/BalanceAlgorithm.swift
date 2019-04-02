@@ -20,11 +20,9 @@ class BalanceAlgorithm {
         
         for exp in expenses{
             let expenseParts = ExpenseDAO.getExpenseParts(forExpense: exp)
-            var concernedMembers = ExpenseDAO.fetchAllParticipants(forExpense: exp)?.count ?? 0
-            concernedMembers += ExpenseDAO.fetchAllPayers(forExpense: exp)?.count ?? 0
             for part in expenseParts!{
-                let newScore = (result[part.refundedBy!] ?? 0) + exp.amount/Float(concernedMembers)
-                result[part.refundedBy!] = -newScore
+                result[part.refundedBy!] = (result[part.refundedBy!] ?? 0) - part.partialAmount
+                result[part.paidBy!] = (result[part.paidBy!] ?? 0) + part.partialAmount
             }
         }
         return result
