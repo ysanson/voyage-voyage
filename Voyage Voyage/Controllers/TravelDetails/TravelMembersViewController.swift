@@ -21,7 +21,7 @@ class TravelMembersViewController: UIViewController {
         
         // Do any additional setup after loading the view.
        tbc = self.tabBarController as? TravelDetailsTabBarController
-        travelMemberC = MemberListTVController(tableview: tableView, travel: tbc.travel!, vc: self)
+        travelMemberC = MemberListTVController(tableview: tableView, vc: self)
         self.tableView.reloadData()
     }
     
@@ -38,7 +38,7 @@ class TravelMembersViewController: UIViewController {
             dest.travel = self.tbc.travel
             if let cell = sender as? TravelMemberTVCell{
                 guard let indexPath = self.tableView.indexPath(for: cell) else{return}
-                dest.participant = self.travelMemberC.participantList?[indexPath.row]
+                dest.participant = self.travelMemberC.participantVM.get(participantAt: indexPath.row)
             }
         }
     }

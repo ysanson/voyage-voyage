@@ -14,11 +14,14 @@ class TravelDetailsTVController: NSObject, UITableViewDataSource {
     var tableView: UITableView
     var participantList: [Participant]?
     var viewController: TravelDetailsViewController
+    var balance: [Participant:Float]
     
     init(tableView: UITableView, viewController: TravelDetailsViewController){
         self.tableView = tableView
         self.viewController = viewController
         participantList = ParticipantsDAO.search(forTravel: viewController.tbc.travel!)
+        let expenses = ExpenseDAO.fetch(forTravel: viewController.tbc.travel!)
+        balance = BalanceAlgorithm.calculateBalance(forParticipants: participantList!, withExpenses: expenses!)
         super.init()
         self.tableView.dataSource = self
     }
@@ -31,7 +34,7 @@ class TravelDetailsTVController: NSObject, UITableViewDataSource {
          guard let cell = tableView.dequeueReusableCell(withIdentifier: "memberAmountCell", for: indexPath) as? MemberAmoutTVCell else{fatalError("The dequeued cell is not an instance of MemberAmountTVCell.")}
         let person = participantList![indexPath.row]
         cell.name.text = person.fullname
-        let totalAmount = 0
+        let totalAmount = balance[person]!
         cell.amount.text = String(totalAmount)
         cell.name.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         cell.amount.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -43,17 +46,4 @@ class TravelDetailsTVController: NSObject, UITableViewDataSource {
         }
         return cell
     }
-    
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

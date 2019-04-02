@@ -64,6 +64,8 @@ class ExpenseDAO{
         return participants
     }
     
-    
+    static func getExpenseParts(forExpense expense: Expense)->[ExpensePart]?{
+        return expense.contains?.allObjects as? [ExpensePart]
+    }
     
 }

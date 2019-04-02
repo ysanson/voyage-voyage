@@ -20,7 +20,7 @@
         <attribute name="exitdate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="firstname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="participe" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Travel" inverseName="contient" inverseEntity="Travel" syncable="YES"/>
+        <relationship name="participe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Travel" inverseName="contient" inverseEntity="Travel" syncable="YES"/>
         <relationship name="pays" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ExpensePart" inverseName="paidBy" inverseEntity="ExpensePart" syncable="YES"/>
         <relationship name="refunds" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ExpensePart" inverseName="refundedBy" inverseEntity="ExpensePart" syncable="YES"/>
     </entity>

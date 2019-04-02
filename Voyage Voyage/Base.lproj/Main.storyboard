@@ -93,11 +93,11 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="memberAmountCell" textLabel="pZu-CZ-lFP" detailTextLabel="fPd-Mt-O2p" rowHeight="90" style="IBUITableViewCellStyleSubtitle" id="aUe-kf-4JP" customClass="MemberAmoutTVCell" customModule="Voyage_Voyage" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memberAmountCell" textLabel="pZu-CZ-lFP" detailTextLabel="fPd-Mt-O2p" rowHeight="90" style="IBUITableViewCellStyleSubtitle" id="aUe-kf-4JP" customClass="MemberAmoutTVCell" customModule="Voyage_Voyage" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aUe-kf-4JP" id="61z-4Z-0ft">
-                                            <rect key="frame" x="0.0" y="0.0" width="328" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pZu-CZ-lFP">
@@ -481,16 +481,10 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="expenseCell" rowHeight="90" id="Iw2-cL-RvR" customClass="ExpenseTVCell" customModule="Voyage_Voyage" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Iw2-cL-RvR" id="9SH-ig-bID" customClass="ExpenceTVCell" customModule="Voyage_Voyage" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Iw2-cL-RvR" id="9SH-ig-bID">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D4Y-gu-qZS">
-                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="91"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="90" id="uyM-r0-d7J"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expense name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iww-5m-M26">
                                                     <rect key="frame" x="140" y="13" width="112" height="21"/>
                                                     <constraints>
@@ -506,6 +500,12 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D4Y-gu-qZS">
+                                                    <rect key="frame" x="0.0" y="-1" width="90" height="91"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="uyM-r0-d7J"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="lJf-bM-iNM" secondAttribute="bottom" constant="-1" id="25i-nH-H0N"/>
@@ -519,9 +519,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="expenseAmount" destination="lJf-bM-iNM" id="vTS-yn-Uwu"/>
-                                            <outlet property="expenseName" destination="Iww-5m-M26" id="dds-xa-4GK"/>
-                                            <outlet property="expenseView" destination="D4Y-gu-qZS" id="68G-py-YHQ"/>
+                                            <outlet property="expenseAmount" destination="lJf-bM-iNM" id="dwP-Pf-aS2"/>
+                                            <outlet property="expenseName" destination="Iww-5m-M26" id="f3v-IW-pCf"/>
+                                            <outlet property="expenseView" destination="D4Y-gu-qZS" id="2i6-nN-oFZ"/>
                                             <segue destination="0Ah-N2-weK" kind="show" identifier="expenseDetails" id="VRU-8d-9pR"/>
                                         </connections>
                                     </tableViewCell>
@@ -1561,7 +1561,7 @@
         <segue reference="7ou-dS-B3r"/>
         <segue reference="frZ-Ko-JFq"/>
         <segue reference="j8c-s3-9Wi"/>
-        <segue reference="rqG-IH-bf6"/>
+        <segue reference="GZG-xg-27a"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

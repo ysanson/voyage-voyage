@@ -12,27 +12,29 @@ class ExpensesTVController: NSObject, UITableViewDataSource, UITableViewDelegate
     
     var viewController: TravelExpensesViewController
     var tableView: UITableView
-    var expenses: [Expense]?
+    var expensesVM: ExpensesVM
+    var expenseFetchResult: ExpenseFetchResultController
     
     init(tableView: UITableView, viewController: TravelExpensesViewController){
         self.tableView = tableView
         self.viewController = viewController
+        expenseFetchResult = ExpenseFetchResultController(view: self.tableView, travel: self.viewController.tbc.travel!)
+        expensesVM = ExpensesVM(data: expenseFetchResult.expensesFetched)
         super.init()
-        expenses = ExpenseDAO.fetch(forTravel: viewController.tbc.travel!)
         self.tableView.dataSource = self
         self.tableView.delegate = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return expenses?.count ?? 0
+        return expensesVM.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          guard let cell = tableView.dequeueReusableCell(withIdentifier: "expenseCell", for: indexPath) as? ExpenseTVCell else{fatalError("The dequeued cell is not an instance of ExpenseTVCell.")}
-        let expense = expenses![indexPath.row]
+        let expense = expensesVM.get(expenseAt: indexPath.row)!
         cell.expenseView.image = expense.getphoto
         cell.expenseName.text = expense.name
-        cell.expenseAmount.text = String(expense.amount)
+        cell.expenseAmount.text = "Amount paid: " + String(expense.amount)
         return cell
     }
     

@@ -25,13 +25,13 @@ class ViewController: UIViewController {
         if let destController = segue.destination as? TravelDetailsTabBarController{
             if let cell = sender as? TravelTVCell{
                 guard let indexPath = self.travelTableView.indexPath(for: cell) else{return}
-                destController.travel = travelTVController.travelVM?.get(travelAt: indexPath.row)
+                destController.travel = travelTVController.travelVM.get(travelAt: indexPath.row)
             }
         }
         else if let destController = segue.destination as? EditTravelViewController{
             if let cell = sender as? TravelTVCell{
                 guard let indexPath = self.travelTableView.indexPath(for: cell) else{return}
-                destController.travel = travelTVController.travelVM?.get(travelAt: indexPath.row)
+                destController.travel = travelTVController.travelVM.get(travelAt: indexPath.row)
             }
         }
     }

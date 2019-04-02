@@ -41,7 +41,7 @@ class TravelExpensesViewController: UIViewController {
         else if let dest = segue.destination as? ExpenseDetailsViewController{
             if let cell = sender as? ExpenseTVCell{
                 guard let indexPath = self.tableView.indexPath(for: cell) else{return}
-                dest.expense = tableViewController?.expenses![indexPath.row]
+                dest.expense = tableViewController?.expensesVM.get(expenseAt: indexPath.row)
             }
         }
     }

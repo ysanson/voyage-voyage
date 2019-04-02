@@ -29,8 +29,8 @@ class ExpensePartFetchResultController: NSObject, NSFetchedResultsControllerDele
         self.tableView.beginUpdates()
     }
     
-    init(view : UITableView){
-        self.tableView  = view
+    init(view : UITableView, travel: Travel){
+        self.tableView = view
         super.init()
         do{
             try self.expensePartsFetched.performFetch()

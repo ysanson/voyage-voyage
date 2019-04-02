@@ -8,10 +8,10 @@
 
 import UIKit
 
-class TravelTVController: NSObject, UITableViewDataSource, UITableViewDelegate, TravelVMDelegate {
+class TravelTVController: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     var tableView: UITableView
-    var travelVM : TravelVM?
+    var travelVM : TravelVM
     var fetchedResultController: TravelFetchResultController
     var viewController: ViewController
     
@@ -22,17 +22,16 @@ class TravelTVController: NSObject, UITableViewDataSource, UITableViewDelegate, 
         self.travelVM = TravelVM(data: self.fetchedResultController.travelsFetched)
         super.init()
         self.tableView.dataSource = self
-        self.travelVM?.delegate = self
         self.tableView.delegate = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (travelVM?.count)!
+        return travelVM.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TravelCell", for: indexPath) as? TravelTVCell else{fatalError("The dequeued cell is not an instance of TravelTVCell.")}
-        let travel = travelVM?.get(travelAt: indexPath.row)
+        let travel = travelVM.get(travelAt: indexPath.row)
         cell.title.text = travel?.name
         cell.icon.image = travel?.picture
         return cell
@@ -47,29 +46,11 @@ class TravelTVController: NSObject, UITableViewDataSource, UITableViewDelegate, 
         editAction.backgroundColor = #colorLiteral(red: 0.3724241709, green: 0.06135788213, blue: 0.9991285863, alpha: 1)
         
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete"){ (action, view, handler) in
-            self.deletePrompt(travel: (self.travelVM?.get(travelAt: indexPath.row))!)
+            self.deletePrompt(travel: (self.travelVM.get(travelAt: indexPath.row))!)
         }
         
         let config = UISwipeActionsConfiguration(actions: [deleteAction, editAction])
         return config
-    }
-    
-    //MARK- TravelVMDelegate
-    
-    func dataSetChanged() {
-        self.tableView.reloadData()
-    }
-    
-    func travelDeleted(at indexPath: IndexPath) {
-        self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
-    }
-    
-    func travelUpdated(at indexPath: IndexPath) {
-        self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
-    }
-    
-    func travelAdded(at indexPath: IndexPath) {
-        self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
     }
     
     func deletePrompt(travel: Travel){

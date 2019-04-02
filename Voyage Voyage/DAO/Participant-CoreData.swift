@@ -30,7 +30,7 @@ extension Participant{
         self.lastname = lastname
         self.entrydate = entryDate
         self.exitdate = nil
-        self.addToParticipe(travel)
+        self.participe = travel
         travel.addToContient(self)
     }
     

@@ -12,10 +12,12 @@ import UIKit
 
 class ExpenseFetchResultController: NSObject, NSFetchedResultsControllerDelegate{
     let tableView  : UITableView
+    let travel: Travel
     
     lazy var expensesFetched : NSFetchedResultsController<Expense> = {
         // prepare a request
         let request : NSFetchRequest<Expense> = Expense.fetchRequest()
+        request.predicate = NSPredicate(format: "concerns == %@", self.travel)
         request.sortDescriptors =
             [NSSortDescriptor(key:#keyPath(Expense.name),ascending:false)]
         let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext:
@@ -29,8 +31,9 @@ class ExpenseFetchResultController: NSObject, NSFetchedResultsControllerDelegate
         self.tableView.beginUpdates()
     }
     
-    init(view : UITableView){
+    init(view : UITableView, travel: Travel){
         self.tableView  = view
+        self.travel = travel
         super.init()
         do{
             try self.expensesFetched.performFetch()

@@ -17,12 +17,16 @@ class ParticipantsDAO{
         CoreDataManager.save()
     }
     static func delete(participant: Participant){
-        participant.exitdate = Date.init()
+        CoreDataManager.context.delete(participant)
     }
     static func update(forParticipant participant: Participant, newFirstName fName: String, newLastName lName: String, newEntryDate entDate: Date){
         participant.firstname = fName
         participant.lastname = lName
         participant.entrydate = entDate
+        save()
+    }
+    static func setGone(forParticipant participant: Participant){
+        participant.exitdate = Date.init()
         save()
     }
     
