@@ -23,4 +23,10 @@ class ExpensesVM{
     public func get(expenseAt index: Int)->Expense?{
         return self.expensesFetched.object(at: IndexPath(row: index, section: 0))
     }
+    
+    public func delete(expense: Expense){
+        if self.expensesFetched.indexPath(forObject: expense) != nil{
+            ExpenseDAO.delete(expense: expense)
+        }
+    }
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G5019" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.98" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Expense" representedClassName="Expense" syncable="YES" codeGenerationType="class">
         <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="Binary" syncable="YES"/>
         <relationship name="concerns" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Travel" inverseName="has" inverseEntity="Travel" syncable="YES"/>
-        <relationship name="contains" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExpensePart" inverseName="refersTo" inverseEntity="ExpensePart" syncable="YES"/>
+        <relationship name="contains" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ExpensePart" inverseName="refersTo" inverseEntity="ExpensePart" syncable="YES"/>
     </entity>
     <entity name="ExpensePart" representedClassName="ExpensePart" syncable="YES" codeGenerationType="class">
         <attribute name="isRefunded" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -21,7 +21,7 @@
         <attribute name="firstname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="participe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Travel" inverseName="contient" inverseEntity="Travel" syncable="YES"/>
-        <relationship name="pays" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExpensePart" inverseName="paidBy" inverseEntity="ExpensePart" syncable="YES"/>
+        <relationship name="pays" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ExpensePart" inverseName="paidBy" inverseEntity="ExpensePart" syncable="YES"/>
         <relationship name="receives" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Refund" inverseName="receiveBy" inverseEntity="Refund" syncable="YES"/>
         <relationship name="refunds" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExpensePart" inverseName="refundedBy" inverseEntity="ExpensePart" syncable="YES"/>
         <relationship name="transfers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Refund" inverseName="transferBy" inverseEntity="Refund" syncable="YES"/>
@@ -35,14 +35,14 @@
         <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="travelName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="travelPhoto" optional="YES" attributeType="Binary" syncable="YES"/>
-        <relationship name="contient" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Participant" inverseName="participe" inverseEntity="Participant" syncable="YES"/>
+        <relationship name="contient" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Participant" inverseName="participe" inverseEntity="Participant" syncable="YES"/>
         <relationship name="has" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Expense" inverseName="concerns" inverseEntity="Expense" syncable="YES"/>
     </entity>
     <elements>
         <element name="Expense" positionX="-114.7578125" positionY="-599.1796875" width="128" height="118"/>
         <element name="ExpensePart" positionX="70.1015625" positionY="-218.28515625" width="128" height="133"/>
-        <element name="Participant" positionX="-250.9375" positionY="-271.875" width="128" height="180"/>
-        <element name="Travel" positionX="-552.84765625" positionY="-122.16015625" width="128" height="118"/>
+        <element name="Participant" positionX="-250.9375" positionY="-271.875" width="128" height="178"/>
         <element name="Refund" positionX="-211.6796875" positionY="7.75390625" width="128" height="90"/>
+        <element name="Travel" positionX="-552.84765625" positionY="-122.16015625" width="128" height="118"/>
     </elements>
 </model>

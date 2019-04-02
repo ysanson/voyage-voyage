@@ -38,16 +38,33 @@ class ExpensesTVController: NSObject, UITableViewDataSource, UITableViewDelegate
         return cell
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - UITableViewDelegate
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?{
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete"){ (action, view, handler) in
+            self.deleteConfirmation(expense: self.expensesVM.get(expenseAt: indexPath.row)!)
+            }
+            
+            let config = UISwipeActionsConfiguration(actions: [deleteAction])
+            return config
     }
-    */
 
+    func deleteConfirmation(expense: Expense){
+        let dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to delete this expense? This is irreversible.", preferredStyle: .alert)
+        
+        // Create OK button with action handler
+        let ok = UIAlertAction(title: "Delete", style: .destructive, handler: { (action) -> Void in
+            ExpenseDAO.delete(expense: expense)
+            self.tableView.reloadData()
+        })
+        
+        // Create Cancel button with action handlder
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+            return
+        }
+        
+        //Add OK and Cancel button to dialog message
+        dialogMessage.addAction(ok)
+        dialogMessage.addAction(cancel)
+        viewController.present(dialogMessage, animated: true, completion: nil)
+    }
 }

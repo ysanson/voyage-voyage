@@ -66,11 +66,9 @@ class TravelTVController: NSObject, UITableViewDataSource, UITableViewDelegate {
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
             return
         }
-        
         //Add OK and Cancel button to dialog message
         dialogMessage.addAction(ok)
         dialogMessage.addAction(cancel)
-        
         // Present dialog message to user
         viewController.present(dialogMessage, animated: true, completion: nil)
     }

@@ -32,20 +32,3 @@ extension Travel {
     }
     
 }
-
-/*
-extension Travel:Equatable{
-    static func == (lhs: Travel, rhs: Travel) -> Bool {
-        return
-            lhs.name == rhs.name &&
-            rhs.picture == lhs.picture &&
-            rhs.date == lhs.date
-    }
-
-}
-extension Travel:Hashable{
-    var hashValue:Int{
-        return name .hashValue ^ picture.hashValue ^ date.hashValue
-    }
-}
-*/
