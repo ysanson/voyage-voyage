@@ -37,26 +37,4 @@ class ExpensePartDAO{
     static func search(forExpense expense: Expense)->[ExpensePart]?{
         return expense.contains?.allObjects as? [ExpensePart]
     }
-    
-    static func getPaidAmount(forExpense expense:Expense, forPayer payer: Participant)->Float?{
-        let parts = expense.contains?.allObjects as? [ExpensePart]
-        for part in parts!{
-            if part.paidBy == payer{
-                return part.paidAmount
-            }
-        }
-        return nil
-    }
-    
-    static func getPartialAmount(forExpense expense:Expense, forParticipant participant: Participant)->Float?{
-        let parts = expense.contains?.allObjects as? [ExpensePart]
-        for part in parts!{
-            if part.refundedBy == participant{
-                return part.partialAmount
-            }
-        }
-        return nil
-    }
-    
-    
 }

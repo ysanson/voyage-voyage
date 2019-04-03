@@ -38,7 +38,8 @@ class PayerTVController: NSObject, UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    
+    ///Retrieves the payers of an expense.
+    ///- Returns: an array of participants, or nil.
     func havePayer()-> [Participant]?{
         let cells = self.tableView.visibleCells as? [PayerTVCell]
         var payers: [Participant]? = []
@@ -50,14 +51,4 @@ class PayerTVController: NSObject, UITableViewDataSource, UITableViewDelegate {
         }
         return payers
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

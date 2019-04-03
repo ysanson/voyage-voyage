@@ -12,10 +12,6 @@ import UIKit
 class TravelDetailsTabBarController: UITabBarController{
     var travel: Travel?
     
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem?.tintColor = .white

@@ -10,12 +10,17 @@ import Foundation
 import UIKit
 import CoreData
 
+/**
+    This class specializes the NSFetchedResultControllerDelegate for the object Participant.
+ */
 class ParticipantFetchResultController: NSObject, NSFetchedResultsControllerDelegate{
+    ///The table view.
     let tableView  : UITableView
+    ///The travel of the participants.
     let travel: Travel
     
+    ///The participants in the data base.
     lazy var participantsFetched : NSFetchedResultsController<Participant> = {
-        // prepare a request
         let request : NSFetchRequest<Participant> = Participant.fetchRequest()
         request.predicate = NSPredicate(format: "participe == %@", self.travel)
         request.sortDescriptors =

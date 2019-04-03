@@ -67,7 +67,6 @@
 		F0E6152B2245347B00624F4F /* MemberAmoutTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6152A2245347B00624F4F /* MemberAmoutTVCell.swift */; };
 		F0E6152D224534EE00624F4F /* TravelMemberTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6152C224534EE00624F4F /* TravelMemberTVCell.swift */; };
 		F0E6152F2245353000624F4F /* TransferTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6152E2245353000624F4F /* TransferTVCell.swift */; };
-		F0E615332245360100624F4F /* TransferTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E615322245360100624F4F /* TransferTVController.swift */; };
 		F0E61537224537A100624F4F /* ExpenseTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E61536224537A100624F4F /* ExpenseTVCell.swift */; };
 		F0E61539224537ED00624F4F /* TravelExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E61538224537ED00624F4F /* TravelExpensesViewController.swift */; };
 		F0E6153B2245382700624F4F /* ExpensesTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6153A2245382700624F4F /* ExpensesTVController.swift */; };
@@ -77,7 +76,6 @@
 		F0E6154722454A9400624F4F /* PayerTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6154622454A9400624F4F /* PayerTVController.swift */; };
 		F0E6154922454B0C00624F4F /* PayerTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6154822454B0C00624F4F /* PayerTVCell.swift */; };
 		F0E6154B22454DE300624F4F /* ExpenseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6154A22454DE300624F4F /* ExpenseDetailsViewController.swift */; };
-		F0E6154F2245512900624F4F /* ReceiverTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E6154E2245512900624F4F /* ReceiverTVController.swift */; };
 		F0E615512245519600624F4F /* ReceiverTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E615502245519600624F4F /* ReceiverTVCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -163,7 +161,6 @@
 		F0E6152A2245347B00624F4F /* MemberAmoutTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberAmoutTVCell.swift; sourceTree = "<group>"; };
 		F0E6152C224534EE00624F4F /* TravelMemberTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelMemberTVCell.swift; sourceTree = "<group>"; };
 		F0E6152E2245353000624F4F /* TransferTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTVCell.swift; sourceTree = "<group>"; };
-		F0E615322245360100624F4F /* TransferTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTVController.swift; sourceTree = "<group>"; };
 		F0E61536224537A100624F4F /* ExpenseTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTVCell.swift; sourceTree = "<group>"; };
 		F0E61538224537ED00624F4F /* TravelExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelExpensesViewController.swift; sourceTree = "<group>"; };
 		F0E6153A2245382700624F4F /* ExpensesTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTVController.swift; sourceTree = "<group>"; };
@@ -173,7 +170,6 @@
 		F0E6154622454A9400624F4F /* PayerTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayerTVController.swift; sourceTree = "<group>"; };
 		F0E6154822454B0C00624F4F /* PayerTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayerTVCell.swift; sourceTree = "<group>"; };
 		F0E6154A22454DE300624F4F /* ExpenseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDetailsViewController.swift; sourceTree = "<group>"; };
-		F0E6154E2245512900624F4F /* ReceiverTVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverTVController.swift; sourceTree = "<group>"; };
 		F0E615502245519600624F4F /* ReceiverTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverTVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -399,10 +395,8 @@
 				F0E615222245220300624F4F /* TravelDetailsViewController.swift */,
 				F0E615282245314400624F4F /* MemberListTVController.swift */,
 				F0E615242245308900624F4F /* TravelMembersViewController.swift */,
-				F0E615322245360100624F4F /* TransferTVController.swift */,
 				F0E61538224537ED00624F4F /* TravelExpensesViewController.swift */,
 				F0E6153A2245382700624F4F /* ExpensesTVController.swift */,
-				F0E6154E2245512900624F4F /* ReceiverTVController.swift */,
 			);
 			path = TravelDetails;
 			sourceTree = "<group>";
@@ -593,7 +587,6 @@
 				F0E615252245308900624F4F /* TravelMembersViewController.swift in Sources */,
 				F0E6153D2245410500624F4F /* AddMemberViewController.swift in Sources */,
 				617AD147224FB88200344017 /* ExpensePart2ViewController.swift in Sources */,
-				F0E615332245360100624F4F /* TransferTVController.swift in Sources */,
 				617AD14F224FBC8700344017 /* ExpencePartBase2ViewController.swift in Sources */,
 				F0E615292245314400624F4F /* MemberListTVController.swift in Sources */,
 				3C972B7E224E1367005744F5 /* ExpenseDAO.swift in Sources */,
@@ -611,7 +604,6 @@
 				F0E6154722454A9400624F4F /* PayerTVController.swift in Sources */,
 				F0E61539224537ED00624F4F /* TravelExpensesViewController.swift in Sources */,
 				3C80490822455C75007CF9CA /* TravelDAO.swift in Sources */,
-				F0E6154F2245512900624F4F /* ReceiverTVController.swift in Sources */,
 				F0E6154522454A5600624F4F /* AddExpenseViewController.swift in Sources */,
 				3C7B64742250F92100C7C4FA /* String-Ext.swift in Sources */,
 				3C972B84224E238D005744F5 /* ExpensePartDAO.swift in Sources */,

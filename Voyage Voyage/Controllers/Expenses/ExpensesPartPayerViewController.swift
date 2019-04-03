@@ -25,13 +25,17 @@ class ExpensesPartPayerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    ///Calculates the amount that the current payers pays.
+    ///If the amount is not equal, it generates an alert and blocks the segue.
+    ///- Parameter amount: a dictionnary containing the participants and theeir payment.
+    ///- Returns: boolean, true if it's equal, false otherwise.
     func isExpenseFullyPaid(withAmounts amounts: [Participant:Float])->Bool{
         var fullAmt: Float = 0.0
         for (_, value) in amounts{
             fullAmt += value
         }
         if fullAmt != expense?.amount{
-            let dialogMessage = UIAlertController(title: "Error", message: "The overall amount is not equal to the expense amount", preferredStyle: .alert)
+            let dialogMessage = UIAlertController(title: "Error", message: "The overall amount is not equal to the expense amount (\(String(describing: expense?.amount)))", preferredStyle: .alert)
             let ok = UIAlertAction(title: "OK", style: .cancel)
             { (action) -> Void in
                 return

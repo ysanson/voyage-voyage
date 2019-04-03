@@ -38,6 +38,8 @@ class PayerAmountTVController: NSObject, UITableViewDataSource, UITableViewDeleg
        return payers?.count ?? 0
     }
     
+    ///Gets the payers and their respective amounts.
+    ///- Returns: a dictionnary with the participant in key the its amount in value.
     func getPayAmount()->[Participant:Float]{
         var dict:[Participant:Float] = [:]
         let cells = self.tableView.visibleCells as? [AmountPayerTableViewCell]

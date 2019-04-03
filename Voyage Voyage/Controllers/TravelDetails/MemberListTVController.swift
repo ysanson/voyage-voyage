@@ -72,33 +72,42 @@ class MemberListTVController: NSObject, UITableViewDataSource, UITableViewDelega
     }
 
     func deleteConfirmation(participant: Participant, indexPath: IndexPath){
-        let dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to delete this member? His exit date will be set for today.", preferredStyle: .alert)
-        // Create OK button with action handler
-        let ok = UIAlertAction(title: "Delete", style: .destructive, handler: { (action) -> Void in
-            ParticipantsDAO.setGone(forParticipant: participant)
-            self.tableView.reloadRows(at: [indexPath], with: .automatic)
-        })
-        
-        // Create Cancel button with action handlder
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
-            return
+        let dialogMessage: UIAlertController
+        if isDeletable(forParticipant: participant){
+            dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to delete this member? His exit date will be set for today.", preferredStyle: .alert)
+            // Create OK button with action handler
+            let ok = UIAlertAction(title: "Delete", style: .destructive, handler: { (action) -> Void in
+                ParticipantsDAO.setGone(forParticipant: participant)
+                self.tableView.reloadRows(at: [indexPath], with: .automatic)
+            })
+            
+            // Create Cancel button with action handlder
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+                return
+            }
+            
+            //Add OK and Cancel button to dialog message
+            dialogMessage.addAction(ok)
+            dialogMessage.addAction(cancel)
+            
+         }
+        else{
+            dialogMessage = UIAlertController(title: "Error", message: "The balance for this participant is not equal to 0", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .cancel) { (action) -> Void in
+                return
+            }
+            dialogMessage.addAction(ok)
         }
-        
-        //Add OK and Cancel button to dialog message
-        dialogMessage.addAction(ok)
-        dialogMessage.addAction(cancel)
         vc.present(dialogMessage, animated: true, completion: nil)
     }
-   
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    ///Checks whether or not the balance is null for a participant.
+    ///- Parameter participant: the participant to ckeck.
+    ///- Returns: a boolean, true if the participant's balance is null, false otherwise.
+    func isDeletable(forParticipant participant: Participant)->Bool{
+        let expenses = ExpenseDAO.fetch(forTravel: self.vc.tbc.travel!)
+        let participantsList = ParticipantsDAO.search(forTravel: self.vc.tbc.travel!)
+        let balance = BalanceAlgorithm.calculateBalance(forParticipants: participantsList!, withExpenses: expenses!)
+        return balance[participant] == 0
     }
-    */
-
 }

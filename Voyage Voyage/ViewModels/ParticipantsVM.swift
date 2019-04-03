@@ -16,6 +16,8 @@ class ParticipantsVM{
         self.participantsFetched = data
     }
     
+    //-------------------------------------------------------------------------------------------------
+    // MARK: View Model functions
     public var count: Int{
         return participantsFetched.fetchedObjects?.count ?? 0
     }

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import os.log
 
 class TravelDetailsTVController: NSObject, UITableViewDataSource {
     
@@ -19,7 +18,7 @@ class TravelDetailsTVController: NSObject, UITableViewDataSource {
     init(tableView: UITableView, viewController: TravelDetailsViewController){
         self.tableView = tableView
         self.viewController = viewController
-        participantList = ParticipantsDAO.search(forTravel: viewController.tbc.travel!)
+        participantList = ParticipantsDAO.searchForStillHere(forTravel: viewController.tbc.travel!)
         let expenses = ExpenseDAO.fetch(forTravel: viewController.tbc.travel!)
         balance = BalanceAlgorithm.calculateBalance(forParticipants: participantList!, withExpenses: expenses!)
         super.init()
@@ -44,6 +43,7 @@ class TravelDetailsTVController: NSObject, UITableViewDataSource {
             cell.backgroundColor = #colorLiteral(red: 1, green: 0.05588275939, blue: 0.1452993751, alpha: 0.6090448944)
             
         }
+        cell.selectionStyle = .none
         return cell
     }
 }

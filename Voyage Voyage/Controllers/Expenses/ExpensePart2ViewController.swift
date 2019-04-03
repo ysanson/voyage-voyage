@@ -18,13 +18,16 @@ class ExpensePart2ViewController: UIViewController {
 
     @IBOutlet weak var nextButton: UIBarButtonItem!
     @IBOutlet weak var CancelButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    ///Retrieves the participants of a travel, minus the ones who paid for the expense.
+    ///- Parameter payers: array of participants who paid for the current expense.
+    ///- Returns: an array of participants, who can be selected to refund the expense.
     func haveParticipants(payers: [Participant])-> [Participant]?{
         let parts = ParticipantsDAO.searchForStillHere(forTravel: self.travel!)
         var participants:[Participant] = []

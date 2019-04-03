@@ -10,9 +10,10 @@ import UIKit
 import Foundation
 import CoreData
 
-//----------------------------------------------------------------------------------------------------------------
-//----------------------------------------------------------------------------------------------------------------
-// MARK: -
+/**
+ Creates a View model for the travels.
+ 
+ */
 class TravelVM{
     // MARK: -
     var travelsFetched : NSFetchedResultsController<Travel>
@@ -20,11 +21,14 @@ class TravelVM{
     init(data: NSFetchedResultsController<Travel>){
         self.travelsFetched = data
     }
+    
     //-------------------------------------------------------------------------------------------------
     // MARK: View Model functions
+    
     public var count : Int {
         return self.travelsFetched.fetchedObjects?.count ?? 0
     }
+    
     
     public func get(travelAt index: Int) -> Travel?{
         return self.travelsFetched.object(at: IndexPath(row: index, section: 0))

@@ -25,6 +25,11 @@ class TravelMembersViewController: UIViewController {
         self.tableView.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.navigationItem.title = self.tabItem.title
+        self.tabBarController?.navigationItem.rightBarButtonItems = self.tabItem.rightBarButtonItems
+    }
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -43,9 +48,5 @@ class TravelMembersViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.navigationItem.title = self.tabItem.title
-        self.tabBarController?.navigationItem.rightBarButtonItems = self.tabItem.rightBarButtonItems
-    }
-
+    
 }

@@ -16,6 +16,8 @@ class ExpensesVM{
         self.expensesFetched = data
     }
     
+    //-------------------------------------------------------------------------------------------------
+    // MARK: View Model functions
     public var count: Int{
         return self.expensesFetched.fetchedObjects?.count ?? 0
     }

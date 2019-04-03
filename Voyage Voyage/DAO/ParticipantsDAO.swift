@@ -25,6 +25,9 @@ class ParticipantsDAO{
         participant.entrydate = entDate
         save()
     }
+    
+    ///Sets the participant's exit date to the current one.
+    /// - Parameter participant: the participant to set as gone.
     static func setGone(forParticipant participant: Participant){
         participant.exitdate = Date.init()
         save()
@@ -51,6 +54,9 @@ class ParticipantsDAO{
         }
     }
     
+    ///Searches for a participant with a specific firstname.
+    ///- Parameter firstname: the firstname to search with.
+    ///- Returns: an array of participants with the said name, or nil.
     static func search(forName firstname: String)->[Participant]?{
         self.request.predicate = NSPredicate(format: "firstname == #@", firstname)
         do{
@@ -61,10 +67,16 @@ class ParticipantsDAO{
         }
     }
     
+    ///Searches for the participants of a specific travel.
+    ///- Parameter travel: the travel to search with.
+    ///- Returns: an array of participants, or nil if there isn't.
     static func search(forTravel travel: Travel)->[Participant]?{
         return travel.contient?.allObjects as? [Participant]
     }
     
+    ///Searches for a participant with a specific fullname.
+    ///- Parameter fullname: the fullname to search with.
+    ///- Returns: an array of participants with the said fullname, or nil.
     static func search(forFullname fullname: String, forTravel travel: Travel)->Participant?{
         guard let parts = travel.contient?.allObjects as? [Participant] else {return nil}
         for part in parts{
@@ -75,6 +87,12 @@ class ParticipantsDAO{
         return nil
     }
     
+    /**
+     Searches for the participants with a exit date set as nil.
+     When the exit date is something else than nil, the participant is gone from the travel.
+     - Parameter travel: The travel to search the participants in.
+     - Returns: an array of participants, or nil.
+    */
     static func searchForStillHere(forTravel travel: Travel)->[Participant]?{
         guard let parts = ParticipantsDAO.search(forTravel: travel) else { return nil }
         var result: [Participant] = []

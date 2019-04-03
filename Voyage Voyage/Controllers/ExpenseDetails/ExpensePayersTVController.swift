@@ -32,7 +32,7 @@ class ExpensePayersTVController: NSObject, UITableViewDelegate, UITableViewDataS
         let cell = tableView.dequeueReusableCell(withIdentifier: "ExpensePayers")
         let participant = payers![indexPath.row]
         cell?.textLabel?.text = participant.fullname
-        let paidAmount = ExpensePartDAO.getPaidAmount(forExpense: self.expense, forPayer: participant)!
+        let paidAmount = ExpenseDAO.getPaidAmount(forExpense: self.expense, forPayer: participant)!
         cell?.detailTextLabel?.text = "Paid " + String(paidAmount)
         return cell!
     }

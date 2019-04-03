@@ -36,10 +36,11 @@ class ParticipantsTVController: NSObject, UITableViewDataSource, UITableViewDele
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return participants?.count ?? 0
     }
     
+    ///Gets the participants that participate to the expense.
+    ///- Returns: an array of participants, or nil.
     func haveParticipantsSelected()-> [Participant]?{
         let cells = self.tableView.visibleCells as? [ExpenseParticipantTVCell]
         var parts: [Participant]? = []

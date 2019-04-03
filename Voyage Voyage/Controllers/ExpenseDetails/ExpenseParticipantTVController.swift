@@ -31,7 +31,7 @@ class ExpenseParticipantTVController: NSObject, UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "expenseParticipants")
         let participant = participants![indexPath.row]
         cell?.textLabel?.text = participant.fullname
-        let partialAmount = ExpensePartDAO.getPartialAmount(forExpense: expense, forParticipant: participant)!
+        let partialAmount = ExpenseDAO.getPartialAmount(forExpense: expense, forParticipant: participant)!
         cell?.detailTextLabel?.text = "Due: " + String(partialAmount)
         return cell!
     }
